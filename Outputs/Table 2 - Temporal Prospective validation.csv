@@ -1,0 +1,5 @@
+﻿Model,ROC-AUC,PR-AUC
+OTRec,0.863,0.303
+OTTree (CatBoost),0.853,0.233
+Disease Mean Baseline,0.824,0.293
+Open Targets Score,0.558,0.082

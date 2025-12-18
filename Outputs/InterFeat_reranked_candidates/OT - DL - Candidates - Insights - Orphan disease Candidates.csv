@@ -1,0 +1,32 @@
+Disease,Target,Explanation,Class,Score
+Charcot-Marie-Tooth (CMT),HDAC6 / HDAC1,"The Structural Stabilizer: CMT is a peripheral neuropathy caused by defects in axonal transport. Microtubules are the ""tracks"" for this transport. 
+
+• Biology: Acetylation of $\alpha$-tubulin stabilizes these tracks. HDAC6 removes this acetylation, causing instability.
+
+• Actionability: HDAC6 inhibitors are currently in clinical trials for other cancers/neuropathies. They could be repurposed to ""freeze"" the microtubule tracks in CMT, restoring transport without toxic side effects of broad HDAC inhibition.",,
+Pulmonary Sarcoidosis,mTOR / PTPRB,"The Granuloma Starvation Strategy: Sarcoidosis is defined by granulomas (clumps of immune cells) that refuse to clear.
+
+• Biology: Granulomas are metabolically active and hypoxic. mTOR drives this metabolic demand. PTPRB regulates the blood vessels feeding them.
+
+• Actionability: mTOR inhibitors (Rapamycin) are generic and available. The model suggests granulomas behave like ""benign tumors"" and can be starved metabolically or vascularly.",,
+Spinocerebellar Ataxia (SCA),HSP90 / Ubiquitin,"The ""Trash Compactor"" Fix: SCAs are often caused by polyglutamine repeats that misfold and aggregate, killing the neuron.
+
+• Biology: The cell's response to aggregates is the Heat Shock Response (HSP). If the chaperone system is overwhelmed, the cell dies.
+
+• Actionability: HSP90 modulators can boost the ""clearance"" capacity of the neuron, buying time and slowing neurodegeneration.",,
+Trypanosomiasis,CD19 (B-Cell),"The Immune Reset: In chronic African Sleeping Sickness, the parasite exhausts the host's B-cell memory, leading to immune collapse.
+
+• Biology: The model links the disease to CD19 (a B-cell marker). 
+
+• Actionability: While we usually deplete B-cells (e.g., Rituximab), this prediction suggests that modulating B-cell survival factors (like BAFF/APRIL) could prevent the immune exhaustion that allows the parasite to persist.",,
+Proximal SMA (Spinal Muscular Atrophy),MDM2,"The Apoptosis Brake: SMA involves the programmed death of motor neurons due to SMN protein deficiency.
+
+• Biology: Neuronal death is often p53-mediated. MDM2 is the E3 ligase that keeps p53 in check.
+
+• Actionability: While we have gene therapy (Zolgensma), ""saving"" neurons that are on the brink of death is crucial. MDM2 stabilizers (or p53 inhibitors, though risky) could prevent the execution signal in stressed motor neurons.",,
+Pulmonary arterial hypertension (idiopathic/associated; WHO group 1),GUCY1B2 (sGC β),Confirms the sGC axis; riociguat is approved — use prediction to stratify who’s sGC-dominant (vs PDE5). Platform validation + precision angle. (JCI),sGC stimulator,0.96
+Neointimal hyperplasia (restenosis; orphan-like phenotypes in rare grafts),FKBP1A,FKBP1A→mTOR is causal in restenosis; drug-device delivery is tractable; great for a prospective “model-guided stent” study.,mTOR/rapalog,0.975
+CDKL5 deficiency disorder,SCN8A,Channelopathy class fit; complements approved ganaxolone; supports combination/sequence trials in DEEs. (PubMed),Na_v modulator,0.973
+CDKL5 deficiency disorder,SCN1A,Same class rationale; selective agents exist to test; low N but high signal-to-noise endpoints. (PubMed),Na_v modulator,0.97
+Familial Behçet-like autoinflammatory syndrome (rare),(Class comparator: IL-1 axis),"While your model highlights IMPDH, the strongest repurposing evidence is IL-1 blockade in BD-related uveitis — suggests “dual track” (IL-1 first; IMPDH as maintenance/adjunct)",IL-1 blocker ± IMPDH,—
+Fuchs endothelial corneal dystrophy (pre-surgical rescue),PTGFR/PTGIR,Hypothesis-level: test PG analogs alongside established ROCK drops to potentiate endothelial recovery; clean optical endpoints make trials efficient. (PubMed),PG receptor modulators,0.767/0.724

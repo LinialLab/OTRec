@@ -1,0 +1,19 @@
+name: ot-recsys-kerasrs
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - cudatoolkit
+  - tensorflow
+  - pandas
+  - pyarrow
+  - numpy
+  - scikit-learn
+  - jupyter
+  - pip
+  - keras
+  - pip:
+    - tf-keras   # The official Keras 3 package
+    - keras-rs
+    - sentence-transformers
