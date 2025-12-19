@@ -28,41 +28,10 @@ OTRec/
 │   ├── app.py                  # Gradio application entry point
 │   └── ...                     # App-specific assets
 └── output/                     # Saved model weights, logs, and evaluation metrics
-
-
----
-
-Here is a concise, professional, and helpful `README.md` for your GitHub repository. It addresses the specific data "gotchas," explains the folder structure, and provides clear instructions for users and editors.
-
-### README.md content
-
-```markdown
-# OTRec: Prospective Prediction of Druggable Disease–Target Associations
-
-**OTRec** (Open Targets Recommender) is a deep learning recommender system designed to prioritize druggable targets for repurposing and novel drug discovery. Unlike retrospective evidence aggregation, OTRec uses a **Two-Tower Neural Network** architecture to learn latent representations from disease and target text descriptions, ontologies, and biological annotations.
-
-This repository contains the source code, analysis notebooks, and an interactive Gradio application for the paper:
-> **OTRec: prospective prediction of druggable target–disease associations via deep learning** > *Dan Ofer and Michal Linial (Hebrew University of Jerusalem)* > [Link to paper / DOI once available]
-
----
-
-## 📂 Repository Structure
-
-```text
-OTRec/
-├── 2-Temporal-Eval.ipynb       # Main evaluation notebook: Temporal split (2022 vs 2025)
-├── 1-Train-DL-Retriever.ipynb  # Training loop for the Deep Learning Recommender
-├── 0-OT-PreProcess_Recc.ipynb  # Data preprocessing and feature engineering
-├── dl_model_def.py             # Keras definition of the Two-Tower model architecture
-├── utils.py                    # Helper functions for data loading and metrics
-├── gradio_app/                 # Standalone interactive web demo
-│   ├── app.py                  # Gradio application entry point
-│   └── ...                     # App-specific assets
-└── output/                     # Saved model weights, logs, and evaluation metrics
-
 ```
 
 ---
+
 
 ### Important: Data & Prerequisites
 
