@@ -1,28 +1,71 @@
-name: Run Python script
+name: Validate Gradio Space
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'app.py'
+      - 'dl_model_def.py'
+      - 'prepare_runtime_artifacts.py'
+      - 'requirements.txt'
+      - 'README.md'
+      - 'data/proc/**'
+  workflow_dispatch:
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.9'
+        python-version: '3.11'
 
-    - name: Install Gradio
-      run: python -m pip install gradio
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install -r requirements.txt
 
-    - name: Log in to Hugging Face
-      run: python -c 'import huggingface_hub; huggingface_hub.login(token="${{ secrets.hf_token }}")'
+    - name: Verify packaged runtime artifacts
+      run: |
+        python - <<'PY'
+        from pathlib import Path
 
-    - name: Deploy to Spaces
-      run: gradio deploy
+        required = [
+            Path('data/proc/df_learn_sub.parquet'),
+            Path('data/proc/disease_df.parquet'),
+            Path('data/proc/target_df.parquet'),
+            Path('data/proc/comparison_lookup.parquet'),
+            Path('data/proc/disease_metadata.csv'),
+        ]
+        missing = [str(path) for path in required if not path.exists()]
+        if missing:
+            raise SystemExit(f'Missing packaged runtime artifacts: {missing}')
+        print('Packaged runtime artifacts are present.')
+        PY
+
+    - name: Smoke test reviewer path
+      run: |
+        python - <<'PY'
+        import app
+        summary, note, frame, csv_path = app.recommend_targets(
+            'DOID_0050890',
+            top_k=10,
+            filter_mode='Hide packaged known hits',
+            sort_label='OTRec score',
+            min_score=0.0,
+        )
+        assert not frame.empty
+        assert 'OTRec score' in frame.columns
+        assert csv_path
+        print(summary.splitlines()[0])
+        print(frame.head(2).to_string())
+        PY

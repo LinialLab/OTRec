@@ -1,5 +1,8 @@
-﻿Model,ROC-AUC,PR-AUC
+Model,ROC-AUC,PR-AUC
 OTRec,0.863,0.303
 OTTree (CatBoost),0.853,0.233
-Disease Mean Baseline,0.824,0.293
+Target Mean Baseline,0.824,0.293
+Matrix Factorization,0.553,0.05
+TF-IDF cosine,0.512,0.042
+Disease Mean Baseline,0.593,0.052
 Open Targets Score,0.558,0.082
