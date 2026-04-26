@@ -52,7 +52,9 @@ above a $0.65$ score threshold (in-distribution CV precision $0.92$;
 out-of-distribution precision not directly estimated), covering
 $4{,}346$ diseases including $2{,}322$ orphan diseases, through
 an interactive prediction platform.
-Code, weights, ranked predictions, and the interactive demo are publicly available: [anonymized during review period].
+An anonymized code-and-results bundle, including CSV outputs, is provided
+with the review submission; code, weights, predictions, and the
+public demo will be released after review period.
 \end{abstract}
 
 % -----------------------------------------------------------------------
@@ -156,14 +158,26 @@ to enable direct replication and comparison.
 We formulate target prioritization as an implicit-feedback recommendation
 task: rank candidate human protein-coding genes for a given disease by
 likelihood of clinical relevance.
+We used Open Targets Platform (OTP) Release 25.06 for cross-validation
+and inference, and Release 22.02 as the historical training snapshot for
+temporal validation~\citep{buniello2025,opentargetsdownloads,opentargets2202release,opentargets2506release}.
 Positive labels ($y{=}1$) are disease--target pairs with evidence of
-clinical progression (clinical trials or approved drugs) in
-OTP Release 2025.06; all remaining pairs are implicit negatives
-($y{=}0$).
+clinical progression (clinical trials or approved drugs) in the relevant
+OTP known-drug / clinical-evidence table; all constructed rows without
+such evidence are implicit negatives ($y{=}0$).
 The implicit-feedback formulation conflates true negatives with unlabeled
 positives; we treat this label noise as inherent to the prospective task.
-The temporal split (\S\ref{sec:eval}) provides a partial empirical bound
-by re-labeling pairs that subsequently progressed to trials.
+The temporal split (\S\ref{sec:eval}) re-labels pairs whose clinical evidence  appears only in a later OTP release.
+Operationally, we construct the temporal test set by an anti-join: retain every 2025.06 row whose exact $(\mathrm{diseaseId},\mathrm{targetId},y)$ tuple is absent from the processed 2022.02 frame. This keeps 2022-negative / 2025-positive
+conversions, excludes pairs already positive in 2022, and retains all
+2025-negative rows that enter the processed 2025 frame under the same
+rule. Negatives are exhaustive within this anti-join cohort rather than
+sampled. No special censoring is applied for diseases or targets with
+different clinical-trial ascertainment, prevalence, or commercial
+interest; these biases remain part of the temporal-labeling problem.
+The OTP known-drug exports used here do not a consistently available trial-start-date field, so we do not independently censor by ClinicalTrials.gov start date. The resulting test set covers $11{,}624$ diseases
+(vs.\ $9{,}741$ diseases in the 2022 training frame), making it strongly
+covariate-shifted in both disease coverage and label distribution.
 
 \textbf{Scope of ``drug'' and ``gene''.}
 Throughout, ``drug'' follows OTP usage and covers any therapeutic entity
@@ -209,11 +223,14 @@ ontology structure.
 Text features are processed via Text Vectorization (bag-of-words, count
 mode).
 The \emph{disease tower} uses disease names, descriptions, exact synonyms,
-therapeutic areas, phenotypes, and ontology parents (EFO terms),
+therapeutic areas, phenotypes, and ontology parents (EFO terms~\citep{malone2010efo}),
 concatenated with a learned disease-ID embedding ($d{=}64$).
 The \emph{target tower} uses gene symbol, name, synonyms, function
-descriptions, Gene Ontology terms, pathway annotations, and tractability
-features including genetic constraint scores.
+descriptions, Gene Ontology terms~\citep{geneontology2023}, pathway
+annotations including Reactome-derived terms~\citep{milacic2024reactome},
+UniProt-derived annotations~\citep{uniprot2025}, and OTP target
+prioritisation / tractability features including gnomAD-derived genetic
+constraint scores where available~\citep{opentargetsdownloads,karczewski2020gnomad}.
 
 \textbf{Architecture and training.}
 Each tower applies a Residual ``Wide \& Deep'' block: a direct linear
@@ -251,8 +268,9 @@ clinical evidence in 2022 that entered clinical trials by 2025.
 The test set covers ${\sim}12{,}000$ diseases (vs.\ ${\sim}6{,}000$
 positive-bearing diseases at training time), making it strongly
 covariate-shifted in both disease coverage and label distribution.
-Any 2025 positive whose earliest trial start predated 2022.02 is
-excluded to prevent leakage.
+Temporal labels are defined by release difference: we construct the 2025 cohort and remove any exact
+$(\mathrm{diseaseId},\mathrm{targetId},\mathrm{label})$ tuple already present
+in 2022.
 
 \textbf{Baselines.}
 We benchmark against six primary methods spanning ML, ontology-aware,
@@ -372,7 +390,7 @@ TF-IDF cosine          & 0.513 & 0.016 & 0.106 & 0.009 \\
 
 \begin{table}[t]
 \caption{Temporal hold-out validation: trained on OTP 22.02, tested
-on pairs with no 2022 clinical evidence that entered trials by OTP 25.06.
+on pairs whose 2025.06 label was retained by the temporal anti-join.
 Values are single-model point estimates with no confidence intervals.}
 \label{tab:temporal}
 \centering\small
@@ -449,7 +467,7 @@ repository (supplementary text S1).
 The interactive platform filters out known disease--target pairs, so
 known associations are intentionally absent.
 
-We additionally release an interactive Gradio web demo
+We additionally release an interactive Gradio web demo~\citep{abid2019gradio}
 (Figure~\ref{fig:gradio}) that lets users issue both forward (disease
 $\to$ ranked targets) and reverse (target $\to$ ranked diseases) queries
 against the trained model, with one-click links to the OTP and EFO
@@ -473,7 +491,7 @@ druggable-genome ranking.
   \label{fig:gradio}
 \end{figure}
 
-\subsection{Selected Discovery Examples}
+\subsection{Discovery Examples}
 
 The following examples are illustrative of the candidates the
 model ranks highly; they are not part of a systematic screen, are not
@@ -481,16 +499,43 @@ experimentally validated, and are outside the quantitative evaluation.
 Full ranked lists are released with the dataset.
 
 \paragraph{Temporal hold-out example: \textit{POLA1} / \textit{POLA2} in central nervous system cancer (2022$\to$2025).}
-OTRec ranked the catalytic and
-accessory subunits of replicative DNA polymerase~$\alpha$ ---
-\textit{POLA1} (score $0.961$) and \textit{POLA2} (score $0.966$) ---
-among the top candidates for central nervous system cancer
-(EFO\_0000326), despite a near-zero OTP known-drug score in 2022
-(${\sim}0.06$).
-By the OTP 2025 release both pairs had crossed the
-clinical-progression threshold ($y{=}1$ in our temporal test set),
-coincident with inhibitors of the POL$\alpha$/primase complex entering
-brain-tumour trials.
+OTRec ranked the catalytic and accessory subunits of replicative DNA
+polymerase~$\alpha$ --- \textit{POLA1} (score $0.961$) and
+\textit{POLA2} (score $0.966$) --- among the top candidates for
+central nervous system cancer (EFO\_0000326), despite a near-zero OTP
+known-drug score in 2022 ($ {\sim}0.06$). By 2025 both pairs had clinical-progression, coincident with inhibitors of the POL$\alpha$/primase complex entering brain-tumour trials. %cite - source? 
+We present this as a biology-first temporal example rather than a ready
+repurposing claim: recent glioma literature supports replication-stress
+dependencies and reports preclinical activity of DNA polymerase-$\alpha$
+inhibition, but direct POLA1/POLA2 clinical validation remains limited
+
+\paragraph{CDKL5 disorder.}
+OTRec assigned very high scores to \textit{SCN8A} ($0.991$) and
+\textit{SCN1A} ($0.989$) within a broader sodium-channel module in
+CDKL5 disorder, a rare developmental and epileptic encephalopathy with
+persistently refractory seizures.
+This is interesting because multicenter cohort data suggest sodium-channel
+blockers can benefit a subset of CDKL5 patients, although our model does
+not identify which channel, or which direction of modulation, is optimal.  %cite - source?  TODO
+
+\paragraph{Limited cutaneous systemic sclerosis.}
+OTRec ranked \textit{PDE4C} highly ($0.924$) for limited cutaneous
+systemic sclerosis, a fibro-inflammatory disease with few
+disease-modifying options.
+This is a plausible translational case rather than a validation claim:
+apremilast and other PDE4 inhibitors show anti-fibrotic and
+anti-inflammatory activity in systemic-sclerosis fibroblast and
+bleomycin-skin models, making oral PDE4 inhibition a tractable
+repurposing hypothesis.  %cite - source?  TODO
+
+\paragraph{Temporal arteritis / giant cell arteritis.}
+\textit{DHODH} scored $0.829$ for temporal
+arteritis / giant cell arteritis, pointing to a lymphocyte-metabolism
+axis rather than another cytokine-only mechanism.
+This is more actionable than many orphan predictions because DHODH
+inhibition is already clinically accessible through leflunomide, and
+recent observational studies suggest steroid-sparing benefit in giant
+cell arteritis.  %cite - source?  TODO
 
 \paragraph{Spinal muscular atrophy (SMA).}
 SMA is caused primarily by insufficient SMN protein from \textit{SMN1}
@@ -505,7 +550,8 @@ signaling as possible complementary axes for model-system follow-up.
 
 \paragraph{Croup and Coxsackievirus.}
 OTRec ranked FKBP1A, an immunophilin co-opted by viral replication
-complexes, among the top candidates.
+complexes, among the top candidates; further rationale is documented
+in the repository.
 
 \paragraph{Limited cutaneous systemic sclerosis.}
 PDE4C was ranked highly as a mechanism-based repurposing candidate;
@@ -513,7 +559,8 @@ apremilast (a PDE4 inhibitor) is already approved for related
 indications.
 
 \paragraph{Ulcerative colitis.}
-OTRec ranked IL6R highly.
+OTRec ranked IL6R highly; clinical context for IL6-axis blockade in
+UC is documented in the repository. % recent clinical trials look relatively negative for it. may be a bad example
 
 \subsection{Feature Contributions and Model Characteristics}
 \label{sec:char}
@@ -626,10 +673,11 @@ BoW ceiling established here.
 \section*{Availability}
 % -----------------------------------------------------------------------
 
-The full artifact bundle (code, model weights, ranked predictions, and
-the interactive query interface) will be released upon acceptance.
-Reviewer access and launch instructions are provided via the
-supplementary materials.
+During blind review, an anonymized supplementary contains the code
+needed to reproduce the main analyses and the result CSVs used in the
+manuscript. The public repository, models, ranked predictions, and
+interactive query interface are online but not linked during anonymized
+review; they will be shared publicly after acceptance / camera-ready.
 
 % -----------------------------------------------------------------------
 \bibliographystyle{plainnat}
