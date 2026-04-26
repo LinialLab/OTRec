@@ -255,8 +255,8 @@ Any 2025 positive whose earliest trial start predated 2022.02 is
 excluded to prevent leakage.
 
 \textbf{Baselines.}
-We benchmark against six methods spanning ML, ontology-aware, and
-cold-start controls:
+We benchmark against six primary methods spanning ML, ontology-aware,
+and cold-start controls:
 (\textit{i})~\textbf{OTTree}: CatBoost~\citep{dorogush2018} trained on
 the same OTRec feature set, isolating the contribution of the
 two-tower architecture from the feature engineering;
@@ -268,15 +268,22 @@ baseline for the OTP target-prioritization task;
 (\textit{iii})~\textbf{Open Targets Score}: the raw OTP overall
 association score (which itself aggregates clinical evidence and is
 therefore an upper bound on retrospective performance);
-(\textit{iv})~\textbf{Target Mean}: the per-target positive rate
+(\textit{iv})~\textbf{Disease Mean}: the per-disease positive rate
+computed on the training split, broadcast to every candidate target
+for that disease (a strong historical-frequency prior in the
+target-disjoint setting);
+(\textit{v})~\textbf{Target Mean}: the per-target positive rate
 computed on the training split, broadcast to every candidate disease
-for that target (a strong historical-frequency prior);
-(\textit{v})~\textbf{Matrix Factorization}: TruncatedSVD on the
+for that target;
+(\textit{vi})~\textbf{Matrix Factorization}: TruncatedSVD on the
 binary positive interaction matrix;
-(\textit{vi})~\textbf{TF-IDF cosine}: lexical similarity between
+(\textit{vii})~\textbf{TF-IDF cosine}: lexical similarity between
 concatenated disease and target text fields.
-The last two are cold-start controls verifying that the
-target-disjoint regime is non-trivial.
+These simple controls verify that the
+target-disjoint regime is non-trivial. In particular, a leakage-free
+Target Mean is expected to collapse toward the global prior because
+test targets are unseen in every fold. We also include
+\textbf{Disease Mean} in the temporal table as a disease-prior control.
 
 % -----------------------------------------------------------------------
 \section{Results}
@@ -307,18 +314,21 @@ target-disjoint regime is non-trivial.
 In the $5{\times}5$ target-disjoint CV (Table~\ref{tab:cv}), OTRec
 achieves ROC-AUC $0.950$ (PR-AUC $0.844$), marginally surpassing
 OTTree ($0.947$ / $0.772$) and exceeding the Open Targets
-Score ($0.913$ / $0.454$).
+Score ($0.914$ / $0.455$).
 Because Han et al. uses only $14$ OTP evidence channels whereas OTRec
 and OTTree use the richer text+ontology+tractability feature set,
 OTRec's gain over Han et al. reflects both feature engineering and model
 class. The OTRec--OTTree gap isolates the two-tower contribution on
 matched inputs ($+0.003$ ROC-AUC).
-The large gap between OTRec and cold-start controls
-(Target Mean: $0.870$; Matrix Factorization: $0.811$; TF-IDF: $0.513$)
-indicates that the target-disjoint regime genuinely tests generalization
-to novel targets, and that OTRec's advantage comes from learned
-biological content transfer rather than interaction memorization or
-surface text matching.
+Among the simple controls, Disease Mean is the strongest
+historical prior ($0.873$ / $0.466$), whereas a leakage-free Target
+Mean collapses to the global prior ($0.500$ / $0.102$) because every
+test target is unseen in its evaluation fold. Matrix Factorization
+($0.811$ / $0.265$) and TF-IDF ($0.513$ / $0.106$) remain much weaker
+than OTRec, indicating that the target-disjoint regime genuinely tests
+generalization to novel targets and that OTRec's advantage comes from
+learned biological content transfer rather than interaction memorization
+or surface text matching.
 
 In the temporal setting (Table~\ref{tab:temporal}), OTRec improves over
 the retrospective OTP score on ROC-AUC by $0.305$ ($0.863$ vs.\
@@ -351,8 +361,9 @@ Model & ROC-AUC & ${\pm}$SD & PR-AUC & ${\pm}$SD \\
 OTTree (CatBoost)      & 0.947 & 0.005 & 0.772 & 0.023 \\
 Han et al.\ (2022)     & 0.910 & 0.014 & 0.726 & 0.046 \\
 \midrule
-Open Targets Score     & 0.913 & ---   & 0.454 & ---   \\
-Target Mean            & 0.870 & ---   & 0.482 & ---   \\
+Open Targets Score     & 0.914 & 0.005 & 0.455 & 0.030 \\
+Disease Mean           & 0.873 & 0.004 & 0.466 & 0.022 \\
+Target Mean            & 0.500 & 0.000 & 0.102 & 0.008 \\
 Matrix Factorization   & 0.811 & 0.008 & 0.265 & 0.014 \\
 TF-IDF cosine          & 0.513 & 0.016 & 0.106 & 0.009 \\
 \bottomrule
@@ -494,8 +505,7 @@ signaling as possible complementary axes for model-system follow-up.
 
 \paragraph{Croup and Coxsackievirus.}
 OTRec ranked FKBP1A, an immunophilin co-opted by viral replication
-complexes, among the top candidates; further rationale is documented
-in the repository.
+complexes, among the top candidates.
 
 \paragraph{Limited cutaneous systemic sclerosis.}
 PDE4C was ranked highly as a mechanism-based repurposing candidate;
@@ -503,8 +513,7 @@ apremilast (a PDE4 inhibitor) is already approved for related
 indications.
 
 \paragraph{Ulcerative colitis.}
-OTRec ranked IL6R highly; clinical context for IL6-axis blockade in
-UC is documented in the repository.
+OTRec ranked IL6R highly.
 
 \subsection{Feature Contributions and Model Characteristics}
 \label{sec:char}
@@ -648,9 +657,10 @@ $-$auxiliary head) is provided in the repository under
 \texttt{Outputs/CV\_DL/}.
 
 \textbf{S4.\ Baseline reproduction.}
-Matrix Factorization, TF-IDF, and Han-style XGBoost baselines can be
-reproduced via \texttt{baselines/run\_baselines.py}; per-fold metrics
-are in \texttt{Outputs/CV\_baselines/}.
+Disease Mean, Target Mean, Open Targets score, Matrix Factorization,
+and TF-IDF baselines can be reproduced via
+\texttt{baselines/run\_baselines.py}; per-fold metrics are in
+\texttt{Outputs/CV\_baselines/}.
 
 \input{checklist_filled.tex}
 

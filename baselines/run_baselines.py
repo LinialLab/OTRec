@@ -10,6 +10,9 @@ used by the neural retriever:
 
 It evaluates deliberately simple cold-start baselines:
 
+- Disease mean positive-rate prior
+- Target mean positive-rate prior
+- Raw Open Targets score
 - MF (implicit ALS) over the positive disease-target interaction matrix
 - Node2Vec over the positive bipartite disease-target graph
 - TF-IDF cosine between disease and target text descriptions
@@ -68,7 +71,14 @@ def parse_args() -> argparse.Namespace:
         "--models",
         nargs="+",
         default=["mf", "node2vec"],
-        choices=["mf", "node2vec", "tfidf"],
+        choices=[
+            "disease_mean",
+            "target_mean",
+            "ot_score",
+            "mf",
+            "node2vec",
+            "tfidf",
+        ],
     )
     parser.add_argument("--n-splits", type=int, default=5)
     parser.add_argument("--n-repeats", type=int, default=5)
@@ -130,6 +140,20 @@ def evaluate_predictions(y_true: np.ndarray, y_score: np.ndarray) -> dict[str, f
         "roc_auc": float(roc_auc_score(y_true, y_score)),
         "pr_auc": float(average_precision_score(y_true, y_score)),
     }
+
+
+def fit_group_mean_predict(
+    train_df: pd.DataFrame,
+    test_df: pd.DataFrame,
+    group_col: str,
+) -> np.ndarray:
+    group_means = train_df.groupby(group_col)["label"].mean()
+    prior = float(train_df["label"].mean())
+    return test_df[group_col].map(group_means).fillna(prior).to_numpy(dtype=np.float32)
+
+
+def fit_ot_score_predict(test_df: pd.DataFrame) -> np.ndarray:
+    return test_df["score"].to_numpy(dtype=np.float32)
 
 
 def fit_mf_predict(
@@ -331,7 +355,13 @@ def run_model(
         ].copy()
         test_df = df_learn.loc[test_mask].copy()
 
-        if model_name == "mf":
+        if model_name == "disease_mean":
+            preds = fit_group_mean_predict(train_df, test_df, group_col="diseaseId")
+        elif model_name == "target_mean":
+            preds = fit_group_mean_predict(train_df, test_df, group_col="targetId")
+        elif model_name == "ot_score":
+            preds = fit_ot_score_predict(test_df)
+        elif model_name == "mf":
             preds = fit_mf_predict(train_df, test_df, config)
         elif model_name == "node2vec":
             preds = fit_node2vec_predict(train_df, test_df, config)

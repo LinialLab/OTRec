@@ -1,8 +1,9 @@
 ﻿Model,ROC-AUC (Mean),ROC-AUC ( ± SD),PR-AUC ,PR-AUC ( ± SD)
 OTRec (Deep Learning),0.95,0.007,0.844,0.017
 OTTree (CatBoost),0.947,0.005,0.772,0.023
-Matrix factorization,0.811,0.008,0.265,0.014
-Target Mean Baseline,0.87,,0.482,
-TF-IDF cosine,0.513,0.016,0.106,0.009
 Han et al: XGB features + OT evidence,0.91,0.0142,0.726,0.0457
-Open Targets Score,0.913,,0.454,
+Open Targets Score,0.914,0.005,0.455,0.03
+Disease Mean Baseline,0.873,0.004,0.466,0.022
+Target Mean Baseline,0.5,0.0,0.102,0.008
+Matrix factorization,0.811,0.008,0.265,0.014
+TF-IDF cosine,0.513,0.016,0.106,0.009
