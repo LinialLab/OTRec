@@ -225,7 +225,9 @@ def fit_node2vec_predict(
         import networkx as nx
         from node2vec import Node2Vec as GensimNode2Vec
     except ImportError as exc:
-        raise ImportError("node2vec and networkx are required: pip install node2vec networkx") from exc
+        raise ImportError(
+            "node2vec and networkx are required: pip install node2vec networkx"
+        ) from exc
 
     positive_train = train_df.loc[
         train_df["label"] == 1, ["diseaseId", "targetId"]
@@ -261,9 +263,9 @@ def fit_node2vec_predict(
     )
 
     all_target_nodes = [f"t::{t}" for t in sorted(positive_train["targetId"].unique())]
-    target_vectors = np.array([
-        w2v.wv[node] for node in all_target_nodes if node in w2v.wv
-    ])
+    target_vectors = np.array(
+        [w2v.wv[node] for node in all_target_nodes if node in w2v.wv]
+    )
     if len(target_vectors) == 0:
         prior = float(train_df["label"].mean())
         return np.full(len(test_df), prior, dtype=np.float32)
@@ -280,7 +282,9 @@ def fit_node2vec_predict(
             continue
         dvec = w2v.wv[node_key]
         denom = float(np.linalg.norm(dvec)) * mean_target_norm
-        cosine = float(np.dot(dvec, mean_target_embedding) / denom) if denom > 0 else 0.0
+        cosine = (
+            float(np.dot(dvec, mean_target_embedding) / denom) if denom > 0 else 0.0
+        )
         scores[idx] = 0.5 * (cosine + 1.0)
     return scores
 

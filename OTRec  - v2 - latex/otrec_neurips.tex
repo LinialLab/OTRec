@@ -294,13 +294,12 @@ concatenated disease and target text fields;
 BioClinical-ModernBERT-base disease and target embeddings
 (\texttt{thomas-sounack/BioClinical-ModernBERT-base}) scored with a
 small MLP interaction head over concatenation, absolute difference,
-elementwise product, and cosine similarity. Due to compute cost, this
-baseline was run with the same target-disjoint protocol but over
-$4{\times}5$ folds rather than $5{\times}5$.
+elementwise product, and cosine similarity. Early stopping used a held-out 10\% ; test targets are never seen
+during training.
 These simple controls verify that the
 target-disjoint regime is non-trivial. In particular, a leakage-free
 Target Mean is expected to collapse toward the global prior because
-test targets are unseen in every fold. We also include
+test targets are unseen in every fold.% We also include
 \textbf{Disease Mean} in the temporal table as a disease-prior control.
 
 % -----------------------------------------------------------------------
@@ -339,7 +338,7 @@ OTRec's gain over Han et al. reflects both feature engineering and model
 class. The OTRec--OTTree gap isolates the two-tower contribution on
 matched inputs ($+0.003$ ROC-AUC).
 A frozen BioClinical-ModernBERT-base encoder reached
-$0.912 \pm 0.009$ ROC-AUC and $0.664 \pm 0.031$ PR-AUC - above the simple priors, but below the best models in PR-AUC.
+$0.912 \pm 0.008$ ROC-AUC and $0.666 \pm 0.028$ PR-AUC ($5{\times}5$ CV, same protocol) --- above the simple priors, but below the best models in PR-AUC.
 Among the simple controls, Disease Mean is the strongest
 historical prior ($0.873$ / $0.466$), whereas a leakage-free Target
 Mean collapses to the global prior ($0.500$ / $0.102$) because every
@@ -354,7 +353,11 @@ the retrospective OTP score on ROC-AUC by $0.314$
 ($0.872 \pm 0.005$ vs.\ $0.559$), while achieving PR-AUC
 ($0.288 \pm 0.009$) close to the stronger historical Target Mean prior
 ($0.299$, gap $0.011$) and well above a disease-only prior ($0.052$).
-Fast cold-start controls are substantially weaker in this prospective
+The BioClinical-ModernBERT encoder, achieves $0.856 \pm 0.003$ ROC-AUC and
+$0.311 \pm 0.011$ PR-AUC, marginally below OTRec on ROC-AUC but above it
+on PR-AUC---an interesting reversal from the CV setting where OTRec led on
+both metrics. The underlying embedding model's dataset included post 2022 data, so there may have been leakage.
+Cold-start controls are substantially weaker in this prospective
 regime (Matrix Factorization: $0.553$ / $0.050$; TF-IDF cosine:
 $0.512$ / $0.042$), indicating that historical priors and learned
 representations carry most of the forward signal.
@@ -379,7 +382,7 @@ Model & ROC-AUC & ${\pm}$SD & PR-AUC & ${\pm}$SD \\
 \textbf{OTRec (ours)}  & \textbf{0.950} & 0.007 & \textbf{0.844} & 0.017 \\
 OTTree (CatBoost)      & 0.947 & 0.005 & 0.772 & 0.023 \\
 Han et al.\ (2022)     & 0.910 & 0.014 & 0.726 & 0.046 \\
-Frozen BioClinical-ModernBERT + MLP & 0.912 & 0.009 & 0.664 & 0.031 \\
+Frozen BioClinical-ModernBERT + MLP & 0.912 & 0.008 & 0.666 & 0.028 \\
 \midrule
 Open Targets Score     & 0.914 & 0.005 & 0.455 & 0.030 \\
 Disease Mean           & 0.873 & 0.004 & 0.466 & 0.022 \\
@@ -402,6 +405,7 @@ Model & ROC-AUC & ${\pm}$SD & PR-AUC & ${\pm}$SD \\
 \midrule
 \textbf{OTRec (ours)} & \textbf{0.872} & 0.005 & 0.288 & 0.009 \\
 OTTree (CatBoost)     & 0.855 & 0.004 & 0.223 & 0.005 \\
+Frozen BioClinical-ModernBERT + MLP & 0.856 & 0.003 & 0.311 & 0.011 \\
 Target Mean           & 0.832 & 0 & \textbf{0.299} & 0 \\
 Matrix Factorization  & 0.553 & 0 & 0.050 & 0 \\
 TF-IDF cosine         & 0.512 & 0 & 0.042 & 0 \\
