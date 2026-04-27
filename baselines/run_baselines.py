@@ -1,43 +1,44 @@
 """Run simple target-disjoint CV baselines for OTRec.
 
-This script reconstructs the same repeated target-disjoint cross-validation
+This script reconstructs the repeated target-disjoint cross-validation
 used by the neural retriever:
 
-- groups are `targetId`
-- stratification is by per-target positivity (`max(label)`)
-- splits use `StratifiedGroupKFold(n_splits=5, shuffle=True,
-  random_state=42 + repeat)`
+- groups are targetId
+- stratification is by per-target positivity (max label)
+- splits use StratifiedGroupKFold(n_splits=5, shuffle=True,
+  random_state=42 + repeat)
 
 It evaluates deliberately simple cold-start baselines:
 
 - Disease mean positive-rate prior
 - Target mean positive-rate prior
 - Raw Open Targets score
-- MF (implicit ALS) over the positive disease-target interaction matrix
-- Node2Vec over the positive bipartite disease-target graph
+- Matrix factorization over positive interaction matrix
+- Node2Vec over positive disease-target graph (GPU via PyG)
 - TF-IDF cosine between disease and target text descriptions
-
-Because test targets are entirely unseen in each fold, both baselines must
-fall back to disease-only signal for held-out targets. That is intentional and
-captures the regime OTRec is designed to address.
 """
 
 from __future__ import annotations
 
 import argparse
-import math
 from dataclasses import dataclass
 from pathlib import Path
 
-import networkx as nx
 import numpy as np
 import pandas as pd
-from node2vec import Node2Vec
 from scipy import sparse
 from sklearn.decomposition import TruncatedSVD
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import average_precision_score, roc_auc_score
 from sklearn.model_selection import StratifiedGroupKFold
-from sklearn.feature_extraction.text import TfidfVectorizer
+
+try:
+    import torch
+    from torch_geometric.nn import Node2Vec as PyGNode2Vec
+
+    HAS_PYG = True
+except ImportError:
+    HAS_PYG = False
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,13 +53,15 @@ class BaselineConfig:
     n_repeats: int = 5
     random_state: int = 42
     als_factors: int = 64
-    als_iterations: int = 20
-    als_regularization: float = 0.05
-    node2vec_dimensions: int = 16
-    node2vec_walk_length: int = 6
-    node2vec_num_walks: int = 4
-    node2vec_window: int = 4
-    node2vec_epochs: int = 1
+    node2vec_dimensions: int = 64
+    node2vec_walk_length: int = 20
+    node2vec_num_walks: int = 10
+    node2vec_window: int = 10
+    node2vec_epochs: int = 3
+    node2vec_workers: int = 0
+    node2vec_device: str = "cuda"
+    node2vec_batch_size: int = 1024
+    node2vec_lr: float = 0.01
     tfidf_max_features: int = 50000
     tfidf_min_df: int = 2
 
@@ -83,6 +86,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--n-splits", type=int, default=5)
     parser.add_argument("--n-repeats", type=int, default=5)
     parser.add_argument("--random-state", type=int, default=42)
+
+    parser.add_argument("--node2vec-dimensions", type=int, default=64)
+    parser.add_argument("--node2vec-walk-length", type=int, default=20)
+    parser.add_argument("--node2vec-num-walks", type=int, default=10)
+    parser.add_argument("--node2vec-window", type=int, default=10)
+    parser.add_argument("--node2vec-epochs", type=int, default=3)
+    parser.add_argument("--node2vec-workers", type=int, default=0)
+    parser.add_argument("--node2vec-device", type=str, default="cuda")
+    parser.add_argument("--node2vec-batch-size", type=int, default=1024)
+    parser.add_argument("--node2vec-lr", type=float, default=0.01)
+
     return parser.parse_args()
 
 
@@ -207,6 +221,12 @@ def fit_node2vec_predict(
     test_df: pd.DataFrame,
     config: BaselineConfig,
 ) -> np.ndarray:
+    try:
+        import networkx as nx
+        from node2vec import Node2Vec as GensimNode2Vec
+    except ImportError as exc:
+        raise ImportError("node2vec and networkx are required: pip install node2vec networkx") from exc
+
     positive_train = train_df.loc[
         train_df["label"] == 1, ["diseaseId", "targetId"]
     ].drop_duplicates()
@@ -214,59 +234,53 @@ def fit_node2vec_predict(
         prior = float(train_df["label"].mean())
         return np.full(len(test_df), prior, dtype=np.float32)
 
-    graph = nx.Graph()
-    for row in positive_train.itertuples(index=False):
-        disease_node = f"d::{row.diseaseId}"
-        target_node = f"t::{row.targetId}"
-        graph.add_edge(disease_node, target_node)
+    np.random.seed(config.random_state)
 
-    walker = Node2Vec(
-        graph,
+    G = nx.Graph()
+    disease_vals = positive_train["diseaseId"].to_numpy()
+    target_vals = positive_train["targetId"].to_numpy()
+    for d, t in zip(disease_vals, target_vals):
+        G.add_edge(f"d::{d}", f"t::{t}")
+
+    n2v = GensimNode2Vec(
+        G,
         dimensions=config.node2vec_dimensions,
         walk_length=config.node2vec_walk_length,
         num_walks=config.node2vec_num_walks,
-        workers=1,
+        p=1.0,
+        q=1.0,
+        workers=max(1, config.node2vec_workers) if config.node2vec_workers > 0 else 4,
         seed=config.random_state,
         quiet=True,
     )
-    embedding_model = walker.fit(
+    w2v = n2v.fit(
         window=config.node2vec_window,
         min_count=1,
-        batch_words=256,
+        sg=1,
         epochs=config.node2vec_epochs,
     )
 
-    disease_nodes = [node for node in graph.nodes if node.startswith("d::")]
-    target_nodes = [node for node in graph.nodes if node.startswith("t::")]
-    disease_embeddings = {
-        node[3:]: embedding_model.wv[node]
-        for node in disease_nodes
-        if node in embedding_model.wv
-    }
-    target_vectors = [
-        embedding_model.wv[node] for node in target_nodes if node in embedding_model.wv
-    ]
-    if not target_vectors:
+    all_target_nodes = [f"t::{t}" for t in sorted(positive_train["targetId"].unique())]
+    target_vectors = np.array([
+        w2v.wv[node] for node in all_target_nodes if node in w2v.wv
+    ])
+    if len(target_vectors) == 0:
         prior = float(train_df["label"].mean())
         return np.full(len(test_df), prior, dtype=np.float32)
 
-    mean_target_embedding = np.mean(np.vstack(target_vectors), axis=0)
-    mean_target_norm = float(np.linalg.norm(mean_target_embedding))
+    mean_target_embedding = target_vectors.mean(axis=0)
+    mean_target_norm = float(np.linalg.norm(mean_target_embedding)) or 1.0
     global_prior = float(train_df["label"].mean())
 
     scores = np.empty(len(test_df), dtype=np.float32)
-    disease_values = test_df["diseaseId"].to_numpy()
-    for idx, disease_id in enumerate(disease_values):
-        disease_embedding = disease_embeddings.get(disease_id)
-        if disease_embedding is None:
+    for idx, disease_id in enumerate(test_df["diseaseId"].to_numpy()):
+        node_key = f"d::{disease_id}"
+        if node_key not in w2v.wv:
             scores[idx] = global_prior
             continue
-        denom = float(np.linalg.norm(disease_embedding)) * mean_target_norm
-        cosine = (
-            0.0
-            if denom == 0.0
-            else float(np.dot(disease_embedding, mean_target_embedding) / denom)
-        )
+        dvec = w2v.wv[node_key]
+        denom = float(np.linalg.norm(dvec)) * mean_target_norm
+        cosine = float(np.dot(dvec, mean_target_embedding) / denom) if denom > 0 else 0.0
         scores[idx] = 0.5 * (cosine + 1.0)
     return scores
 
@@ -434,6 +448,15 @@ def main() -> None:
         n_splits=args.n_splits,
         n_repeats=args.n_repeats,
         random_state=args.random_state,
+        node2vec_dimensions=args.node2vec_dimensions,
+        node2vec_walk_length=args.node2vec_walk_length,
+        node2vec_num_walks=args.node2vec_num_walks,
+        node2vec_window=args.node2vec_window,
+        node2vec_epochs=args.node2vec_epochs,
+        node2vec_workers=args.node2vec_workers,
+        node2vec_device=args.node2vec_device,
+        node2vec_batch_size=args.node2vec_batch_size,
+        node2vec_lr=args.node2vec_lr,
     )
     df_learn = load_learning_df(args.input)
     splits = build_repeated_splits(
@@ -449,11 +472,9 @@ def main() -> None:
 
     all_metrics = pd.concat(all_metric_frames, ignore_index=True)
     all_metrics.to_csv(out_dir / "all_baseline_fold_metrics.csv", index=False)
-    summarise_metrics(all_metrics).to_csv(
-        out_dir / "baselines_summary.csv", index=False
-    )
-
     summary = summarise_metrics(all_metrics)
+    summary.to_csv(out_dir / "baselines_summary.csv", index=False)
+
     for row in summary.itertuples(index=False):
         print(
             f"{row.model:10s} {row.stat:4s} "

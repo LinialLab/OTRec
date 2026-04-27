@@ -266,7 +266,7 @@ $(\mathrm{diseaseId},\mathrm{targetId},\mathrm{label})$ tuple already present
 in 2022.
 
 \textbf{Baselines.}
-We benchmark against six primary methods spanning ML, ontology-aware,
+We benchmark against eight primary methods spanning ML, ontology-aware,
 and cold-start controls:
 (\textit{i})~\textbf{OTTree}: CatBoost~\citep{dorogush2018} trained on
 the same OTRec feature set, isolating the contribution of the
@@ -289,7 +289,14 @@ for that target;
 (\textit{vi})~\textbf{Matrix Factorization}: TruncatedSVD on the
 binary positive interaction matrix;
 (\textit{vii})~\textbf{TF-IDF cosine}: lexical similarity between
-concatenated disease and target text fields.
+concatenated disease and target text fields;
+(\textit{viii})~\textbf{Frozen biomedical encoder}: normalized
+BioClinical-ModernBERT-base disease and target embeddings
+(\texttt{thomas-sounack/BioClinical-ModernBERT-base}) scored with a
+small MLP interaction head over concatenation, absolute difference,
+elementwise product, and cosine similarity. Due to compute cost, this
+baseline was run with the same target-disjoint protocol but over
+$4{\times}5$ folds rather than $5{\times}5$.
 These simple controls verify that the
 target-disjoint regime is non-trivial. In particular, a leakage-free
 Target Mean is expected to collapse toward the global prior because
@@ -331,6 +338,8 @@ and OTTree use the richer text+ontology+tractability feature set,
 OTRec's gain over Han et al. reflects both feature engineering and model
 class. The OTRec--OTTree gap isolates the two-tower contribution on
 matched inputs ($+0.003$ ROC-AUC).
+A frozen BioClinical-ModernBERT-base encoder reached
+$0.912 \pm 0.009$ ROC-AUC and $0.664 \pm 0.031$ PR-AUC - above the simple priors, but below the best models in PR-AUC.
 Among the simple controls, Disease Mean is the strongest
 historical prior ($0.873$ / $0.466$), whereas a leakage-free Target
 Mean collapses to the global prior ($0.500$ / $0.102$) because every
@@ -370,6 +379,7 @@ Model & ROC-AUC & ${\pm}$SD & PR-AUC & ${\pm}$SD \\
 \textbf{OTRec (ours)}  & \textbf{0.950} & 0.007 & \textbf{0.844} & 0.017 \\
 OTTree (CatBoost)      & 0.947 & 0.005 & 0.772 & 0.023 \\
 Han et al.\ (2022)     & 0.910 & 0.014 & 0.726 & 0.046 \\
+Frozen BioClinical-ModernBERT + MLP & 0.912 & 0.009 & 0.664 & 0.031 \\
 \midrule
 Open Targets Score     & 0.914 & 0.005 & 0.455 & 0.030 \\
 Disease Mean           & 0.873 & 0.004 & 0.466 & 0.022 \\
@@ -612,12 +622,14 @@ experimentally validated. The full unfiltered candidate set is
 released precisely to allow independent, unsupervised evaluation.
 
 \textbf{Bag-of-words text encoding.}
-We use count-mode text vectorization rather than a biomedical
-transformer encoder (BioBERT, PubMedBERT). This trades representational
-richness for inference scale (${\sim}87$M pairs at prediction time)
-and interpretability of contributing tokens.  Substituting a frozen
-biomedical LM into either tower is a natural extension we do not
-benchmark here.
+Our main OTRec model uses count-mode text vectorization rather than a
+pretrained biomedical transformer tower. This trades representational
+richness for inference scale (${\sim}87$M pairs at prediction time) and
+interpretability of contributing tokens. In a separate frozen
+BioClinical-ModernBERT-base baseline, pretrained embeddings improved
+substantially over TF-IDF but remained below OTRec and OTTree in
+target-disjoint CV, so stronger end-to-end encoder adaptation remains
+an open direction rather than an established win here.
 
 \textbf{Implicit-feedback / PU formulation.}
 All non-clinical pairs are treated as $y{=}0$; no positive-unlabeled
@@ -646,10 +658,10 @@ from text and ontology improve over the retrospective evidence score on
 ROC-AUC, while PR-AUC matches a strong historical target-prior baseline.
 OTRec makes this ranking available at scale: ${\sim}282{,}500$
 candidate associations, an interactive query interface, and a temporal benchmark against which future models can be directly compared.
-Rolling release splits, additional data sources, and transformer-based
-tower encoders are the natural next steps to test whether deeper
-language representations extend the prospective advantage beyond the
-BoW ceiling established here.
+Rolling release splits, additional data sources, and better-integrated
+biomedical encoder training are the natural next steps to test whether
+deeper language representations can close the remaining gap to the
+count-based OTRec towers on this benchmark.
 
 % -----------------------------------------------------------------------
 \section*{Availability}

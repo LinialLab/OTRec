@@ -1,0 +1,2 @@
+model_name,raw_cosine_roc_auc,raw_cosine_pr_auc,mlp_roc_auc,mlp_pr_auc,best_epoch,best_val_pr_auc,encode_runtime_seconds,train_runtime_seconds,total_runtime_seconds,train_rows,val_rows,test_rows,train_targets,val_targets,test_targets,train_positive_rate,val_positive_rate,test_positive_rate
+thomas-sounack/BioClinical-ModernBERT-base,0.5263504664598373,0.09542637007553914,0.8914410923999584,0.6076706938981298,6,0.6496875242158311,29.286041278000084,24.29347589000008,83.62948601700009,470607,49504,143240,1095,122,305,0.10385735868782232,0.10633484162895927,0.09349343758726612
