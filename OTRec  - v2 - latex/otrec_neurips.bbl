@@ -1,0 +1,223 @@
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abid et~al.(2019)Abid, Abdalla, Abid, Khan, Alfozan, and
+  Zou]{abid2019gradio}
+Abubakar Abid, Ali Abdalla, Ali Abid, Dawood Khan, Abdulrahman Alfozan, and
+  James Zou.
+\newblock Gradio: Hassle-free sharing and testing of ml models in the wild,
+  2019.
+\newblock URL \url{https://arxiv.org/abs/1906.02569}.
+
+\bibitem[Ain et~al.(2015)Ain, Aleksandrova, Roessler, and
+  Ballester]{ulain2015mlscoring}
+Qurrat~Ul Ain, Antoniya Aleksandrova, Florian~D. Roessler, and Pedro~J.
+  Ballester.
+\newblock Machine-learning scoring functions to improve structure-based binding
+  affinity prediction and virtual screening.
+\newblock \emph{WIREs Computational Molecular Science}, 5\penalty0
+  (6):\penalty0 405--424, 2015.
+\newblock \doi{10.1002/wcms.1225}.
+\newblock URL \url{https://doi.org/10.1002/wcms.1225}.
+
+\bibitem[Buniello et~al.(2025)Buniello, Suveges, Cruz-Castillo,
+  et~al.]{buniello2025}
+Annalisa Buniello, Daniel Suveges, Carla Cruz-Castillo, et~al.
+\newblock Open targets platform: Facilitating therapeutic hypotheses building
+  in drug discovery.
+\newblock \emph{Nucleic Acids Research}, 53\penalty0 (D1):\penalty0
+  D1467--D1475, 2025.
+\newblock \doi{10.1093/nar/gkae1128}.
+\newblock URL \url{https://doi.org/10.1093/nar/gkae1128}.
+
+\bibitem[Chollet(2015)]{chollet2015}
+Francois Chollet.
+\newblock Keras.
+\newblock \url{https://keras.io}, 2015.
+\newblock Accessed 2026-04-25.
+
+\bibitem[Dorogush et~al.(2018)Dorogush, Ershov, and Gulin]{dorogush2018}
+Anna~Veronika Dorogush, Vasily Ershov, and Andrey Gulin.
+\newblock Catboost: Gradient boosting with categorical features support.
+\newblock \emph{arXiv preprint arXiv:1810.11363}, 2018.
+\newblock URL \url{https://arxiv.org/abs/1810.11363}.
+
+\bibitem[Finan et~al.(2017)Finan, Gaulton, Kruger, et~al.]{finan2017}
+Chris Finan, Anna Gaulton, Felix~A. Kruger, et~al.
+\newblock The druggable genome and support for target identification and
+  validation in drug development.
+\newblock \emph{Science Translational Medicine}, 9\penalty0 (383):\penalty0
+  eaag1166, 2017.
+\newblock \doi{10.1126/scitranslmed.aag1166}.
+\newblock URL \url{https://doi.org/10.1126/scitranslmed.aag1166}.
+
+\bibitem[Gu et~al.(2021)Gu, Tinn, Cheng, Lucas, Usuyama, Liu, Naumann, Gao, and
+  Poon]{gu2021}
+Yu~Gu, Robert Tinn, Hao Cheng, Michael Lucas, Naoto Usuyama, Xiang Liu, Tristan
+  Naumann, Jianfeng Gao, and Hoifung Poon.
+\newblock Domain-specific language model pretraining for biomedical natural
+  language processing.
+\newblock \emph{ACM Transactions on Computing for Healthcare}, 3\penalty0
+  (1):\penalty0 1--23, 2021.
+\newblock \doi{10.1145/3458754}.
+\newblock URL \url{https://doi.org/10.1145/3458754}.
+
+\bibitem[Han et~al.(2022)Han, Klinger, Rajpal, Zhu, and Teeple]{han2022}
+Yingnan Han, Katherine Klinger, Deepak~K. Rajpal, Cheng Zhu, and Erin Teeple.
+\newblock Empowering the discovery of novel target--disease associations via
+  machine learning in the open targets platform.
+\newblock \emph{BMC Bioinformatics}, 23:\penalty0 232, 2022.
+\newblock \doi{10.1186/s12859-022-04753-4}.
+\newblock URL \url{https://doi.org/10.1186/s12859-022-04753-4}.
+
+\bibitem[Harel and Radinsky(2018)]{harel2018}
+Shahar Harel and Kira Radinsky.
+\newblock Accelerating prototype-based drug discovery using conditional
+  diversity networks.
+\newblock In \emph{Proceedings of the 24th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pages 331--339, 2018.
+\newblock \doi{10.1145/3219819.3219882}.
+\newblock URL \url{https://doi.org/10.1145/3219819.3219882}.
+
+\bibitem[Huang et~al.(2020)Huang, Fu, Glass, Zitnik, Xiao, and Sun]{huang2020}
+Kexin Huang, Tianfan Fu, Lucas~M. Glass, Marinka Zitnik, Cao Xiao, and Jimeng
+  Sun.
+\newblock Deeppurpose: a deep learning library for drug--target interaction
+  prediction.
+\newblock \emph{Bioinformatics}, 36\penalty0 (22-23):\penalty0 5545--5547,
+  2020.
+\newblock \doi{10.1093/bioinformatics/btaa1005}.
+\newblock URL \url{https://doi.org/10.1093/bioinformatics/btaa1005}.
+
+\bibitem[Huang et~al.(2021{\natexlab{a}})Huang, Fu, Gao, Zhao, Roohani,
+  Leskovec, Coley, Xiao, Sun, and Zitnik]{huang2021tdc}
+Kexin Huang, Tianfan Fu, Wenhao Gao, Yue Zhao, Yusuf Roohani, Jure Leskovec,
+  Connor~W. Coley, Cao Xiao, Jimeng Sun, and Marinka Zitnik.
+\newblock Therapeutics data commons: Machine learning datasets and tasks for
+  drug discovery and development.
+\newblock In \emph{NeurIPS 2021 Datasets and Benchmarks Track},
+  2021{\natexlab{a}}.
+\newblock URL \url{https://openreview.net/forum?id=8nvgnORnoWr}.
+
+\bibitem[Huang et~al.(2021{\natexlab{b}})Huang, Xiao, Glass, and
+  Sun]{huang2021moltrans}
+Kexin Huang, Cao Xiao, Lucas~M. Glass, and Jimeng Sun.
+\newblock Moltrans: Molecular interaction transformer for drug--target
+  interaction prediction.
+\newblock \emph{Bioinformatics}, 37\penalty0 (6):\penalty0 830--836,
+  2021{\natexlab{b}}.
+\newblock \doi{10.1093/bioinformatics/btaa880}.
+
+\bibitem[Karczewski et~al.(2020)Karczewski, Francioli, Tiao, Cummings,
+  Alf{\"o}ldi, Wang, Collins, Laricchia, Ganna, Birnbaum,
+  et~al.]{karczewski2020gnomad}
+Konrad~J. Karczewski, Laurent~C. Francioli, Grace Tiao, Beryl~B. Cummings,
+  Jessica Alf{\"o}ldi, Qingbo Wang, Ryan~L. Collins, Kristen~M. Laricchia,
+  Andrea Ganna, Daniel~P. Birnbaum, et~al.
+\newblock The mutational constraint spectrum quantified from variation in
+  141,456 humans.
+\newblock \emph{Nature}, 581:\penalty0 434--443, 2020.
+\newblock \doi{10.1038/s41586-020-2308-7}.
+\newblock URL \url{https://doi.org/10.1038/s41586-020-2308-7}.
+
+\bibitem[Malone et~al.(2010)Malone, Holloway, Adamusiak, Kapushesky, Zheng,
+  Kolesnikov, Zhukova, Brazma, and Parkinson]{malone2010efo}
+James Malone, Ele Holloway, Tomasz Adamusiak, Misha Kapushesky, Jie Zheng,
+  Nikolay Kolesnikov, Anna Zhukova, Alvis Brazma, and Helen Parkinson.
+\newblock Modeling sample variables with an experimental factor ontology.
+\newblock \emph{Bioinformatics}, 26\penalty0 (8):\penalty0 1112--1118, 2010.
+\newblock \doi{10.1093/bioinformatics/btq099}.
+\newblock URL \url{https://doi.org/10.1093/bioinformatics/btq099}.
+
+\bibitem[Milacic et~al.(2024)Milacic, Beavers, Conley, Gong, Gillespie, Griss,
+  Haw, Jassal, Matthews, May, et~al.]{milacic2024reactome}
+Marija Milacic, Deidre Beavers, Patrick Conley, Chuqiao Gong, Marc Gillespie,
+  Johannes Griss, Robin Haw, Bijay Jassal, Lisa Matthews, Bruce May, et~al.
+\newblock The reactome pathway knowledgebase 2024.
+\newblock \emph{Nucleic Acids Research}, 52\penalty0 (D1):\penalty0 D672--D678,
+  2024.
+\newblock \doi{10.1093/nar/gkad1025}.
+\newblock URL \url{https://doi.org/10.1093/nar/gkad1025}.
+
+\bibitem[Nicholson and Greene(2020)]{nicholson2020}
+D.~N. Nicholson and Casey~S. Greene.
+\newblock Constructing knowledge graphs and their biomedical applications.
+\newblock \emph{Computational and Structural Biotechnology Journal},
+  18:\penalty0 1414--1428, 2020.
+\newblock \doi{10.1016/j.csbj.2020.05.017}.
+\newblock URL \url{https://doi.org/10.1016/j.csbj.2020.05.017}.
+
+\bibitem[Ofer et~al.(2026)Ofer, Linial, and Shahaf]{ofer2025}
+Dan Ofer, Michal Linial, and Dafna Shahaf.
+\newblock Interfeat: a pipeline for finding interesting scientific features.
+\newblock \emph{Scientific Reports}, 2026.
+\newblock \doi{10.1038/s41598-026-43169-5}.
+\newblock URL \url{https://doi.org/10.1038/s41598-026-43169-5}.
+
+\bibitem[{Open Targets Platform}(2022)]{opentargets2202release}
+{Open Targets Platform}.
+\newblock Open targets platform 22.02 has been released.
+\newblock
+  \url{https://blog.opentargets.org/open-targets-platform-22-02-release/},
+  2022.
+\newblock Accessed 2026-04-26.
+
+\bibitem[{Open Targets Platform}(2025{\natexlab{a}})]{opentargets2506release}
+{Open Targets Platform}.
+\newblock Open targets platform 25.06 has been released.
+\newblock
+  \url{https://blog.opentargets.org/open-targets-platform-25-06-release/},
+  2025{\natexlab{a}}.
+\newblock Accessed 2026-04-26.
+
+\bibitem[{Open Targets Platform}(2025{\natexlab{b}})]{opentargetsdownloads}
+{Open Targets Platform}.
+\newblock Open targets platform data downloads.
+\newblock \url{https://platform.opentargets.org/downloads}, 2025{\natexlab{b}}.
+\newblock Accessed 2026-04-26.
+
+\bibitem[Ratajczak et~al.(2022)Ratajczak, Joblin, Ringsquandl, and
+  Hildebrandt]{ratajczak2022taskdriven}
+Florin Ratajczak, Mitchell Joblin, Martin Ringsquandl, and Marcel Hildebrandt.
+\newblock Task-driven knowledge graph filtering improves prioritizing drugs for
+  repurposing.
+\newblock \emph{BMC Bioinformatics}, 23:\penalty0 84, 2022.
+\newblock \doi{10.1186/s12859-022-04608-y}.
+
+\bibitem[Richardson et~al.(2023)Richardson, Navarro, Amaral, and
+  Stoeger]{richardson2023understudied}
+Reese A.~K. Richardson, Heliodoro~Tejedor Navarro, Luis A.~Nunes Amaral, and
+  Thomas Stoeger.
+\newblock Meta-research: understudied genes are lost in a leaky pipeline
+  between genome-wide assays and reporting of results.
+\newblock \emph{bioRxiv}, 2023.
+\newblock \doi{10.1101/2023.02.28.530483}.
+
+\bibitem[{The Gene Ontology Consortium}(2023)]{geneontology2023}
+{The Gene Ontology Consortium}.
+\newblock The gene ontology knowledgebase in 2023.
+\newblock \emph{Genetics}, 224\penalty0 (1):\penalty0 iyad031, 2023.
+\newblock \doi{10.1093/genetics/iyad031}.
+\newblock URL \url{https://doi.org/10.1093/genetics/iyad031}.
+
+\bibitem[{UniProt Consortium}(2025)]{uniprot2025}
+{UniProt Consortium}.
+\newblock Uniprot: the universal protein knowledgebase in 2025.
+\newblock \emph{Nucleic Acids Research}, 53\penalty0 (D1):\penalty0 D609--D617,
+  2025.
+\newblock \doi{10.1093/nar/gkae1010}.
+\newblock URL \url{https://doi.org/10.1093/nar/gkae1010}.
+
+\bibitem[Wang et~al.(2019)Wang, Zhang, Zhang, Leskovec, Zhao, Li, and
+  Wang]{wang2019kgnnls}
+Hongwei Wang, Fuzheng Zhang, Mengdi Zhang, Jure Leskovec, Miao Zhao, Wenjie Li,
+  and Zhongyuan Wang.
+\newblock Knowledge-aware graph neural networks with label smoothness
+  regularization for recommender systems.
+\newblock \emph{arXiv preprint arXiv:1905.04413}, 2019.
+
+\end{thebibliography}
