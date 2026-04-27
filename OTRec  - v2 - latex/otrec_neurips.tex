@@ -288,9 +288,10 @@ computed on the training split, broadcast to every candidate disease
 for that target;
 (\textit{vi})~\textbf{Matrix Factorization}: TruncatedSVD on the
 binary positive interaction matrix;
-(\textit{vii})~\textbf{TF-IDF cosine}: lexical similarity between
+(\textit{vii})~\textbf{Node2Vec}~\citep{grover2016node2vec}: bipartite graph of positive disease--target pairs; node embeddings learned via random walks (dimensions $64$, walk length $20$, walks per node $10$, context window $10$, $3$ epochs); test-disease scores computed as cosine similarity to the mean training-target embedding;
+(\textit{viii})~\textbf{TF-IDF cosine}: lexical similarity between
 concatenated disease and target text fields;
-(\textit{viii})~\textbf{Frozen biomedical encoder}: normalized
+(\textit{ix})~\textbf{Frozen biomedical encoder}: normalized
 BioClinical-ModernBERT-base disease and target embeddings
 (\texttt{thomas-sounack/BioClinical-ModernBERT-base}) scored with a
 small MLP interaction head over concatenation, absolute difference,
@@ -343,7 +344,7 @@ Among the simple controls, Disease Mean is the strongest
 historical prior ($0.873$ / $0.466$), whereas a leakage-free Target
 Mean collapses to the global prior ($0.500$ / $0.102$) because every
 test target is unseen in its evaluation fold. Matrix Factorization
-($0.811$ / $0.265$) and TF-IDF ($0.513$ / $0.106$) remain much weaker
+($0.811$ / $0.265$), Node2Vec ($0.684$ / $0.139$), and TF-IDF ($0.513$ / $0.106$) remain much weaker
 than OTRec, indicating that the target-disjoint regime genuinely tests
 generalization to novel targets and that OTRec's advantage comes from
 learned biological content transfer rather than interaction memorization or surface text matching.
@@ -388,6 +389,7 @@ Open Targets Score     & 0.914 & 0.005 & 0.455 & 0.030 \\
 Disease Mean           & 0.873 & 0.004 & 0.466 & 0.022 \\
 Target Mean            & 0.500 & 0 & 0.102 & 0.008 \\
 Matrix Factorization   & 0.811 & 0.008 & 0.265 & 0.014 \\
+Node2Vec               & 0.684 & 0.006 & 0.139 & 0.013 \\
 TF-IDF cosine          & 0.513 & 0.016 & 0.106 & 0.009 \\
 \bottomrule
 \end{tabular}

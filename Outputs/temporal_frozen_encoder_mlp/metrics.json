@@ -1,0 +1,16 @@
+{
+  "model_name": "thomas-sounack/BioClinical-ModernBERT-base",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "roc_auc_mean": 0.8555116242508894,
+  "roc_auc_std": 0.0028747634817870545,
+  "pr_auc_mean": 0.31110849054181067,
+  "pr_auc_std": 0.011261586061683499,
+  "encode_runtime_seconds": 34.155778690999796,
+  "total_runtime_seconds": 234.80189948399948
+}

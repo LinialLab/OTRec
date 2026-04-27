@@ -1,8 +1,9 @@
 Model,ROC-AUC,ROC-AUC SD,PR-AUC,PR-AUC SD
 OTRec,0.872,0.005,0.288,0.009
 OTTree (CatBoost),0.855,0.004,0.223,0.005
-Target Mean Baseline,0.832,0.000,0.299,0.000
-Matrix Factorization,0.553,0.000,0.050,0.000
-TF-IDF cosine,0.512,0.000,0.042,0.000
-Disease Mean Baseline,0.594,0.000,0.052,0.000
-Open Targets Score,0.559,0.000,0.082,0.000
+Frozen BioClinical-ModernBERT + MLP,0.856,0.003,0.311,0.011
+Target Mean Baseline,0.832,0.0,0.299,0.0
+Matrix Factorization,0.553,0.0,0.05,0.0
+TF-IDF cosine,0.512,0.0,0.042,0.0
+Disease Mean Baseline,0.594,0.0,0.052,0.0
+Open Targets Score,0.559,0.0,0.082,0.0

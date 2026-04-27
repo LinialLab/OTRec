@@ -1,7 +1,8 @@
-﻿Model,ROC-AUC (Mean),ROC-AUC ( ± SD),PR-AUC ,PR-AUC ( ± SD)
+Model,ROC-AUC (Mean),ROC-AUC ( ± SD),PR-AUC ,PR-AUC ( ± SD)
 OTRec (Deep Learning),0.95,0.007,0.844,0.017
 OTTree (CatBoost),0.947,0.005,0.772,0.023
 Han et al: XGB features + OT evidence,0.91,0.0142,0.726,0.0457
+Frozen BioClinical-ModernBERT + MLP,0.912,0.008,0.666,0.028
 Open Targets Score,0.914,0.005,0.455,0.03
 Disease Mean Baseline,0.873,0.004,0.466,0.022
 Target Mean Baseline,0.5,0.0,0.102,0.008
