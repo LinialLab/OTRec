@@ -83,7 +83,7 @@ representations from raw biomedical text and ontology. These representations
 are scored by cosine similarity, which natively enables attribute-cold-start
 inference for targets absent from training folds but still represented
 through public annotations.
-Validated in a temporal hold-out against later trial entries, it improves on the retrospective OTP score and the learned baselines in the target-disjoint CV. We release candidate associations ${\sim}282{,}500$ candidate associations above a $0.65$ score threshold with a fully interactive platform.
+Validated in a temporal hold-out against later trial entries, it improves on the retrospective OTP score and the learned baselines in the target-disjoint CV. We release ${\sim}282{,}500$ candidate associations above a $0.65$ score threshold with a fully interactive platform.
 
 Our contributions are threefold:
 (i) A two-tower neural recommender that learns disease and target
@@ -114,14 +114,14 @@ It inherits the retrospective bias of OTP evidence channels, which is
 precisely what our temporal evaluation is designed to expose.
 
 \textbf{Knowledge-graph and graph neural network DTI.}
-KG embedding and GNN methods, such as DRKG and KGNN-LS,
-integrate heterogeneous biomedical entities and relations~\citep{ratajczak2022taskdriven,wang2019kgnnls,nicholson2020}.
+KG-based methods such as DRKG~\citep{ioannidis2020drkg} and graph-based DTI predictors~\citep{ratajczak2022taskdriven,nicholson2020}
+integrate heterogeneous biomedical entities and relations.
 These methods rely on a pre-curated interaction graph whose edges
 themselves encode the same investigation bias we aim to escape.
 Furthermore, they are typically evaluated on curated DTI benchmarks (BindingDB, DAVIS) with
 balanced positive/negative ratios, and do not natively support the
 OTP implicit-feedback, target-disjoint, time-split regime.
-We include Matrix-Factorization and TF-IDF controls that serve as
+We include Matrix Factorization, Node2Vec, and TF-IDF controls that serve as
 comparable cold-start relational baselines.
 
 \textbf{Chemistry-centric DTI.}
@@ -168,7 +168,7 @@ rule. Negatives are exhaustive within this anti-join cohort rather than
 sampled. No special censoring is applied for diseases or targets with
 different clinical-trial ascertainment, prevalence, or commercial
 interest; these biases remain part of the temporal-labeling problem.
-The OTP known-drug exports used here do not a consistently available trial-start-date field, so we do not independently censor by ClinicalTrials.gov start date. The resulting test set covers $11{,}624$ diseases
+The OTP known-drug exports used here do not have a consistently available trial-start-date field, so we do not independently censor by ClinicalTrials.gov start date. The resulting test set covers $11{,}624$ diseases
 (vs.\ $9{,}741$ diseases in the 2022 training frame), making it strongly
 covariate-shifted in both disease coverage and label distribution.
 
@@ -291,12 +291,7 @@ binary positive interaction matrix;
 (\textit{vii})~\textbf{Node2Vec}~\citep{grover2016node2vec}: bipartite graph of positive disease--target pairs; node embeddings learned via random walks (dimensions $64$, walk length $20$, walks per node $10$, context window $10$, $3$ epochs); test-disease scores computed as cosine similarity to the mean training-target embedding;
 (\textit{viii})~\textbf{TF-IDF cosine}: lexical similarity between
 concatenated disease and target text fields;
-(\textit{ix})~\textbf{Frozen biomedical encoder}: normalized
-BioClinical-ModernBERT-base disease and target embeddings
-(\texttt{thomas-sounack/BioClinical-ModernBERT-base}) scored with a
-small MLP interaction head over concatenation, absolute difference,
-elementwise product, and cosine similarity. Early stopping used a held-out 10\% ; test targets are never seen
-during training.
+(\textit{ix})~\textbf{Frozen BioClinical ModernBERT + MLP}~\citep{sounack2025bioclinicalmodernbert}: frozen disease and target embeddings from BioClinical ModernBERT scored with a small MLP head over concatenation, absolute difference, elementwise product, and cosine similarity; test targets are unseen during training.
 These simple controls verify that the
 target-disjoint regime is non-trivial. In particular, a leakage-free
 Target Mean is expected to collapse toward the global prior because
@@ -338,8 +333,8 @@ and OTTree use the richer text+ontology+tractability feature set,
 OTRec's gain over Han et al. reflects both feature engineering and model
 class. The OTRec--OTTree gap isolates the two-tower contribution on
 matched inputs ($+0.003$ ROC-AUC).
-A frozen BioClinical-ModernBERT-base encoder reached
-$0.912 \pm 0.008$ ROC-AUC and $0.666 \pm 0.028$ PR-AUC ($5{\times}5$ CV, same protocol) --- above the simple priors, but below the best models in PR-AUC.
+A frozen BioClinical ModernBERT encoder~\citep{sounack2025bioclinicalmodernbert} reached
+$0.912 \pm 0.008$ ROC-AUC and $0.666 \pm 0.028$ PR-AUC ($5{\times}5$ CV, same protocol) --- above the simple priors but below the top models on PR-AUC.
 Among the simple controls, Disease Mean is the strongest
 historical prior ($0.873$ / $0.466$), whereas a leakage-free Target
 Mean collapses to the global prior ($0.500$ / $0.102$) because every
@@ -354,7 +349,7 @@ the retrospective OTP score on ROC-AUC by $0.314$
 ($0.872 \pm 0.005$ vs.\ $0.559$), while achieving PR-AUC
 ($0.288 \pm 0.009$) close to the stronger historical Target Mean prior
 ($0.299$, gap $0.011$) and well above a disease-only prior ($0.052$).
-The BioClinical-ModernBERT encoder, achieves $0.856 \pm 0.003$ ROC-AUC and
+The frozen BioClinical ModernBERT encoder achieves $0.856 \pm 0.003$ ROC-AUC and
 $0.311 \pm 0.011$ PR-AUC, marginally below OTRec on ROC-AUC but above it
 on PR-AUC---an interesting reversal from the CV setting where OTRec led on
 both metrics. The underlying embedding model's dataset included post 2022 data, so there may have been leakage.
@@ -383,7 +378,7 @@ Model & ROC-AUC & ${\pm}$SD & PR-AUC & ${\pm}$SD \\
 \textbf{OTRec (ours)}  & \textbf{0.950} & 0.007 & \textbf{0.844} & 0.017 \\
 OTTree (CatBoost)      & 0.947 & 0.005 & 0.772 & 0.023 \\
 Han et al.\ (2022)     & 0.910 & 0.014 & 0.726 & 0.046 \\
-Frozen BioClinical-ModernBERT + MLP & 0.912 & 0.008 & 0.666 & 0.028 \\
+Frozen BioClinical ModernBERT + MLP & 0.912 & 0.008 & 0.666 & 0.028 \\
 \midrule
 Open Targets Score     & 0.914 & 0.005 & 0.455 & 0.030 \\
 Disease Mean           & 0.873 & 0.004 & 0.466 & 0.022 \\
@@ -407,7 +402,7 @@ Model & ROC-AUC & ${\pm}$SD & PR-AUC & ${\pm}$SD \\
 \midrule
 \textbf{OTRec (ours)} & \textbf{0.872} & 0.005 & 0.288 & 0.009 \\
 OTTree (CatBoost)     & 0.855 & 0.004 & 0.223 & 0.005 \\
-Frozen BioClinical-ModernBERT + MLP & 0.856 & 0.003 & 0.311 & 0.011 \\
+Frozen BioClinical ModernBERT + MLP & 0.856 & 0.003 & 0.311 & 0.011 \\
 Target Mean           & 0.832 & 0 & \textbf{0.299} & 0 \\
 Matrix Factorization  & 0.553 & 0 & 0.050 & 0 \\
 TF-IDF cosine         & 0.512 & 0 & 0.042 & 0 \\
@@ -607,12 +602,13 @@ druggable genome (${\sim}4{,}600$ protein-coding genes) and OTP-defined diseases
 the released candidate set. OTRec also ranks targets independently and
 does not model multi-target / off-target liabilities; downstream
 polypharmacology and selectivity filters remain the curator's
-responsibility. Other limitations concern several of the technical decisions along with the OTRec implementation. Specifically, the auxiliary head regresses the OTP overall association score from the
-same release as each training split (2025.06 in CV; 2022.02 in the
-temporal run). Thus, the temporal experiment does not use post-cutoff 2025
-supervision. The reported temporal mean performance uses a multi-task
-objective rather than a pure binary objective.
-An auxiliary-free temporal ablation would isolate how much the score
+responsibility. 
+% Other limitations concern technical decisions in the OTRec implementation. Specifically, the auxiliary head regresses the OTP overall association score from the
+% same release as each training split (2025.06 in CV; 2022.02 in the
+% temporal run). Thus, the temporal experiment does not use post-cutoff 2025
+% supervision. 
+The reported temporal mean performance uses a multi-task
+objective rather than a pure binary objective. An auxiliary-free temporal ablation would isolate how much the score
 head changes optimization.
 
 \textbf{Single temporal split period.}
@@ -631,11 +627,7 @@ released precisely to allow independent, unsupervised evaluation.
 Our main OTRec model uses count-mode text vectorization rather than a
 pretrained biomedical transformer tower. This trades representational
 richness for inference scale (${\sim}87$M pairs at prediction time) and
-interpretability of contributing tokens. In a separate frozen
-BioClinical-ModernBERT-base baseline, pretrained embeddings improved
-substantially over TF-IDF but remained below OTRec and OTTree in
-target-disjoint CV, so stronger end-to-end encoder adaptation remains
-an open direction rather than an established win here.
+interpretability of contributing tokens. A frozen BioClinical ModernBERT baseline improved substantially over TF-IDF but remained below OTRec and OTTree in target-disjoint CV, so stronger end-to-end encoder adaptation remains an open direction rather than an established win here.
 
 \textbf{Implicit-feedback / PU formulation.}
 All non-clinical pairs are treated as $y{=}0$; no positive-unlabeled
@@ -673,11 +665,12 @@ count-based OTRec towers on this benchmark.
 \section*{Availability}
 % -----------------------------------------------------------------------
 
-During blind review, an anonymized supplementary contains the code
-needed to reproduce the main analyses and the result CSVs used in the
-manuscript. The public repository, models, ranked predictions, and
-interactive query interface are online but not linked during anonymized
-review; they will be shared publicly after acceptance / camera-ready.
+During blind review, the supplementary material includes an
+anonymized code and predictions archive sufficient to reproduce the
+main analyses and result CSVs. A public repository, trained models,
+ranked predictions, and the interactive query interface are
+maintained but are not linked here to preserve anonymity; the link
+will be added in the camera-ready version.
 
 % -----------------------------------------------------------------------
 \bibliographystyle{plainnat}
