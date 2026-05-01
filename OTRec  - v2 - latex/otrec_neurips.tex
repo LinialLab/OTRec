@@ -39,17 +39,17 @@ The model integrates heterogeneous inputs, including textual
 descriptions, ontology-derived features, and biological annotations
 such as tractability, Gene Ontology (GO) terms, and pathway information.
 We perform temporal validation by training on the 2022 Open
-Targets release and evaluating on clinical trial data from 2025.
-OTRec improves on the retrospective Open Targets association
-score  (ROC-AUC: $0.872 \pm 0.005$ vs.\ $0.559$; PR-AUC: $0.288 \pm 0.009$ vs.\ $0.08$). %) it remains close to a target-prior baseline (, gap $0.011$).
+Targets (OT) release and evaluating on clinical trial data from 2025.
+OTRec improves on the retrospective OT association
+score  (ROC-AUC: $0.872 \pm 0.005$ vs.\ $0.559$; PR-AUC: $0.288 \pm 0.009$ vs.\ $0.08$).
 In $5{\times}5$ target-disjoint cross-validation, OTRec reaches
-ROC-AUC $0.950$ and PR-AUC $0.844$), improving on the Open-Targets evidence score (ROC-AUC $0.91$; PR-AUC $0.45$).
+ROC-AUC $0.950$ and PR-AUC $0.844$) improving on the OT evidence score (ROC-AUC $0.91$; PR-AUC $0.45$).
 We rank the druggable genome across ${\sim}19{,}000$
-OTP diseases and release ${\sim}282{,}500$ candidate associations
+OT platform (OTP) diseases and release ${\sim}282{,}500$ candidate associations
 above a $0.65$ score threshold (in-distribution CV precision $0.92$), covering
 $4{,}346$ diseases including $2{,}322$ orphan diseases, through
 an interactive prediction platform.
-The public demo, code, models, and predictions will be released after the review period.
+Anonymized demo, code, models, and predictions available: https://anonymous.4open.science/r/OTRec-D6DF/
 \end{abstract}
 
 % -----------------------------------------------------------------------
@@ -59,10 +59,10 @@ The public demo, code, models, and predictions will be released after the review
 Drug discovery is hindered by a pervasive ``streetlight effect'':
 research concentrates on well-studied targets while large regions of
 the druggable genome remain under-investigated~\citep{buniello2025,richardson2023understudied,harel2018}.
-The Open Targets Platform (OTP) integrates diverse evidence sources, from
+The Open Targets platform (OTP) integrates diverse evidence sources, from
 GWAS associations to text-mined literature, but the resulting association
 scores are intrinsically retrospective, reflecting existing knowledge
-rather than a target's prospective therapeutic promise.
+rather than a target's prospective therapeutic promise \citep{koscielny_open_2017}.
 A zero or low score may signal the absence of investigation rather than a
 genuine lack of relevance.
 Moreover, manually designed, rule-based scoring frameworks typically
@@ -74,8 +74,7 @@ genome by its probability of entering clinical trials, a label OTP
  captures across ${>}17{,}000$ diseases.
 In this work, ''target'' denotes an OTP gene target (mapped to Ensembl gene IDs),
 and ''drug'' denotes therapeutic evidence represented in OTP via approved or
-clinical-stage associations linked to those targets.
-Unlike OTP's rule-based aggregations~\citep{han2022}, OTRec uses a
+clinical-stage associations linked to those targets. Unlike OTP's rule-based aggregations~\citep{buniello2025}, OTRec uses a
 two-tower neural architecture that separately encodes disease and target
 representations from raw biomedical text and ontology. These representations
 are scored by cosine similarity, which natively enables attribute-cold-start
@@ -231,9 +230,9 @@ The 384-dimensional embeddings interact via normalized dot product
 predicts clinical trial entry while an auxiliary linear head predicts
 the OTP overall association score from the same release used to
 construct the training split (2025.06 in target-disjoint CV, 2022.02
-in the temporal experiment).
+in the temporal setting).
 In the temporal experiment, the auxiliary target uses 2022 OTP overall scores, so the model does not use post-cutoff information.
-Training used TensorFlow/Keras~\citep{chollet2015}, Adam (LR $8{\times}10^{-3}$, batch size $1{,}024$), BinaryCrossentropy loss, ReduceLROnPlateau (factor 0.2, patience 1) and early stopping (patience 2) on a held-out 5\% validation set.
+Training used TensorFlow/Keras~\citep{chollet2015, abadi_tensorflow_2016}, Adam (LR $8{\times}10^{-3}$, batch size $1{,}024$), BinaryCrossentropy loss, ReduceLROnPlateau (factor 0.2, patience 1) and early stopping (patience 2) on a held-out 5\% validation set.
 
 \subsection{Evaluation and Baselines}
 \label{sec:eval}
@@ -284,10 +283,10 @@ binary positive interaction matrix;
 (\textit{vii})~\textbf{Node2Vec}~\citep{grover2016node2vec}: bipartite graph of positive disease--target pairs; node embeddings learned via random walks (dimensions $64$, walk length $20$, walks per node $10$, context window $10$, $3$ epochs); test-disease scores computed as cosine similarity to the mean training-target embedding;
 (\textit{viii})~\textbf{TF-IDF cosine}: lexical similarity between
 concatenated disease and target text fields;
-(\textit{ix})~\textbf{Frozen BioClinical ModernBERT + MLP}~\citep{sounack2025bioclinicalmodernbert}: static disease and target embeddings from BioClinical ModernBERT scored with a small MLP head over concatenation, absolute difference, elementwise product, and cosine similarity; test targets are unseen during training.
+(\textit{ix})~\textbf{Frozen BioClinical ModernBERT + MLP}~\citep{sounack_bioclinical_2025}: static disease and target embeddings from BioClinical ModernBERT scored with a small MLP head over concatenation, absolute difference, elementwise product, and cosine similarity; test targets are unseen during training.
 These simple controls verify that the
 target-disjoint regime is non-trivial. In particular, a leakage-free
-Target Mean is expected to collapse toward the global prior because
+target mean is expected to collapse toward the global prior because
 test targets are unseen in every fold.% We also include \textbf{Disease Mean} in the temporal table as a disease-prior control.
 
 % -----------------------------------------------------------------------
@@ -481,8 +480,8 @@ out-of-fold CV data ($92\%$ in-distribution precision, $62\%$ recall;
 up to 200 per disease).
 Out-of-distribution precision for genuinely novel pairs is likely lower
 and not directly estimated; the ranked predictions should not be treated as a validated discovery list.
-Predictions were further ranked and annotated using the InterFeat
-framework~\citep{ofer2025};
+Selected candidates were first annotated for interestingness, novelty and plausability using the InterFeat
+framework~\citep{ofer_interfeat_2026};
 full candidates are available in the
 repository (supplementary text S1).
 % The interactive platform filters out known disease--target pairs, so % known associations are intentionally absent.
@@ -521,9 +520,8 @@ polymerase~$\alpha$ --- \textit{POLA1} (score $0.961$) and
 central nervous system cancer (EFO\_0000326), despite a near-zero OTP
 known-drug score in 2022 ($ {\sim}0.06$). By 2025 both pairs had clinical-progression, coincident with inhibitors of the POL$\alpha$/primase complex entering brain-tumour trials. %cite - source? 
 We present this as a biology-first temporal example rather than a ready
-repurposing claim: recent glioma literature supports replication-stress
-dependencies and reports preclinical activity of DNA polymerase-$\alpha$
-inhibition, but direct POLA1/POLA2 clinical validation remains limited.
+repurposing claim: glioma literature supports replication-stress
+dependencies \citep{morgan_replication_2018}, but direct POLA1/POLA2 clinical validation remains limited.
 
 \paragraph{CDKL5 disorder.}
 OTRec assigned very high scores to \textit{SCN8A} ($0.991$) and
@@ -548,7 +546,7 @@ repurposing hypothesis.  %cite - source?  TODO
 \textit{DHODH} (dihydroorotate dehydrogenase) scored $0.829$ for temporal
 arteritis / giant cell arteritis, pointing to a lymphocyte-metabolism
 axis rather than another cytokine-only mechanism.
-This is actionable than many orphan predictions because DHODH inhibition is already clinically accessible through leflunomide and teriflunomide. 
+This is more actionable than many orphan predictions because DHODH inhibition is already clinically accessible through leflunomide and teriflunomide. 
 % Recent observational studies suggest steroid-sparing benefit in giant cell  arteritis.  %cite - source?  TODO
 
 \paragraph{Spinal muscular atrophy (SMA).}
@@ -590,7 +588,7 @@ representative high-degree hubs include GUCY1B2, tubulins, FKBP1A, and
 DNA maintenance proteins such as POLD2.
 This pattern is consistent with OTRec ranking pathway- or system-level
 intervention points shared across diseases rather than only causal-gene
-recovery.%, though such candidates still require experimental validation.
+recovery. %, though such candidates still require experimental validation.
 Comparing out-of-fold prediction scores against the maximum clinical trial
 phase (1--4) reached by ${\sim}65{,}000$ known positive associations,
 we observe a weak but significant positive correlation
@@ -667,8 +665,8 @@ During blind review, the supplementary material includes an
 anonymized code and predictions archive sufficient to reproduce the
 main analyses and result CSVs. A public repository, trained models,
 ranked predictions, and the interactive query interface are
-maintained but are not linked here to preserve anonymity; the link
-will be added in the camera-ready version.
+maintained but are not linked here to preserve anonymity.
+Repository: https://anonymous.4open.science/r/OTRec-D6DF/
 
 % -----------------------------------------------------------------------
 \bibliographystyle{plainnat}
