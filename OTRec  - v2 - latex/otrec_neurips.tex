@@ -43,7 +43,7 @@ Targets release and evaluating on clinical trial data from 2025.
 OTRec improves on the retrospective Open Targets association
 score  (ROC-AUC: $0.872 \pm 0.005$ vs.\ $0.559$; PR-AUC: $0.288 \pm 0.009$ vs.\ $0.08$). %) it remains close to a target-prior baseline (, gap $0.011$).
 In $5{\times}5$ target-disjoint cross-validation, OTRec reaches
-ROC-AUC $0.950$ and PR-AUC $0.844$, improving on the Open-Targets evidence score (ROC-AUC $0.91$; PR-AUC $0.45$).
+ROC-AUC $0.950$ and PR-AUC $0.844$), improving on the Open-Targets evidence score (ROC-AUC $0.91$; PR-AUC $0.45$).
 We rank the druggable genome across ${\sim}19{,}000$
 OTP diseases and release ${\sim}282{,}500$ candidate associations
 above a $0.65$ score threshold (in-distribution CV precision $0.92$), covering
@@ -81,7 +81,7 @@ representations from raw biomedical text and ontology. These representations
 are scored by cosine similarity, which natively enables attribute-cold-start
 inference for targets absent from training folds but still represented
 through public annotations.
-Validated in a temporal hold-out against later trial entries, it improves on the retrospective OTP score and the learned baselines in the target-disjoint CV. We release ${\sim}282{,}500$ candidate associations above a $0.65$ score threshold with a fully interactive platform.
+Validated in a temporal hold-out against later trial entries, it improves on the retrospective OTP score and the learned baselines in the target-disjoint CV. We release ${\sim}282{,}500$ novel candidate associations above a $0.65$ score threshold with a fully interactive platform.
 
 Our contributions are threefold:
 (i) A two-tower neural recommender that learns disease and target
@@ -164,29 +164,27 @@ The temporal split (\S\ref{sec:eval}) re-labels pairs whose clinical evidence ap
 % rule. Negatives are exhaustive within this anti-join cohort rather than
 % sampled.
 Operationally, we construct the temporal test set by comparing processed 2022.02 and 2025.06 disease–target labels. We retain 2025 pairs that were not already positive in 2022, including 2022-negative/2025-positive conversions, and we retain all 2025-negative rows entering the processed 2025 frame under the same rule.
-No special censoring is applied for diseases or targets with
-different clinical-trial ascertainment, prevalence, or commercial
-interest; these biases remain part of the temporal-labeling problem.
-The OTP known-drug exports used here do not have a consistently available trial-start-date field, so we do not independently censor by ClinicalTrials.gov start date. The resulting test set covers $11{,}624$ diseases
+% No special censoring is applied for diseases or targets with different clinical-trial ascertainment, prevalence, or commercial interest; these biases remain part of the temporal-labeling problem.
+% The OTP known-drug exports used here do not have a consistently available trial-start-date field, so we do not independently censor by ClinicalTrials.gov start date. 
+The resulting test set covers $11{,}624$ diseases
 (vs.\ $9{,}741$ diseases in the 2022 training frame), making it strongly
 covariate-shifted in both disease coverage and label distribution.
 
-\textbf{Scope of ``drug'' and ``target''.}
+% \textbf{Scope of ``drug'' and ``target''.}
 Throughout, ``drug'' follows OTP usage and covers any therapeutic entity
 in the OTP drug index ($N{=}18{,}081$ entities in Release 2025.06,
 of which $10{,}956$ have reached clinical phase~${\geq}1$):
 small molecules ($N{=}14{,}848$, $82\%$ of the index), antibodies
 ($N{=}963$), proteins / peptides / enzymes ($N{=}830$),
 oligonucleotides ($N{=}159$), antibody--drug conjugates ($N{=}119$),
-gene therapies ($N{=}117$), cell therapies ($N{=}52$), and vaccines.
+gene therapies ($N{=}117$), cell therapies ($N{=}52$) and vaccines.
 ``gene'' / ``target'' refers to the human protein-coding subset of
 the Finan et al.\ druggable genome~\citep{finan2017} (${\sim}4{,}600$
 genes, of $20{,}130$ protein-coding genes in OTP).
 Non-coding loci catalogued by OTP (lncRNAs $N{=}34{,}882$, miRNAs
 $N{=}1{,}879$, snRNAs, pseudogenes) are excluded from both the
 training label set and the inference pool, mirroring the
-small-molecule / biologic-modality bias of the OTP drug index;
-we revisit this scope in~\S\ref{sec:limitations}.
+small-molecule / biologic-modality bias of the OTP drug index.
 
 We applied filtering criteria aligned with prior work~\citep{han2022}:
 non-specific ontology terms (``measurement'', ``phenotype'', ``biological
@@ -200,15 +198,15 @@ diseases overall in the training pool; 67{,}532 positives, 10\%).
 During inference, the model ranks the full druggable
 genome~\citep{finan2017} (${\sim}4{,}600$ genes) across
 ${\sim}19{,}000$ valid OTP diseases.
-Note that CV metrics characterise generalization within the
-multi-indication-clinical training subset and should be seen as an
-upper bound. % on full-druggable-genome inference quality.
+% Note that CV metrics characterise generalization within the
+% multi-indication-clinical training subset and should be seen as an
+% upper bound. % on full-druggable-genome inference quality.
 
 \subsection{Model Architecture and Features}
 
 OTRec uses a multi-input two-tower architecture (Figure~\ref{fig:model}A)
 that separately encodes disease and target representations, enabling the
-model to learn semantic and biological similarities from text and
+model to learn semantic and biological attributes from text and
 ontology structure.
 
 \textbf{Inputs.}
@@ -220,8 +218,8 @@ concatenated with a learned disease-ID embedding ($d{=}64$).
 The \emph{target tower} uses gene symbol, name, synonyms, function
 descriptions, Gene Ontology terms~\citep{geneontology2023}, pathway
 annotations including Reactome-derived terms~\citep{milacic2024reactome},
-UniProt-derived annotations~\citep{uniprot2025}, and OTP target
-prioritisation / tractability features including gnomAD-derived genetic
+UniProt annotations~\citep{uniprot2025}, and OTP target
+prioritization / tractability features including gnomAD-derived genetic
 constraint scores where available~\citep{opentargetsdownloads,karczewski2020gnomad}.
 
 \textbf{Architecture and training.}
@@ -235,7 +233,7 @@ the OTP overall association score from the same release used to
 construct the training split (2025.06 in target-disjoint CV, 2022.02
 in the temporal experiment).
 In the temporal experiment, the auxiliary target uses 2022 OTP overall scores, so the model does not use post-cutoff information.
-Training in TensorFlow/Keras~\citep{chollet2015} used Adam (learning rate $8{\times}10^{-3}$, batch size $1{,}024$), BinaryCrossentropy loss, ReduceLROnPlateau (factor $0.2$, patience $1$) and early stopping (patience $2$) on a held-out 5\% validation set.
+Training used TensorFlow/Keras~\citep{chollet2015}, Adam (LR $8{\times}10^{-3}$, batch size $1{,}024$), BinaryCrossentropy loss, ReduceLROnPlateau (factor 0.2, patience 1) and early stopping (patience 2) on a held-out 5\% validation set.
 
 \subsection{Evaluation and Baselines}
 \label{sec:eval}
@@ -297,21 +295,48 @@ test targets are unseen in every fold.% We also include \textbf{Disease Mean} in
 \label{sec:results}
 % -----------------------------------------------------------------------
 
+% \begin{figure}[t]
+%   \centering
+%   \includegraphics[width=\linewidth]{media/image1.png}
+%   \caption{
+%     \textbf{OTRec architecture and performance.}
+%     \textbf{(A)} The two-tower model separately encodes disease and
+%     target features (text, ontology, tractability, gene symbol/name) into
+%     384-dimensional embeddings compared by normalized dot product
+%     (cosine similarity) to predict clinical trial entry probability.
+%     \textbf{(B)} Target-disjoint $5{\times}5$ cross-validation results.
+%     OTRec achieves the highest mean ROC-AUC ($0.95$) and
+%     PR-AUC ($0.844$).
+%     \textbf{(C)} Temporal hold-out validation (training on 2022,
+%     predicting 2025 entries). Panel C shows mean performance over
+%     five random seeds. Error bars denote standard deviation.
+%   }
+%   \label{fig:model}
+% \end{figure}
+
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\linewidth]{media/image1.png}
+  % Top half: Architecture (Fig A)
+  \includegraphics[width=\linewidth]{Outputs/Fig-1-A-model-inputs.png}
+
+  % Negative vertical space to pull the images tightly together
+  \vspace{-1.5em} % Increase or decrease this value (e.g., -0.5em or -2em) to adjust the gap
+
+  % Bottom half: Updated Results with SD bars (Fig B & C)
+  \includegraphics[width=\linewidth]{Outputs/Fig1_BC.png} % Update filename
+
   \caption{
     \textbf{OTRec architecture and performance.}
     \textbf{(A)} The two-tower model separately encodes disease and
     target features (text, ontology, tractability, gene symbol/name) into
     384-dimensional embeddings compared by normalized dot product
-    (cosine similarity) to predict clinical trial entry probability. 
-    \textit{[Architecture diagram to be added in camera-ready version]}
-    \textbf{(B)} Target-disjoint $5{\times}5$ cross-validation results (mean $\pm$ SD over 25 folds).
-    OTRec achieves the highest mean ROC-AUC ($0.950 \pm 0.007$) and
-    PR-AUC ($0.844 \pm 0.017$).
+    (cosine similarity) to predict clinical trial entry probability.
+    \textbf{(B)} Target-disjoint $5{\times}5$ cross-validation results.
+    OTRec achieves the highest mean ROC-AUC ($0.95$) and
+    PR-AUC ($0.844$).
     \textbf{(C)} Temporal hold-out validation (training on 2022,
-    predicting 2025 entries). Mean and standard deviation over five random initialization seeds. Error bars denote standard deviation.
+    predicting 2025 entries). Panel C shows mean performance over
+    five random seeds. Error bars denote standard deviation.
   }
   \label{fig:model}
 \end{figure}
@@ -319,15 +344,14 @@ test targets are unseen in every fold.% We also include \textbf{Disease Mean} in
 \subsection{Benchmark Comparison}
 
 In the $5{\times}5$ target-disjoint CV (Table~\ref{tab:cv}), OTRec
-achieves ROC-AUC $0.950$ (PR-AUC $0.844$). Compared to OTTree ($0.947$ / $0.772$),
-OTRec achieves similar ROC-AUC but substantially higher PR-AUC (gain of $0.072$).
-Both substantially exceed the Open Targets Score ($0.914$ / $0.455$).
-Because Han et al.~uses only $14$ OTP evidence channels whereas OTRec
+achieves ROC-AUC $0.950$ / PR-AUC $0.844$, marginally surpassing
+OTTree ($0.947$ / $0.772$) and exceeding the Open Targets
+Score ($0.914$ / $0.455$).
+Because Han et al. uses only $14$ OTP evidence channels whereas OTRec
 and OTTree use the richer text+ontology+tractability feature set,
-OTRec's absolute gain over Han et al.~on ROC-AUC ($+0.040$) and PR-AUC ($+0.118$) reflects both feature engineering and model class.
-The OTRec--OTTree gap isolates the two-tower architecture contribution on
-matched inputs: $+0.003$ ROC-AUC but $+0.072$ PR-AUC, demonstrating that
-the two-tower approach particularly improves precision-recall performance.
+OTRec's gain over Han et al. reflects both feature engineering and model
+class. The OTRec--OTTree gap isolates the two-tower contribution on
+matched inputs ($+0.003$ ROC-AUC).
 A frozen BioClinical ModernBERT encoder~\citep{sounack2025bioclinicalmodernbert} reached
 $0.912 \pm 0.008$ ROC-AUC and $0.666 \pm 0.028$ PR-AUC ($5{\times}5$ CV, same protocol) --- above the simple priors but below the top models on PR-AUC.
 Among the simple controls, Disease Mean is the strongest
@@ -387,8 +411,8 @@ TF-IDF cosine          & 0.513 & 0.016 & 0.106 & 0.009 \\
 
 \begin{table}[t]
 \caption{Temporal hold-out validation: trained on OTP 22.02, tested
-on pairs whose 2025.06 label was retained by the temporal anti-join
-(mean $\pm$ SD over 5 random seeds).}
+on 2025 % whose  label was retained by the temporal anti-join
+ (mean $\pm$ SD over 5 seeds).}
 \label{tab:temporal}
 \centering\small
 \begin{tabular}{@{}lrrrr@{}}
@@ -448,29 +472,25 @@ OTTree (CatBoost)  & 48.7\%          & 73.2\%          & 53.7\%          & 27.2\
 
 We identified ${\sim}282{,}500$ candidate associations above a $0.65$
 score threshold for $4{,}346$ diseases matched with $2{,}808$ targets,
-including $2{,}322$ orphan diseases, where ``orphan'' here refers to
-OTP diseases with no clinically associated target in 2025.06 rather
-than a formal prevalence-based regulatory definition.
+including $2{,}322$ orphan diseases. ``Orphan'' here refers to
+OTP diseases with no clinically associated target.
 Candidates were generated by screening the druggable genome, removing
 known links, and retaining predictions with score ${>}0.65$, a
 threshold selected by inspecting the precision-recall curve on
 out-of-fold CV data ($92\%$ in-distribution precision, $62\%$ recall;
 up to 200 per disease).
-Out-of-distribution precision for genuinely novel pairs is lower
-and not directly estimated; the ranked prediction set should not be treated as a validated discovery list.
+Out-of-distribution precision for genuinely novel pairs is likely lower
+and not directly estimated; the ranked predictions should not be treated as a validated discovery list.
 Predictions were further ranked and annotated using the InterFeat
 framework~\citep{ofer2025};
 full candidates are available in the
 repository (supplementary text S1).
-The interactive platform filters out known disease--target pairs, so
-known associations are intentionally absent.
+% The interactive platform filters out known disease--target pairs, so % known associations are intentionally absent.
 
 Additionally we release an interactive Gradio web demo~\citep{abid2019gradio}
 (Figure~\ref{fig:gradio}) that lets users issue both forward (disease
 $\to$ ranked targets) and reverse (target $\to$ ranked diseases) queries
-against the trained model, with links to OTP and EFO
-or ontology records, tractability annotations,
-comparison labels, and CSV export of the full druggable-genome ranking.
+against the trained model, with ontology records, tractability annotations and the full druggable-genome ranking.
 
 \begin{figure}[t]
   \centering
@@ -482,9 +502,8 @@ comparison labels, and CSV export of the full druggable-genome ranking.
     \vspace{1.5em}}}%
   }
   \caption{\textbf{OTRec interactive demo.} Users select a
-  disease or target; the Gradio app returns the ranked
-  candidate list with OTP/EFO cross-links, tractability
-  category, and export of the full druggable-genome ranking.}
+  disease or target; the app returns the ranked
+  candidate list with OTP cross-links, tractability and exports of the full druggable-genome ranking.}
   \label{fig:gradio}
 \end{figure}
 
@@ -529,9 +548,8 @@ repurposing hypothesis.  %cite - source?  TODO
 \textit{DHODH} (dihydroorotate dehydrogenase) scored $0.829$ for temporal
 arteritis / giant cell arteritis, pointing to a lymphocyte-metabolism
 axis rather than another cytokine-only mechanism.
-This is more actionable than many orphan predictions because DHODH
-inhibition is already clinically accessible through leflunomide and teriflunomide. Recent observational studies suggest steroid-sparing benefit in giant
-cell arteritis.  %cite - source?  TODO
+This is actionable than many orphan predictions because DHODH inhibition is already clinically accessible through leflunomide and teriflunomide. 
+% Recent observational studies suggest steroid-sparing benefit in giant cell  arteritis.  %cite - source?  TODO
 
 \paragraph{Spinal muscular atrophy (SMA).}
 SMA is caused primarily by insufficient SMN protein from \textit{SMN1}
@@ -543,14 +561,13 @@ These predictions should be read as hypothesis-generating symptomatic
 or modifier targets rather than disease-causal replacements for SMN
 restoration: they point to neuronal excitability and inhibitory
 signaling as possible complementary axes for model-system follow-up.
-
-\paragraph{Croup and Coxsackievirus.}
-OTRec ranked FKBP1A, an immunophilin co-opted by viral replication
-complexes, among the top candidates; further rationale is documented
-in the OTRec repository.
+% \paragraph{Croup and Coxsackievirus.}
+% OTRec ranked FKBP1A, an immunophilin co-opted by viral replication
+% complexes, among the top candidates; further rationale is documented
+% in the OTRec repository.
 
 \paragraph{Ulcerative colitis.}
-OTRec ranked IL6R highly; IL-6R inhibitors (e.g.,  Tocilizumab, Sarilumab) are approved for Rheumatoid arthritis and cytokine release syndrome, but have shown only modest efficacy in Ulcerative colitis (UC). While biologically plausible, their clinical benefit in UC remains limited. They may therefore be better suited for patients who become resistant to standard therapies (i.e. anti-TNFs, JAK inhibitors, integrin blockers). We suggest repurposing well-characterized, safe IL-6R inhibitors for stratified patient subsets, particularly non-responders, as a second-line or complementary treatment option. % recent clinical trials look relatively negative for it. may be a bad example
+OTRec ranked IL6R highly; IL-6R inhibitors (e.g.,  Tocilizumab, Sarilumab) are approved for Rheumatoid arthritis and cytokine release syndrome, but have shown only modest efficacy in Ulcerative colitis (UC). While biologically plausible, their clinical benefit in UC remains limited. They may be better suited for patients who become resistant to standard therapies (i.e. anti-TNFs, JAK inhibitors, integrin blockers). We suggest repurposing well-characterized, safe IL-6R inhibitors for stratified patient subsets, particularly non-responders, as a second-line treatment option. % recent clinical trials look relatively negative for it. may be a bad example
 
 \subsection{Feature Contributions and Model Characteristics}
 \label{sec:char}
@@ -573,8 +590,8 @@ representative high-degree hubs include GUCY1B2, tubulins, FKBP1A, and
 DNA maintenance proteins such as POLD2.
 This pattern is consistent with OTRec ranking pathway- or system-level
 intervention points shared across diseases rather than only causal-gene
-recovery, though such candidates still require experimental validation.
-Comparing out-of-fold prediction scores against the maximum clinical
+recovery.%, though such candidates still require experimental validation.
+Comparing out-of-fold prediction scores against the maximum clinical trial
 phase (1--4) reached by ${\sim}65{,}000$ known positive associations,
 we observe a weak but significant positive correlation
 (Spearman $\rho{=}0.20$), consistent with OTRec assigning higher
@@ -611,10 +628,10 @@ experimentally validated. The full unfiltered candidate set is
 released precisely to allow independent, unsupervised evaluation.
 
 \textbf{Bag-of-words text encoding.}
-Our main OTRec model uses count-mode text vectorization rather than a
+OTRec uses count-mode text vectorization rather than a
 pretrained biomedical transformer tower. This trades representational
 richness for inference scale (${\sim}87$M pairs at prediction time) and
-interpretability of contributing tokens. A frozen BioClinical ModernBERT baseline improved substantially over TF-IDF but remained below OTRec and OTTree in target-disjoint CV, so stronger end-to-end encoder adaptation remains an open direction rather than an established win here.
+interpretability of contributing tokens. A frozen BioClinical ModernBERT baseline improved substantially over TF-IDF but remained below OTRec and OTTree in target-disjoint CV, so stronger end-to-end encoder adaptation remains an open direction.
 
 \textbf{Implicit-feedback.}
 All non-clinical pairs are treated as implicit negatives $y{=}0$. The temporal setting partially relabels some false negatives (later discoveries) by relabeling pairs that entered trials between 2022 and 2025. %, making the label-noise assumption testable rather than purely assumed.
