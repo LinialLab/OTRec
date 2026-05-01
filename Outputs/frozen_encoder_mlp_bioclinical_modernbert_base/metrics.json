@@ -1,0 +1,105 @@
+{
+  "model_name": "thomas-sounack/BioClinical-ModernBERT-base",
+  "data_path": "/mnt/d/Research/OpenTargetsTransfer/data/proc/df_learn.parquet",
+  "device": "cuda",
+  "max_seq_length": 384,
+  "encode_batch_size": 64,
+  "train_batch_size": 2048,
+  "hidden_dim": 512,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "dropout": 0.2,
+  "max_epochs": 20,
+  "patience": 3,
+  "seed": 42,
+  "split_summary": {
+    "train_rows": 470607,
+    "val_rows": 49504,
+    "test_rows": 143240,
+    "train_targets": 1095,
+    "val_targets": 122,
+    "test_targets": 305,
+    "train_positive_rate": 0.10385735868782232,
+    "val_positive_rate": 0.10633484162895927,
+    "test_positive_rate": 0.09349343758726612
+  },
+  "raw_cosine_test_metrics": {
+    "roc_auc": 0.5263504664598373,
+    "pr_auc": 0.09542637007553914
+  },
+  "best_epoch": 6,
+  "best_val_pr_auc": 0.6496875242158311,
+  "test_metrics": {
+    "loss": 0.7289091333085284,
+    "roc_auc": 0.8914410923999584,
+    "pr_auc": 0.6076706938981298
+  },
+  "encode_runtime_seconds": 29.286041278000084,
+  "train_runtime_seconds": 24.29347589000008,
+  "total_runtime_seconds": 83.62948601700009,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.8745703394070211,
+      "val_loss": 0.8022810184500953,
+      "val_roc_auc": 0.880613979701765,
+      "val_pr_auc": 0.552296223417682
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.6995504987941835,
+      "val_loss": 0.7154658706672128,
+      "val_roc_auc": 0.9051407776112059,
+      "val_pr_auc": 0.603480053425915
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6354794238355252,
+      "val_loss": 0.7081435074633603,
+      "val_roc_auc": 0.9052846375050154,
+      "val_pr_auc": 0.6064544898766886
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.597745871814647,
+      "val_loss": 0.7016821309452144,
+      "val_roc_auc": 0.9077393569786518,
+      "val_pr_auc": 0.6058723096312476
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5760341346689826,
+      "val_loss": 0.675907387645613,
+      "val_roc_auc": 0.9146232645950245,
+      "val_pr_auc": 0.6349675855920456
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.545055993346786,
+      "val_loss": 0.664041193073306,
+      "val_roc_auc": 0.9189877475616559,
+      "val_pr_auc": 0.6496875242158311
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5292609900559543,
+      "val_loss": 0.6903613928871611,
+      "val_roc_auc": 0.914323744706272,
+      "val_pr_auc": 0.6397571018830817
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5046918520846229,
+      "val_loss": 0.6867271064941392,
+      "val_roc_auc": 0.9174329790325773,
+      "val_pr_auc": 0.6352510875668403
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.4607475188068629,
+      "val_loss": 0.6726049018353127,
+      "val_roc_auc": 0.9183226929170537,
+      "val_pr_auc": 0.6406106871162924
+    }
+  ]
+}

@@ -48,7 +48,7 @@ Expected Space layout:
         └── disease_metadata.csv
 ```
 
-The model weights are downloaded at runtime. By default the app uses `OTREC_MODEL_REPO_ID=GrimSqueaker/OTRec` and `OTREC_MODEL_FILENAME=model.weights.h5`, but both can be overridden with environment variables for reviewer-safe or local deployments.
+The model weights are downloaded at runtime. By default the app uses `OTREC_MODEL_REPO_ID=XXXX/OTRec` and `OTREC_MODEL_FILENAME=model.weights.h5`, but both can be overridden with environment variables for reviewer-safe or local deployments.
 
 ## Packaging comparison data
 

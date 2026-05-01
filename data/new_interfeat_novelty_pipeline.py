@@ -1,9 +1,8 @@
 """
 Simple helper functions for running novelty filtering and PubMed co‑occurrence analysis on
 prediction data frames.
-Requires the InterFeat codebase: InterFeat: A Pipeline for Finding Interesting Scientific Features
-https://arxiv.org/abs/2505.13534
-https://github.com/LinialLab/InterFeat
+Requires InterFeat: a pipeline for finding interesting scientific features
+https://www.nature.com/articles/s41598-026-43169-5
 
 These functions are intentionally lightweight and avoid importing heavy dependencies such as
 ``scispacy`` or any knowledge–graph components.  They provide a way to construct candidate
@@ -20,7 +19,7 @@ import pandas as pd
 
 from search_pubmed import cache_search
 from tqdm import tqdm
-import pandas as pd
+
 
 def collect_pairwise_search_data(df_pairs, min_results_count=20):
     """Run PubMed search per (query, target) pair instead of full cross-product."""
@@ -33,13 +32,15 @@ def collect_pairwise_search_data(df_pairs, min_results_count=20):
         if q_count > min_results_count and t_count > min_results_count:
             combined = f"({query}) AND ({target})"
             qt_count = cache_search(combined)
-            results.append({
-                "Query": query,
-                "Target": target,
-                "Query Count": q_count,
-                "Target Count": t_count,
-                "Co-occurrence Count": qt_count,
-            })
+            results.append(
+                {
+                    "Query": query,
+                    "Target": target,
+                    "Query Count": q_count,
+                    "Target Count": t_count,
+                    "Co-occurrence Count": qt_count,
+                }
+            )
         progress_bar.update(1)
     progress_bar.close()
     return pd.DataFrame(results)
@@ -99,15 +100,11 @@ def prepare_candidate_df_from_predictions(
         df_filtered = df_preds.copy()
 
     # Extract unique candidate terms and drop blanks
-    unique_values = (
-        df_filtered[feature_col]
-        .dropna()
-        .astype(str)
-        .str.strip()
-        .unique()
-    )
+    unique_values = df_filtered[feature_col].dropna().astype(str).str.strip().unique()
     unique_terms = pd.DataFrame({"feature_name": unique_values})
-    unique_terms = unique_terms.loc[unique_terms["feature_name"] != ""].reset_index(drop=True)
+    unique_terms = unique_terms.loc[unique_terms["feature_name"] != ""].reset_index(
+        drop=True
+    )
 
     # Duplicate the feature name into the query and add a blank CUI column
     unique_terms["cui_nomenclature"] = unique_terms["feature_name"]
@@ -116,8 +113,8 @@ def prepare_candidate_df_from_predictions(
     if add_kg_columns:
         unique_terms["KG_Hits"] = 0
         unique_terms["feature_level_min_kg_hits"] = 0
-        unique_terms['sim_score'] = 0.5
-        unique_terms['feature_level_sum_kg_hits']=0
+        unique_terms["sim_score"] = 0.5
+        unique_terms["feature_level_sum_kg_hits"] = 0
 
     return unique_terms
 
@@ -188,14 +185,7 @@ def run_pubmed_pipeline_on_predictions(
     # Determine the list of targets from the disease column
     if disease_col not in df_preds.columns:
         raise ValueError(f"Column '{disease_col}' not found in prediction DataFrame.")
-    targets = (
-        df_preds[disease_col]
-        .dropna()
-        .astype(str)
-        .str.strip()
-        .unique()
-        .tolist()
-    )
+    targets = df_preds[disease_col].dropna().astype(str).str.strip().unique().tolist()
 
     # Construct default configuration for the search
     cfg = {
@@ -217,18 +207,26 @@ def run_pubmed_pipeline_on_predictions(
         ) from e
 
     # Execute the search pipeline.  Passing candidate_df triggers the df branch in run_search_pubmed.
-    res_df = run_search_pubmed( cfg, df=candidate_df, SAVE_OUTPUTS=save_outputs,get_promising_results=False,concat_targets =False )
+    res_df = run_search_pubmed(
+        cfg,
+        df=candidate_df,
+        SAVE_OUTPUTS=save_outputs,
+        get_promising_results=False,
+        concat_targets=False,
+    )
     return res_df
 
 
-
 import re
-import pandas as pd
 from search_pubmed import run_search_pubmed
-from new_interfeat_novelty_pipeline import prepare_candidate_df_from_predictions  # if same file, just call directly
+from new_interfeat_novelty_pipeline import (
+    prepare_candidate_df_from_predictions,
+)  # if same file, just call directly
+
 
 def _sanitize_fn(s: str) -> str:
-    return re.sub(r'[^A-Za-z0-9]+', '_', str(s)).strip('_')
+    return re.sub(r"[^A-Za-z0-9]+", "_", str(s)).strip("_")
+
 
 def run_pubmed_per_disease_then_concat(
     df_preds: pd.DataFrame,
@@ -244,10 +242,7 @@ def run_pubmed_per_disease_then_concat(
     then concat results across diseases.
     """
     # unique diseases
-    diseases = (
-        df_preds[disease_col]
-        .dropna().astype(str).str.strip().unique().tolist()
-    )
+    diseases = df_preds[disease_col].dropna().astype(str).str.strip().unique().tolist()
 
     out = []
     for d in diseases:
@@ -278,7 +273,7 @@ def run_pubmed_per_disease_then_concat(
             df=cand_df,
             SAVE_OUTPUTS=save_outputs,
             get_promising_results=False,
-            concat_targets=False,   # force no target OR-merge
+            concat_targets=False,  # force no target OR-merge
         )
         # enforce explicit target
         res["Target"] = d
@@ -287,12 +282,11 @@ def run_pubmed_per_disease_then_concat(
     if not out:
         return pd.DataFrame()
 
-    out = [c for c in out if c.shape[0]>0]
+    out = [c for c in out if c.shape[0] > 0]
     combined = pd.concat(out, ignore_index=True)
 
     # light de-dup for safety
     combined.drop_duplicates(
-        subset=["Query", "feature_name", "Target", "Co-occurrence Count"],
-        inplace=True
+        subset=["Query", "feature_name", "Target", "Co-occurrence Count"], inplace=True
     )
     return combined
