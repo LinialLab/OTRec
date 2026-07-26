@@ -1,0 +1,28 @@
+{
+  "model": "Node2Vec (OTRec baselines.fit_node2vec_predict)",
+  "protocol": "temporal 2022.02 history -> 2025.06 future (anti-join test set)",
+  "seed": 42,
+  "roc_auc": 0.5330102340504104,
+  "pr_auc": 0.04212985722336412,
+  "n_test_pairs": 403132,
+  "n_positives": 16074,
+  "positive_rate": 0.03987279600726313,
+  "n_history_rows": 411430,
+  "n_history_positive_edges": 62417,
+  "n_unique_preds": 1743,
+  "n_unique_test_diseases": 11624,
+  "fit_seconds": 40.569907665252686,
+  "total_seconds": 49.81487798690796,
+  "params": {
+    "dimensions": 64,
+    "walk_length": 20,
+    "num_walks": 10,
+    "window": 10,
+    "epochs": 3,
+    "p": 1.0,
+    "q": 1.0,
+    "workers": 4,
+    "sg": 1,
+    "min_count": 1
+  }
+}
