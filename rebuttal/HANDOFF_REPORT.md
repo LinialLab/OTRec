@@ -145,8 +145,33 @@ Reading, stated conservatively:
    on both pooled metrics — it does not hurt. This answers the open question left in the
    manuscript's Limitations.
 
-Caveats to state if the table is used: single seed per rung; and this is the **temporal**
-protocol, not the CV protocol the §S3 pointer implies (a CV ablation is 25 folds per variant).
+### Seed replication of the decisive contrast (4 seeds each, R1 vs R4)
+
+Points 1 and 2 above were established at one seed per rung. Seeds 43–45 were added for
+text-only (R1) and full (R4) to test them. Results: `results/ablation_seed_replication_combined.csv`.
+
+| Metric | R1 text-only (n=4) | R4 full (n=4) | diff | Welch p |
+|---|---|---|---|---|
+| pooled ROC-AUC | 0.8737 ± 0.0043 | 0.8722 ± 0.0056 | −0.0014 | 0.696 |
+| pooled PR-AUC | 0.2852 ± 0.0123 | 0.2918 ± 0.0094 | +0.0065 | 0.433 |
+| **cold-start ROC-AUC** | 0.8809 ± 0.0022 | 0.8883 ± 0.0024 | **+0.0074** | **0.004** |
+| **cold-start PR-AUC** | 0.1866 ± 0.0173 | 0.2482 ± 0.0227 | **+0.0616** | **0.006** |
+
+Paired by seed, the cold-start advantage of the full feature set is positive in **4 of 4 seeds**
+(ROC +0.0105 / +0.0044 / +0.0086 / +0.0062; PR +0.034 / +0.035 / +0.060 / +0.118), and the
+cold-start PR ranges do not overlap (R1 0.162–0.202 vs R4 0.229–0.280). The paired t-test on
+cold-start PR gives p = 0.052, so quote the Welch test and the 4/4 sign consistency together
+rather than a single p-value.
+
+**Conclusion, now seed-backed:** the ontology, GO/pathway and tractability groups contribute
+**nothing measurable to pooled temporal performance** (p = 0.70 / 0.43) but contribute
+**significantly on zero-indication cold-start targets** (+0.007 ROC, +0.062 PR-AUC). That is the
+regime the paper is about — targets with no interaction history, where annotation is the only
+signal available. Free text alone suffices whenever interaction history exists.
+
+Caveats to state if the table is used: n=4 seeds per arm and four metrics tested; and this is
+the **temporal** protocol, not the CV protocol the §S3 pointer implies (a CV ablation is 25
+folds per variant).
 
 **Original status (unchanged):** no pre-existing ablation artefacts were on disk. Repo-wide grep for
 `ablation|text_only|no_aux|feature_group` over `.py/.md/.csv/.json` → zero hits. The only
