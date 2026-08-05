@@ -23,7 +23,7 @@ from runtime_data import build_result_annotations
 
 APP_ROOT = Path(__file__).resolve().parent
 DATA_DIR = APP_ROOT / "data" / "proc"
-MODEL_REPO_ID = os.environ.get("OTREC_MODEL_REPO_ID", "XXX/OTRec")
+MODEL_REPO_ID = os.environ.get("OTREC_MODEL_REPO_ID", "GrimSqueaker/OTRec")
 MODEL_FILENAME = os.environ.get("OTREC_MODEL_FILENAME", "model.weights.h5")
 MODEL_DOWNLOAD_ETAG_TIMEOUT = int(os.environ.get("OTREC_HF_ETAG_TIMEOUT", "30"))
 

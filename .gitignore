@@ -188,3 +188,6 @@ catboost_info/learn/events.out.tfevents
 OTRec_*handoff*.md
 OTRec_handoff_review.md
 Outputs/_fig_backup/
+
+# Local figure backups (originals kept out of the repo)
+_fig_backup/
