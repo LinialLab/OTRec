@@ -28,7 +28,7 @@ from run_temporal_repeated import (
     set_global_seed,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "results"      # OTRec/rebuttal/results
+OUT = Path(__file__).resolve().parents[1] / "results"      # OTRec/analysis/results
 SEED, EPOCHS = 42, 6
 
 history_raw = pd.read_parquet(ROOT.parent / "code" / "history_df.parquet")

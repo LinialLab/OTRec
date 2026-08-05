@@ -18,7 +18,7 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 
 BASELINES = str(Path(__file__).resolve().parents[2] / "baselines")
 CODE = Path(__file__).resolve().parents[3] / "code"
-OUT = Path(__file__).resolve().parents[1] / "results"      # OTRec/rebuttal/results
+OUT = Path(__file__).resolve().parents[1] / "results"      # OTRec/analysis/results
 sys.path.insert(0, BASELINES)
 
 from run_baselines import BaselineConfig, fit_node2vec_predict  # noqa: E402

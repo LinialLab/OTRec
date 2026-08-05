@@ -28,7 +28,7 @@ from run_temporal_repeated import (
     add_historical_score, build_temporal_test_set, make_ds, merge_df_dis_target, set_global_seed,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "results"      # OTRec/rebuttal/results
+OUT = Path(__file__).resolve().parents[1] / "results"      # OTRec/analysis/results
 SEED, EPOCHS = 42, 6
 
 # Clinical-precedence tractability buckets = the only post-2022 OUTCOME signal in the text.

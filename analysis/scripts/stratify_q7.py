@@ -15,7 +15,7 @@ import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 ROOT = Path(__file__).resolve().parents[3]                 # workspace root (parent of OTRec)
-OUT = ROOT / "OTRec" / "rebuttal" / "results"
+OUT = ROOT / "OTRec" / "analysis" / "results"
 
 preds = pd.read_parquet(OUT / "temporal_preds_seed42.parquet")
 hist = pd.read_parquet(ROOT / "code" / "history_df.parquet")

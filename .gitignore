@@ -183,3 +183,8 @@ catboost_info/catboost_training.json
 catboost_info/learn_error.tsv
 catboost_info/time_left.tsv
 catboost_info/learn/events.out.tfevents
+
+# Internal planning / working notes (not for publication)
+OTRec_*handoff*.md
+OTRec_handoff_review.md
+Outputs/_fig_backup/

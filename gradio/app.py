@@ -23,7 +23,7 @@ from runtime_data import build_result_annotations
 
 APP_ROOT = Path(__file__).resolve().parent
 DATA_DIR = APP_ROOT / "data" / "proc"
-MODEL_REPO_ID = os.environ.get("OTREC_MODEL_REPO_ID", "GrimSqueaker/OTRec")
+MODEL_REPO_ID = os.environ.get("OTREC_MODEL_REPO_ID", "XXX/OTRec")
 MODEL_FILENAME = os.environ.get("OTREC_MODEL_FILENAME", "model.weights.h5")
 MODEL_DOWNLOAD_ETAG_TIMEOUT = int(os.environ.get("OTREC_HF_ETAG_TIMEOUT", "30"))
 
@@ -970,7 +970,7 @@ def launch():
     with gr.Blocks(title="OTRec") as demo:
         gr.Markdown(
             """
-            # OTRec — disease$\\leftrightarrow$target prioritization
+            # OTRec — disease ↔ target prioritization
 
             Rank druggable-genome genes for a given disease (forward), or rank diseases for a given gene (reverse).
             Open Targets and OTTree comparison columns are shown only where packaged comparison data is available.
