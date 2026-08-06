@@ -39,6 +39,10 @@ plt.rcParams["grid.linewidth"] = 0.5
 plt.rcParams["axes.axisbelow"] = True
 
 C_ROC, C_PR = "#A6A6A6", "#005A9C"
+# OTRec is highlighted in orange so it reads apart from the baselines at a glance.
+# The light/dark relationship mirrors ROC/PR in the baseline palette; the black edge
+# keeps the pair distinguishable in greyscale, where orange and grey are close.
+C_ROC_HL, C_PR_HL = "#F5A24B", "#C75000"
 
 # Set False to reproduce the original bar set (no ModernBERT).
 INCLUDE_MODERNBERT = True
@@ -104,8 +108,15 @@ def load_panel_c():
 def plot_panel(ax, models, rocs, roc_errs, prs, pr_errs, title, hide_y=False):
     x = np.arange(len(models))
     width = 0.35
-    bars1 = ax.bar(x - width / 2, rocs, width, label="ROC-AUC", color=C_ROC)
-    bars2 = ax.bar(x + width / 2, prs, width, label="PR-AUC", color=C_PR)
+    hl = [m.startswith("OTRec") for m in models]
+    edges = ["black" if h else "none" for h in hl]
+    widths = [1.1 if h else 0 for h in hl]
+    bars1 = ax.bar(x - width / 2, rocs, width, label="ROC-AUC",
+                   color=[C_ROC_HL if h else C_ROC for h in hl],
+                   edgecolor=edges, linewidth=widths)
+    bars2 = ax.bar(x + width / 2, prs, width, label="PR-AUC",
+                   color=[C_PR_HL if h else C_PR for h in hl],
+                   edgecolor=edges, linewidth=widths)
 
     for bars, errs in ((bars1, roc_errs), (bars2, pr_errs)):
         for bar, err in zip(bars, errs):
@@ -119,6 +130,10 @@ def plot_panel(ax, models, rocs, roc_errs, prs, pr_errs, title, hide_y=False):
     ax.set_title(title, loc="left", fontsize=13, fontweight="bold", pad=15)
     ax.set_xticks(x)
     ax.set_xticklabels(models, fontsize=11, linespacing=1.25)
+    for tick, h in zip(ax.get_xticklabels(), hl):
+        if h:
+            tick.set_fontweight("bold")
+            tick.set_color(C_PR_HL)
     ax.set_ylim(0, 1.15)
     if hide_y:
         ax.set_yticklabels([])
@@ -140,9 +155,17 @@ def main():
     plot_panel(ax2, lc, rc, rcs, pc, pcs,
                "C. Temporal Validation (2025)", hide_y=True)
 
-    handles, labels = ax1.get_legend_handles_labels()
-    fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(0.5, -0.06),
-               ncol=2, frameon=False, fontsize=12)
+    # Explicit handles: a BarContainer legend entry would take its colour from the
+    # first bar, which is now OTRec's orange, and mislabel the whole series.
+    from matplotlib.patches import Patch
+    handles = [
+        Patch(facecolor=C_ROC, label="ROC-AUC"),
+        Patch(facecolor=C_PR, label="PR-AUC"),
+        Patch(facecolor=C_ROC_HL, edgecolor="black", linewidth=1.1, label="OTRec ROC-AUC"),
+        Patch(facecolor=C_PR_HL, edgecolor="black", linewidth=1.1, label="OTRec PR-AUC"),
+    ]
+    fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(0.5, -0.08),
+               ncol=4, frameon=False, fontsize=12)
 
     for out in (HERE / "Fig1_BC.png", HERE / "Fig1_BC.pdf"):
         plt.savefig(out, dpi=400, bbox_inches="tight")

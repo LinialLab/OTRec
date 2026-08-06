@@ -1,7 +1,9 @@
+# Pinned to the environment the app was smoke-tested in:
+# Python 3.10.18, forward and reverse queries verified end to end.
 gradio==6.13.0
 h5py==3.14.0
-huggingface-hub==1.11.0
-numpy==1.26.4
-pandas==3.0.2
-pyarrow==21.0.0
+huggingface-hub==1.16.1
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==24.0.0
 tensorflow==2.21.0

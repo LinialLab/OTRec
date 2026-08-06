@@ -1,10 +1,14 @@
 ---
 title: OTRec
+emoji: 🦀
 app_file: app.py
 sdk: gradio
 sdk_version: 6.13.0
-python_version: 3.11
+python_version: "3.10"
+license: mit
+short_description: 'OTRec: prediction of druggable target–disease associations'
 ---
+
 # OTRec
 
 Interactive demo for OTRec, a deep learning recommender that ranks druggable-genome targets for a disease by predicted likelihood of clinical relevance. Open Targets and OTTree scores are shown for context where available.
