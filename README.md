@@ -23,7 +23,10 @@ OTRec/
 │   ├── scripts/                # Reproduction scripts
 │   └── results/                # Per-analysis outputs (CSV/parquet)
 ├── baselines/                  # Baseline reproduction (run_baselines.py)
-└── Outputs/                    # Saved model weights, logs, and evaluation metrics
+└── Outputs/                    # Model weights, metrics, and released predictions
+    ├── S1-DL_novel_predictions.csv        # 214,968 novel candidates (4,347 diseases)
+    ├── S2-DL_novel+known_candidates.csv   # S1 + 67,532 known associations (282,500 rows)
+    └── InterFeat_reranked_candidates/     # InterFeat annotations for selected candidates
 ```
 
 ---
