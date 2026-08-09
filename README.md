@@ -3,8 +3,6 @@
 
 **OTRec** (Open Targets Recommender) ranks druggable genes for a disease using a two-tower neural architecture trained on Open Targets Platform data. The repository contains the notebooks, model code, outputs, and the interactive Gradio app used for manuscript figures and reviewer-facing artifacts.
 
-For blind-review builds, public identity-bearing URLs are intentionally omitted from this README. The supplementary materials can point reviewers to the appropriate snapshot or deployment.
-
 If you want to retrain or reevaluate the model, you will need the Open Targets parquet exports and the historical 22.02 release described below.
 
 ---
@@ -21,6 +19,10 @@ OTRec/
 ├── gradio/                     # Standalone interactive web demo
 │   ├── app.py                  # Gradio application entry point
 │   └── ...                     # App-specific assets
+├── analysis/                   # Supplementary analyses (S1–S8)
+│   ├── scripts/                # Reproduction scripts
+│   └── results/                # Per-analysis outputs (CSV/parquet)
+├── baselines/                  # Baseline reproduction (run_baselines.py)
 └── Outputs/                    # Saved model weights, logs, and evaluation metrics
 ```
 
@@ -101,7 +103,7 @@ pip install tensorflow pandas scikit-learn catboost gradio pyarrow fastparquet
 The notebooks are numbered sequentially:
 
 1. **`0-OT-PreProcess_Recc.ipynb`**: Filters raw data, applies "druggable genome" constraints, and generates the training dataset. Trains the CatBoost baseline.
-2. **`1-Train-DL-Retriever.ipynb`**: Trains the Two-Tower model . Saves model weights to `output/`.
+2. **`1-Train-DL-Retriever.ipynb`**: Trains the Two-Tower model. Saves model weights to `Outputs/`.
 3. **`2-Temporal-Eval.ipynb`**: Performs the rigorous temporal split validation, comparing 2022 predictions against 2025 clinical outcomes.
 
 ### Interactive Demo (Gradio)
@@ -120,12 +122,12 @@ The Gradio app downloads model weights at runtime and precomputes embeddings on 
 
 ## 📊 Key Results
 
-* **Temporal validation:** Predicting 2025 clinical-trial entries from 2022 data.
-* **OTRec:** ROC-AUC **0.863**, PR-AUC **0.303**
-* **Open Targets Score:** ROC-AUC **0.558**, PR-AUC **0.082**
+* **Temporal validation:** Predicting 2025 clinical-trial entries from 2022 data (mean over five runs).
+* **OTRec:** ROC-AUC **0.872**, PR-AUC **0.288**
+* **Open Targets Score:** ROC-AUC **0.559**, PR-AUC **0.082**
 
 
-* **Target-Disjoint Generalization:** 5-fold CV on targets unseen during training.
+* **Target-Disjoint Generalization:** 5×5-fold CV (25 folds) on targets unseen during training.
 * **OTRec:** ROC-AUC **0.950**, PR-AUC **0.844**
 
 
