@@ -27,9 +27,9 @@ MODEL_REPO_ID = os.environ.get("OTREC_MODEL_REPO_ID", "GrimSqueaker/OTRec")
 MODEL_FILENAME = os.environ.get("OTREC_MODEL_FILENAME", "model.weights.h5")
 MODEL_DOWNLOAD_ETAG_TIMEOUT = int(os.environ.get("OTREC_HF_ETAG_TIMEOUT", "30"))
 
-FILTER_HIDE_PACKAGED = "Hide packaged known hits"
-FILTER_ALL = "All targets"
-FILTER_ONLY_PACKAGED = "Only packaged known hits"
+FILTER_HIDE_PACKAGED = "Novel predictions only"
+FILTER_ALL = "Known + novel"
+FILTER_ONLY_PACKAGED = "Known clinical targets only"
 
 DISPLAY_COLUMNS = [
     "Rank",
@@ -39,9 +39,8 @@ DISPLAY_COLUMNS = [
     "Open Targets score",
     "OTTree score",
     "Tractability",
-    "Packaged label",
+    "Known/novel",
     "Function",
-    "Open Targets link",
 ]
 
 DISEASE_DISPLAY_COLUMNS = [
@@ -50,7 +49,6 @@ DISEASE_DISPLAY_COLUMNS = [
     "Disease ID",
     "OTRec score",
     "Description",
-    "Open Targets link",
 ]
 
 SORT_OPTIONS = {
@@ -90,6 +88,22 @@ target_df.rename(
 
 BATCH_SIZE = 1024
 
+# Precomputed lowercase search blobs: one plain-substring scan per keystroke
+# instead of five case-insensitive regex scans. The newline separator prevents
+# accidental cross-field matches (queries never contain newlines).
+_DISEASE_SEARCH_BLOB = (
+    disease_df["name"].astype(str)
+    + "\n" + disease_df["diseaseId"].astype(str)
+    + "\n" + disease_df["synonyms"].astype(str)
+    + "\n" + disease_df["ExactSynonyms"].astype(str)
+    + "\n" + disease_df["description"].astype(str)
+).str.lower()
+_TARGET_SEARCH_BLOB = (
+    target_df["approvedSymbol"].astype(str)
+    + "\n" + target_df["targetId"].astype(str)
+    + "\n" + target_df["approvedName"].astype(str)
+).str.lower()
+
 
 def _load_weights_file() -> str:
     last_error = None
@@ -123,6 +137,24 @@ def _load_model_with_weights():
     keras.backend.clear_session()
     loaded_model = build_two_tower_model(df_learn)
 
+    # Restore the training-time vocabularies. Without this, TextVectorization
+    # is re-adapted from df_learn_sub, whose token FREQUENCIES differ from the
+    # full training frame; the same-sized vocabulary comes out in a different
+    # ORDER, weights load without error against permuted features, and
+    # predictions silently degrade to chance (measured ROC-AUC 0.52 vs 0.95).
+    vocab_path = DATA_DIR / "vocabs.json.gz"
+    if vocab_path.exists():
+        from vocab_io import apply_vocabularies, load_vocabularies
+
+        print("Applying saved training-time vocabularies...")
+        apply_vocabularies(loaded_model, load_vocabularies(vocab_path))
+    else:
+        print(
+            "WARNING: data/proc/vocabs.json.gz not found -- falling back to "
+            "re-adapted vocabularies, which are only correct if df_learn_sub "
+            "reproduces the training frame's exact token frequencies."
+        )
+
     print("Loading weights...")
     try:
         loaded_model.load_weights(weights_file)
@@ -148,6 +180,38 @@ def _load_model_with_weights():
 
     print("Weights loaded successfully.")
     return loaded_model
+
+
+def _weights_md5() -> str:
+    import hashlib
+    try:
+        return hashlib.md5(Path(_load_weights_file()).read_bytes()).hexdigest()
+    except Exception:
+        return ""
+
+
+def _load_packaged_embeddings(loaded_model):
+    """Load precomputed candidate/disease embeddings if present AND produced
+    from the exact weights file we just loaded (md5 guard). Returns
+    (cand_embs, dis_embs) or None -> caller computes live. Cuts the cold-start
+    embedding precompute (~1 min on the free CPU tier) to a file read."""
+    path = DATA_DIR / "embeddings.npz"
+    if not path.exists():
+        return None
+    try:
+        data = np.load(path, allow_pickle=False)
+        if str(data["weights_md5"]) != _weights_md5():
+            print("Packaged embeddings are for different weights; recomputing live.")
+            return None
+        cand, dis = data["candidate_embs"], data["disease_embs"]
+        if len(cand) != len(target_df) or len(dis) != len(disease_df):
+            print("Packaged embeddings shape mismatch; recomputing live.")
+            return None
+        print(f"Loaded packaged embeddings: candidates {cand.shape}, diseases {dis.shape}")
+        return cand.astype(np.float32), dis.astype(np.float32)
+    except Exception as error:
+        print(f"Packaged embeddings unreadable ({error}); recomputing live.")
+        return None
 
 
 def _precompute_candidate_embeddings(loaded_model):
@@ -195,8 +259,16 @@ def _precompute_disease_embeddings(loaded_model):
 @lru_cache(maxsize=1)
 def _get_runtime_cached():
     loaded_model = _load_model_with_weights()
+    packaged = _load_packaged_embeddings(loaded_model)
+    if packaged is not None:
+        cand_embs, dis_embs = packaged
+        _PACKAGED_DISEASE_EMBS.append(dis_embs)
+        return loaded_model, cand_embs
     cand_embs = _precompute_candidate_embeddings(loaded_model)
     return loaded_model, cand_embs
+
+
+_PACKAGED_DISEASE_EMBS: list = []
 
 
 def get_runtime():
@@ -207,6 +279,8 @@ def get_runtime():
 @lru_cache(maxsize=1)
 def _get_disease_runtime_cached():
     loaded_model, _ = get_runtime()
+    if _PACKAGED_DISEASE_EMBS:
+        return loaded_model, _PACKAGED_DISEASE_EMBS[0]
     dis_embs = _precompute_disease_embeddings(loaded_model)
     return loaded_model, dis_embs
 
@@ -239,7 +313,19 @@ def _is_safe_url(value: str) -> bool:
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
-def _render_results_table(results: pd.DataFrame, columns: list[str]) -> str:
+def _render_results_table(
+    results: pd.DataFrame,
+    columns: list[str],
+    link_columns: dict[str, str] | None = None,
+) -> str:
+    """Render the ranked results as an HTML table.
+
+    link_columns maps a *display* column (e.g. "Gene") to the column holding
+    its URL (e.g. "Open Targets link"), turning that cell's text into a link to
+    the Open Targets platform page. The URL column does not need to be in
+    `columns` -- it is read from `results` directly.
+    """
+    link_columns = link_columns or {}
     header_cells = "".join(
         f'<th scope="col" style="text-align:left;padding:0.6rem;border-bottom:1px solid #d9d9d9;">{html.escape(column)}</th>'
         for column in columns
@@ -254,7 +340,14 @@ def _render_results_table(results: pd.DataFrame, columns: list[str]) -> str:
     else:
         rendered_rows: list[str] = []
         display_rows = results.reindex(columns=columns, fill_value="")
-        for _, row in display_rows.iterrows():
+        # URL sources are read positionally from `results`, so they survive the
+        # reindex above even when the URL column is not displayed.
+        url_sources = {
+            display_col: results[url_col].to_numpy()
+            for display_col, url_col in link_columns.items()
+            if url_col in results.columns
+        }
+        for position, (_, row) in enumerate(display_rows.iterrows()):
             cells: list[str] = []
             for column in columns:
                 value = row.get(column, "")
@@ -262,10 +355,20 @@ def _render_results_table(results: pd.DataFrame, columns: list[str]) -> str:
                     text = ""
                 else:
                     text = " ".join(str(value).split())
+                link_url = ""
+                if column in url_sources:
+                    raw_url = url_sources[column][position]
+                    if not pd.isna(raw_url):
+                        link_url = str(raw_url).strip()
                 if column == "Open Targets link" and text and _is_safe_url(text):
                     cell_value = (
                         f'<a href="{html.escape(text, quote=True)}" target="_blank" '
                         'rel="noopener noreferrer">Open Targets</a>'
+                    )
+                elif text and link_url and _is_safe_url(link_url):
+                    cell_value = (
+                        f'<a href="{html.escape(link_url, quote=True)}" target="_blank" '
+                        f'rel="noopener noreferrer" title="View on Open Targets">{html.escape(text)}</a>'
                     )
                 else:
                     cell_value = html.escape(text) if text else "&mdash;"
@@ -301,7 +404,7 @@ def _known_status(value: object) -> str:
         numeric_value = float(str(value))
     except (TypeError, ValueError):
         return "unlabeled"
-    return "packaged known hit" if int(numeric_value) == 1 else "packaged novel"
+    return "known clinical" if int(numeric_value) == 1 else "novel"
 
 
 def _format_bool(value: object) -> str:
@@ -462,7 +565,7 @@ def _build_note(
     total_ranked_count: int,
 ) -> str:
     parts = [
-        "Packaged label semantics: `packaged known hit` means label `1` in the packaged comparison data; `packaged novel` means packaged label `0`; unlabeled rows remain rankable by OTRec.",
+        "`Known clinical` targets have clinical-trial evidence for this disease in the Open Targets release backing this app; `novel` targets do not. Rows without a label are still ranked by OTRec.",
     ]
     if comparison_row_count > 0:
         parts.append(
@@ -503,12 +606,14 @@ def _prepare_display_frame(results: pd.DataFrame) -> pd.DataFrame:
         )
     else:
         display_df["Tractability"] = "—"
-    display_df["Packaged label"] = display_df["known_label"].map(_known_status)
+    display_df["Known/novel"] = display_df["known_label"].map(_known_status)
     display_df["Function"] = display_df[FUNCTION_COLUMN].map(_truncate_text)
     display_df["Open Targets link"] = display_df["targetId"].map(
         lambda target_id: f"https://platform.opentargets.org/target/{target_id}"
     )
-    return display_df[DISPLAY_COLUMNS].copy()
+    # Keep the URL column alongside the display columns: it is not shown as a
+    # column, but _render_results_table reads it to hyperlink the Gene cell.
+    return display_df[DISPLAY_COLUMNS + ["Open Targets link"]].copy()
 
 
 @lru_cache(maxsize=128)
@@ -686,7 +791,7 @@ def recommend_targets(
     return (
         summary,
         note,
-        _render_results_table(display_df, DISPLAY_COLUMNS),
+        _render_results_table(display_df, DISPLAY_COLUMNS, {"Gene": "Open Targets link"}),
         csv_path,
         full_csv_path,
     )
@@ -782,7 +887,8 @@ def _prepare_disease_display(results: pd.DataFrame) -> pd.DataFrame:
     out["Open Targets link"] = out["diseaseId"].map(
         lambda did: f"https://platform.opentargets.org/disease/{did}"
     )
-    return out[DISEASE_DISPLAY_COLUMNS].copy()
+    # URL column retained for the renderer's Disease-cell hyperlink (not shown).
+    return out[DISEASE_DISPLAY_COLUMNS + ["Open Targets link"]].copy()
 
 
 def recommend_diseases(target_id: str, top_k: int = 25, min_score: float = 0.0):
@@ -806,7 +912,6 @@ def recommend_diseases(target_id: str, top_k: int = 25, min_score: float = 0.0):
                             "Disease ID": "",
                             "OTRec score": "",
                             "Description": "First use downloads model weights and computes embeddings.",
-                            "Open Targets link": "",
                         }
                     ]
                 ),
@@ -831,7 +936,11 @@ def recommend_diseases(target_id: str, top_k: int = 25, min_score: float = 0.0):
     )
     display_df = _prepare_disease_display(results.head(int(top_k)))
     csv_path = _export_disease_results(results, target_dict)
-    return summary, _render_results_table(display_df, DISEASE_DISPLAY_COLUMNS), csv_path
+    return (
+        summary,
+        _render_results_table(display_df, DISEASE_DISPLAY_COLUMNS, {"Disease": "Open Targets link"}),
+        csv_path,
+    )
 
 
 def _resolve_target_id(search_query: str, target_id: str | None) -> tuple[str, str]:
@@ -886,13 +995,7 @@ def search_targets(query):
         return gr.update(choices=[], value=None)
     query = query.strip()
     lowered = query.lower()
-    mask = (
-        target_df["approvedSymbol"].str.contains(query, case=False, na=False)
-        | target_df["targetId"].str.contains(query, case=False, na=False)
-        | target_df["approvedName"]
-        .astype(str)
-        .str.contains(query, case=False, na=False)
-    )
+    mask = _TARGET_SEARCH_BLOB.str.contains(lowered, regex=False, na=False)
     matches = target_df.loc[mask].copy()
     if matches.empty:
         return gr.update(choices=[], value=None)
@@ -911,7 +1014,7 @@ def search_targets(query):
         )
         for _, row in matches.iterrows()
     ]
-    return gr.update(choices=choices, value=None)
+    return gr.update(choices=choices, value=choices[0][1])
 
 
 # ============================================
@@ -925,17 +1028,7 @@ def search_diseases(query):
 
     query = query.strip()
     lowered_query = query.lower()
-    mask = (
-        disease_df["name"].str.contains(query, case=False, na=False)
-        | disease_df["diseaseId"].str.contains(query, case=False, na=False)
-        | disease_df["synonyms"].astype(str).str.contains(query, case=False, na=False)
-        | disease_df["ExactSynonyms"]
-        .astype(str)
-        .str.contains(query, case=False, na=False)
-        | disease_df["description"]
-        .astype(str)
-        .str.contains(query, case=False, na=False)
-    )
+    mask = _DISEASE_SEARCH_BLOB.str.contains(lowered_query, regex=False, na=False)
 
     matches = disease_df.loc[mask].copy()
     if matches.empty:
@@ -956,7 +1049,9 @@ def search_diseases(query):
         for _, row in matches.iterrows()
     ]
 
-    return gr.update(choices=choices, value=None)
+    # Auto-select the top match so the user never has to open the dropdown;
+    # selecting a value does NOT trigger ranking (only Rank/sliders/select do).
+    return gr.update(choices=choices, value=choices[0][1])
 
 
 def launch():
@@ -967,6 +1062,16 @@ def launch():
         ["DOID_0050890"],
     ]
 
+    def run_example(query):
+        """Search, auto-select the top match, and rank -- used by example
+        clicks and the initial page load so the app never opens empty."""
+        update = search_diseases(query)
+        disease_id = update.get("value") if isinstance(update, dict) else None
+        results = run_disease_query(
+            query, disease_id, 25, FILTER_HIDE_PACKAGED, "OTTree score", 0.0
+        )
+        return (update, *results)
+
     with gr.Blocks(title="OTRec") as demo:
         gr.Markdown(
             """
@@ -975,6 +1080,7 @@ def launch():
             Rank druggable-genome genes for a given disease (forward), or rank diseases for a given gene (reverse).
             Open Targets and OTTree comparison columns are shown only where packaged comparison data is available.
             The first query downloads model weights and precomputes embeddings, so the initial response can take around a minute.
+            Model and annotations: Open Targets Platform Release 25.12.
             Research screening tool, not clinical evidence.
             """
         )
@@ -997,7 +1103,7 @@ def launch():
 
                 with gr.Row():
                     filter_mode = gr.Dropdown(
-                        label="Packaged label filter",
+                        label="Show",
                         choices=[
                             FILTER_HIDE_PACKAGED,
                             FILTER_ALL,
@@ -1008,7 +1114,7 @@ def launch():
                     sort_by = gr.Dropdown(
                         label="Sort by",
                         choices=list(SORT_OPTIONS.keys()),
-                        value="OTRec score",
+                        value="OTTree score",
                     )
                     topk = gr.Slider(5, 200, value=25, step=5, label="Results to show")
                     min_score = gr.Slider(
@@ -1020,11 +1126,14 @@ def launch():
                 disease_summary = gr.Markdown(value="## Select a disease to begin")
                 coverage_note = gr.Markdown(
                     value=(
-                        "Packaged label semantics and comparison coverage will appear here once you rank a disease."
+                        "Label definitions and comparison coverage will appear here once you rank a disease."
                     )
                 )
 
-                gr.Markdown("Predicted targets")
+                gr.Markdown(
+                    f"Predicted targets — ranked over {len(target_df):,} candidate genes "
+                    "with tractability evidence or a known drug"
+                )
                 out_df = gr.HTML(
                     value=_render_results_table(_empty_results(), DISPLAY_COLUMNS)
                 )
@@ -1034,13 +1143,13 @@ def launch():
                         label="Download full unfiltered ranking (CSV)"
                     )
 
-                gr.Examples(examples=examples, inputs=search_box)
-
-                search_box.input(
-                    fn=search_diseases, inputs=search_box, outputs=did_dropdown
-                )
-                search_box.submit(
-                    fn=search_diseases, inputs=search_box, outputs=did_dropdown
+                gr.Examples(
+                    examples=examples,
+                    inputs=search_box,
+                    fn=run_example,
+                    outputs=[did_dropdown, disease_summary, coverage_note, out_df, out_file, out_file_full],
+                    run_on_click=True,
+                    cache_examples=False,
                 )
 
                 inputs = [
@@ -1059,7 +1168,16 @@ def launch():
                     out_file_full,
                 ]
 
+                # Typing populates AND ranks: per-disease scoring is lru-cached,
+                # so keystrokes that keep the same top match cost only a render.
+                search_box.input(
+                    fn=search_diseases, inputs=search_box, outputs=did_dropdown
+                ).then(fn=run_disease_query, inputs=inputs, outputs=outputs)
+                search_box.submit(
+                    fn=search_diseases, inputs=search_box, outputs=did_dropdown
+                ).then(fn=run_disease_query, inputs=inputs, outputs=outputs)
                 btn.click(fn=run_disease_query, inputs=inputs, outputs=outputs)
+                did_dropdown.select(fn=run_disease_query, inputs=inputs, outputs=outputs)
                 topk.change(fn=run_disease_query, inputs=inputs, outputs=outputs)
                 filter_mode.change(fn=run_disease_query, inputs=inputs, outputs=outputs)
                 sort_by.change(fn=run_disease_query, inputs=inputs, outputs=outputs)
@@ -1096,21 +1214,40 @@ def launch():
                     )
                 )
                 t_out_file = gr.File(label="Download full disease ranking (CSV)")
-                t_search_box.input(
-                    fn=search_targets, inputs=t_search_box, outputs=tid_dropdown
-                )
-                t_search_box.submit(
-                    fn=search_targets, inputs=t_search_box, outputs=tid_dropdown
-                )
                 t_inputs = [t_search_box, tid_dropdown, t_topk, t_min_score]
                 t_outputs = [target_summary, t_out_df, t_out_file]
+                t_search_box.input(
+                    fn=search_targets, inputs=t_search_box, outputs=tid_dropdown
+                ).then(fn=run_target_query, inputs=t_inputs, outputs=t_outputs)
+                t_search_box.submit(
+                    fn=search_targets, inputs=t_search_box, outputs=tid_dropdown
+                ).then(fn=run_target_query, inputs=t_inputs, outputs=t_outputs)
                 t_btn.click(fn=run_target_query, inputs=t_inputs, outputs=t_outputs)
+                tid_dropdown.select(fn=run_target_query, inputs=t_inputs, outputs=t_outputs)
                 t_topk.change(fn=run_target_query, inputs=t_inputs, outputs=t_outputs)
                 t_min_score.change(
                     fn=run_target_query, inputs=t_inputs, outputs=t_outputs
                 )
 
-    demo.queue(default_concurrency_limit=2).launch(theme=gr.themes.Soft())
+        demo.load(
+            fn=lambda: run_example("spinal muscular atrophy"),
+            inputs=None,
+            outputs=[did_dropdown, disease_summary, coverage_note, out_df, out_file, out_file_full],
+        )
+
+    # Prewarm the model + embeddings in the background so the first visitor
+    # doesn't pay the cold start.
+    def _prewarm():
+        try:
+            get_runtime()
+            _get_disease_runtime_cached()
+            print("Prewarm complete.")
+        except Exception as error:
+            print(f"Prewarm failed (will retry on first query): {error}")
+
+    threading.Thread(target=_prewarm, daemon=True).start()
+
+    demo.queue(default_concurrency_limit=2).launch(theme=gr.themes.Soft(), show_error=True)
 
 
 if __name__ == "__main__":

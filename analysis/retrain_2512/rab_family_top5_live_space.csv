@@ -1,0 +1,311 @@
+gene,targetId,rank,disease,diseaseId,otrec_score
+RAB10,ENSG00000084733,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.986
+RAB10,ENSG00000084733,2,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.979
+RAB10,ENSG00000084733,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.979
+RAB10,ENSG00000084733,4,upper aerodigestive tract neoplasm,EFO_0004284,0.975
+RAB10,ENSG00000084733,5,anus cancer,MONDO_0001879,0.968
+RAB11A,ENSG00000103769,1,drug toxicity,EFO_0020003,0.837
+RAB11A,ENSG00000103769,2,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.796
+RAB11A,ENSG00000103769,3,peritoneal neoplasm,EFO_1001100,0.792
+RAB11A,ENSG00000103769,4,refractory hematologic cancer,MONDO_0004111,0.759
+RAB11A,ENSG00000103769,5,upper aerodigestive tract neoplasm,EFO_0004284,0.633
+RAB11B,ENSG00000185236,1,drug toxicity,EFO_0020003,0.914
+RAB11B,ENSG00000185236,2,incomplete abortion,EFO_1001799,0.819
+RAB11B,ENSG00000185236,3,Rh isoimmunization,EFO_1001159,0.775
+RAB11B,ENSG00000185236,4,peritoneal neoplasm,EFO_1001100,0.773
+RAB11B,ENSG00000185236,5,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.75
+RAB13,ENSG00000143545,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.986
+RAB13,ENSG00000143545,2,upper aerodigestive tract neoplasm,EFO_0004284,0.981
+RAB13,ENSG00000143545,3,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.978
+RAB13,ENSG00000143545,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.975
+RAB13,ENSG00000143545,5,peritoneal neoplasm,EFO_1001100,0.975
+RAB14,ENSG00000119396,1,upper aerodigestive tract neoplasm,EFO_0004284,0.991
+RAB14,ENSG00000119396,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.988
+RAB14,ENSG00000119396,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.986
+RAB14,ENSG00000119396,4,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.982
+RAB14,ENSG00000119396,5,anus cancer,MONDO_0001879,0.981
+RAB15,ENSG00000139998,1,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.993
+RAB15,ENSG00000139998,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.993
+RAB15,ENSG00000139998,3,anus cancer,MONDO_0001879,0.991
+RAB15,ENSG00000139998,4,upper aerodigestive tract neoplasm,EFO_0004284,0.991
+RAB15,ENSG00000139998,5,peritoneal neoplasm,EFO_1001100,0.99
+RAB17,ENSG00000124839,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.966
+RAB17,ENSG00000124839,2,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.949
+RAB17,ENSG00000124839,3,peritoneal neoplasm,EFO_1001100,0.947
+RAB17,ENSG00000124839,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.945
+RAB17,ENSG00000124839,5,upper aerodigestive tract neoplasm,EFO_0004284,0.934
+RAB18,ENSG00000099246,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.994
+RAB18,ENSG00000099246,2,Proteus syndrome,MONDO_0008318,0.983
+RAB18,ENSG00000099246,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.981
+RAB18,ENSG00000099246,4,anus cancer,MONDO_0001879,0.98
+RAB18,ENSG00000099246,5,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.98
+RAB19,ENSG00000146955,1,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.991
+RAB19,ENSG00000146955,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.989
+RAB19,ENSG00000146955,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.988
+RAB19,ENSG00000146955,4,peritoneal neoplasm,EFO_1001100,0.987
+RAB19,ENSG00000146955,5,lethal midline granuloma,EFO_1001013,0.986
+RAB1A,ENSG00000138069,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.962
+RAB1A,ENSG00000138069,2,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.958
+RAB1A,ENSG00000138069,3,peritoneal neoplasm,EFO_1001100,0.945
+RAB1A,ENSG00000138069,4,upper aerodigestive tract neoplasm,EFO_0004284,0.924
+RAB1A,ENSG00000138069,5,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.896
+RAB1B,ENSG00000174903,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.987
+RAB1B,ENSG00000174903,2,peritoneal neoplasm,EFO_1001100,0.973
+RAB1B,ENSG00000174903,3,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.968
+RAB1B,ENSG00000174903,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.966
+RAB1B,ENSG00000174903,5,upper aerodigestive tract neoplasm,EFO_0004284,0.956
+RAB20,ENSG00000139832,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.982
+RAB20,ENSG00000139832,2,acute myeloblastic leukemia with maturation,EFO_0003028,0.981
+RAB20,ENSG00000139832,3,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.98
+RAB20,ENSG00000139832,4,lethal midline granuloma,EFO_1001013,0.975
+RAB20,ENSG00000139832,5,upper aerodigestive tract neoplasm,EFO_0004284,0.973
+RAB21,ENSG00000080371,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.961
+RAB21,ENSG00000080371,2,upper aerodigestive tract neoplasm,EFO_0004284,0.958
+RAB21,ENSG00000080371,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.956
+RAB21,ENSG00000080371,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.948
+RAB21,ENSG00000080371,5,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.942
+RAB22A,ENSG00000124209,1,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.914
+RAB22A,ENSG00000124209,2,adult glioblastoma,MONDO_0020690,0.882
+RAB22A,ENSG00000124209,3,peritoneal neoplasm,EFO_1001100,0.873
+RAB22A,ENSG00000124209,4,upper aerodigestive tract neoplasm,EFO_0004284,0.866
+RAB22A,ENSG00000124209,5,high grade ovarian serous adenocarcinoma,EFO_1001958,0.835
+RAB23,ENSG00000112210,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.988
+RAB23,ENSG00000112210,2,upper aerodigestive tract neoplasm,EFO_0004284,0.983
+RAB23,ENSG00000112210,3,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.972
+RAB23,ENSG00000112210,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.965
+RAB23,ENSG00000112210,5,lethal midline granuloma,EFO_1001013,0.953
+RAB24,ENSG00000169228,1,acute myeloblastic leukemia with maturation,EFO_0003028,0.975
+RAB24,ENSG00000169228,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.967
+RAB24,ENSG00000169228,3,lethal midline granuloma,EFO_1001013,0.967
+RAB24,ENSG00000169228,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.961
+RAB24,ENSG00000169228,5,upper aerodigestive tract neoplasm,EFO_0004284,0.961
+RAB25,ENSG00000132698,1,acute myeloblastic leukemia with maturation,EFO_0003028,0.959
+RAB25,ENSG00000132698,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.932
+RAB25,ENSG00000132698,3,lethal midline granuloma,EFO_1001013,0.92
+RAB25,ENSG00000132698,4,upper aerodigestive tract neoplasm,EFO_0004284,0.918
+RAB25,ENSG00000132698,5,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.911
+RAB26,ENSG00000167964,1,peritoneal neoplasm,EFO_1001100,0.953
+RAB26,ENSG00000167964,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.944
+RAB26,ENSG00000167964,3,upper aerodigestive tract neoplasm,EFO_0004284,0.93
+RAB26,ENSG00000167964,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.927
+RAB26,ENSG00000167964,5,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.917
+RAB27A,ENSG00000069974,1,upper aerodigestive tract neoplasm,EFO_0004284,0.967
+RAB27A,ENSG00000069974,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.961
+RAB27A,ENSG00000069974,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.955
+RAB27A,ENSG00000069974,4,adult glioblastoma,MONDO_0020690,0.948
+RAB27A,ENSG00000069974,5,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.94
+RAB27B,ENSG00000041353,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.919
+RAB27B,ENSG00000041353,2,peritoneal neoplasm,EFO_1001100,0.895
+RAB27B,ENSG00000041353,3,upper aerodigestive tract neoplasm,EFO_0004284,0.874
+RAB27B,ENSG00000041353,4,drug toxicity,EFO_0020003,0.874
+RAB27B,ENSG00000041353,5,refractory hematologic cancer,MONDO_0004111,0.834
+RAB28,ENSG00000157869,1,chronic renal failure syndrome,MONDO_0024327,0.97
+RAB28,ENSG00000157869,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.961
+RAB28,ENSG00000157869,3,upper aerodigestive tract neoplasm,EFO_0004284,0.958
+RAB28,ENSG00000157869,4,peritoneal neoplasm,EFO_1001100,0.941
+RAB28,ENSG00000157869,5,drug toxicity,EFO_0020003,0.941
+RAB29,ENSG00000117280,1,peritoneal neoplasm,EFO_1001100,0.962
+RAB29,ENSG00000117280,2,upper aerodigestive tract neoplasm,EFO_0004284,0.943
+RAB29,ENSG00000117280,3,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.911
+RAB29,ENSG00000117280,4,high grade ovarian serous adenocarcinoma,EFO_1001958,0.892
+RAB29,ENSG00000117280,5,pituitary-dependent Cushing&#x27;s disease,EFO_1001110,0.887
+RAB2A,ENSG00000104388,1,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.966
+RAB2A,ENSG00000104388,2,upper aerodigestive tract neoplasm,EFO_0004284,0.941
+RAB2A,ENSG00000104388,3,high grade ovarian serous adenocarcinoma,EFO_1001958,0.934
+RAB2A,ENSG00000104388,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.928
+RAB2A,ENSG00000104388,5,peritoneal neoplasm,EFO_1001100,0.927
+RAB2B,ENSG00000129472,1,upper aerodigestive tract neoplasm,EFO_0004284,0.989
+RAB2B,ENSG00000129472,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.987
+RAB2B,ENSG00000129472,3,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.985
+RAB2B,ENSG00000129472,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.983
+RAB2B,ENSG00000129472,5,peritoneal neoplasm,EFO_1001100,0.983
+RAB30,ENSG00000137502,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.983
+RAB30,ENSG00000137502,2,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.976
+RAB30,ENSG00000137502,3,peritoneal neoplasm,EFO_1001100,0.962
+RAB30,ENSG00000137502,4,upper aerodigestive tract neoplasm,EFO_0004284,0.955
+RAB30,ENSG00000137502,5,acute myeloblastic leukemia with maturation,EFO_0003028,0.946
+RAB31,ENSG00000168461,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.988
+RAB31,ENSG00000168461,2,upper aerodigestive tract neoplasm,EFO_0004284,0.973
+RAB31,ENSG00000168461,3,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.97
+RAB31,ENSG00000168461,4,anus cancer,MONDO_0001879,0.951
+RAB31,ENSG00000168461,5,lethal midline granuloma,EFO_1001013,0.945
+RAB32,ENSG00000118508,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.888
+RAB32,ENSG00000118508,2,upper aerodigestive tract neoplasm,EFO_0004284,0.886
+RAB32,ENSG00000118508,3,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.874
+RAB32,ENSG00000118508,4,incomplete abortion,EFO_1001799,0.817
+RAB32,ENSG00000118508,5,chronic renal failure syndrome,MONDO_0024327,0.815
+RAB33A,ENSG00000134594,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.993
+RAB33A,ENSG00000134594,2,acute myeloblastic leukemia with maturation,EFO_0003028,0.989
+RAB33A,ENSG00000134594,3,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.986
+RAB33A,ENSG00000134594,4,anus cancer,MONDO_0001879,0.985
+RAB33A,ENSG00000134594,5,lethal midline granuloma,EFO_1001013,0.983
+RAB33B,ENSG00000172007,1,peritoneal neoplasm,EFO_1001100,0.918
+RAB33B,ENSG00000172007,2,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.788
+RAB33B,ENSG00000172007,3,drug toxicity,EFO_0020003,0.772
+RAB33B,ENSG00000172007,4,refractory hematologic cancer,MONDO_0004111,0.731
+RAB33B,ENSG00000172007,5,upper aerodigestive tract neoplasm,EFO_0004284,0.718
+RAB34,ENSG00000109113,1,chronic renal failure syndrome,MONDO_0024327,0.924
+RAB34,ENSG00000109113,2,drug toxicity,EFO_0020003,0.879
+RAB34,ENSG00000109113,3,incomplete abortion,EFO_1001799,0.874
+RAB34,ENSG00000109113,4,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.801
+RAB34,ENSG00000109113,5,upper aerodigestive tract neoplasm,EFO_0004284,0.703
+RAB35,ENSG00000111737,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.982
+RAB35,ENSG00000111737,2,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.965
+RAB35,ENSG00000111737,3,anus cancer,MONDO_0001879,0.964
+RAB35,ENSG00000111737,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.963
+RAB35,ENSG00000111737,5,upper aerodigestive tract neoplasm,EFO_0004284,0.96
+RAB36,ENSG00000100228,1,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.994
+RAB36,ENSG00000100228,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.993
+RAB36,ENSG00000100228,3,peritoneal neoplasm,EFO_1001100,0.99
+RAB36,ENSG00000100228,4,anus cancer,MONDO_0001879,0.99
+RAB36,ENSG00000100228,5,acute myeloblastic leukemia with maturation,EFO_0003028,0.989
+RAB37,ENSG00000172794,1,peritoneal neoplasm,EFO_1001100,0.972
+RAB37,ENSG00000172794,2,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.967
+RAB37,ENSG00000172794,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.966
+RAB37,ENSG00000172794,4,high grade ovarian serous adenocarcinoma,EFO_1001958,0.956
+RAB37,ENSG00000172794,5,lethal midline granuloma,EFO_1001013,0.951
+RAB38,ENSG00000123892,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.937
+RAB38,ENSG00000123892,2,upper aerodigestive tract neoplasm,EFO_0004284,0.901
+RAB38,ENSG00000123892,3,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.867
+RAB38,ENSG00000123892,4,peritoneal neoplasm,EFO_1001100,0.857
+RAB38,ENSG00000123892,5,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.845
+RAB39A,ENSG00000179331,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.939
+RAB39A,ENSG00000179331,2,upper aerodigestive tract neoplasm,EFO_0004284,0.921
+RAB39A,ENSG00000179331,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.912
+RAB39A,ENSG00000179331,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.889
+RAB39A,ENSG00000179331,5,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.885
+RAB39B,ENSG00000155961,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.996
+RAB39B,ENSG00000155961,2,anus cancer,MONDO_0001879,0.994
+RAB39B,ENSG00000155961,3,Proteus syndrome,MONDO_0008318,0.994
+RAB39B,ENSG00000155961,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.992
+RAB39B,ENSG00000155961,5,acute myeloblastic leukemia with maturation,EFO_0003028,0.991
+RAB3A,ENSG00000105649,1,Rh isoimmunization,EFO_1001159,0.92
+RAB3A,ENSG00000105649,2,drug toxicity,EFO_0020003,0.9
+RAB3A,ENSG00000105649,3,incomplete abortion,EFO_1001799,0.891
+RAB3A,ENSG00000105649,4,chronic renal failure syndrome,MONDO_0024327,0.834
+RAB3A,ENSG00000105649,5,congenital fibrinogen deficiency,MONDO_0018060,0.75
+RAB3B,ENSG00000169213,1,chronic renal failure syndrome,MONDO_0024327,0.936
+RAB3B,ENSG00000169213,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.93
+RAB3B,ENSG00000169213,3,drug toxicity,EFO_0020003,0.922
+RAB3B,ENSG00000169213,4,upper aerodigestive tract neoplasm,EFO_0004284,0.913
+RAB3B,ENSG00000169213,5,peritoneal neoplasm,EFO_1001100,0.909
+RAB3C,ENSG00000152932,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.973
+RAB3C,ENSG00000152932,2,acute myeloblastic leukemia with maturation,EFO_0003028,0.964
+RAB3C,ENSG00000152932,3,peritoneal neoplasm,EFO_1001100,0.957
+RAB3C,ENSG00000152932,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.946
+RAB3C,ENSG00000152932,5,lethal midline granuloma,EFO_1001013,0.944
+RAB3D,ENSG00000105514,1,drug toxicity,EFO_0020003,0.942
+RAB3D,ENSG00000105514,2,chronic renal failure syndrome,MONDO_0024327,0.882
+RAB3D,ENSG00000105514,3,incomplete abortion,EFO_1001799,0.866
+RAB3D,ENSG00000105514,4,peritoneal neoplasm,EFO_1001100,0.853
+RAB3D,ENSG00000105514,5,refractory hematologic cancer,MONDO_0004111,0.848
+RAB40A,ENSG00000172476,1,chronic renal failure syndrome,MONDO_0024327,0.957
+RAB40A,ENSG00000172476,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.937
+RAB40A,ENSG00000172476,3,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.934
+RAB40A,ENSG00000172476,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.905
+RAB40A,ENSG00000172476,5,peritoneal neoplasm,EFO_1001100,0.899
+RAB40B,ENSG00000141542,1,chronic renal failure syndrome,MONDO_0024327,0.935
+RAB40B,ENSG00000141542,2,drug toxicity,EFO_0020003,0.907
+RAB40B,ENSG00000141542,3,refractory hematologic cancer,MONDO_0004111,0.885
+RAB40B,ENSG00000141542,4,peritoneal neoplasm,EFO_1001100,0.862
+RAB40B,ENSG00000141542,5,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.85
+RAB40C,ENSG00000197562,1,chronic renal failure syndrome,MONDO_0024327,0.934
+RAB40C,ENSG00000197562,2,peritoneal neoplasm,EFO_1001100,0.91
+RAB40C,ENSG00000197562,3,high grade ovarian serous adenocarcinoma,EFO_1001958,0.901
+RAB40C,ENSG00000197562,4,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.885
+RAB40C,ENSG00000197562,5,incomplete abortion,EFO_1001799,0.87
+RAB41,ENSG00000147127,1,anus cancer,MONDO_0001879,0.995
+RAB41,ENSG00000147127,2,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.995
+RAB41,ENSG00000147127,3,high grade ovarian serous adenocarcinoma,EFO_1001958,0.995
+RAB41,ENSG00000147127,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.992
+RAB41,ENSG00000147127,5,Proteus syndrome,MONDO_0008318,0.991
+RAB42,ENSG00000188060,1,drug toxicity,EFO_0020003,0.91
+RAB42,ENSG00000188060,2,lethal midline granuloma,EFO_1001013,0.878
+RAB42,ENSG00000188060,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.869
+RAB42,ENSG00000188060,4,peritoneal neoplasm,EFO_1001100,0.856
+RAB42,ENSG00000188060,5,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.854
+RAB43,ENSG00000172780,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.965
+RAB43,ENSG00000172780,2,upper aerodigestive tract neoplasm,EFO_0004284,0.943
+RAB43,ENSG00000172780,3,peritoneal neoplasm,EFO_1001100,0.942
+RAB43,ENSG00000172780,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.942
+RAB43,ENSG00000172780,5,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.932
+RAB44,ENSG00000255587,1,peritoneal neoplasm,EFO_1001100,0.978
+RAB44,ENSG00000255587,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.973
+RAB44,ENSG00000255587,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.961
+RAB44,ENSG00000255587,4,upper aerodigestive tract neoplasm,EFO_0004284,0.957
+RAB44,ENSG00000255587,5,neoplasm of mature T-cells or NK-cells,EFO_0002426,0.956
+RAB4A,ENSG00000168118,1,upper aerodigestive tract neoplasm,EFO_0004284,0.948
+RAB4A,ENSG00000168118,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.934
+RAB4A,ENSG00000168118,3,peritoneal neoplasm,EFO_1001100,0.919
+RAB4A,ENSG00000168118,4,drug toxicity,EFO_0020003,0.916
+RAB4A,ENSG00000168118,5,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.897
+RAB4B,ENSG00000167578,1,chronic renal failure syndrome,MONDO_0024327,0.945
+RAB4B,ENSG00000167578,2,upper aerodigestive tract neoplasm,EFO_0004284,0.94
+RAB4B,ENSG00000167578,3,high grade ovarian serous adenocarcinoma,EFO_1001958,0.926
+RAB4B,ENSG00000167578,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.912
+RAB4B,ENSG00000167578,5,"small intestine neuroendocrine tumor, well differentiated, low or intermediate grade",MONDO_0002995,0.892
+RAB5A,ENSG00000144566,1,upper aerodigestive tract neoplasm,EFO_0004284,0.988
+RAB5A,ENSG00000144566,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.981
+RAB5A,ENSG00000144566,3,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.966
+RAB5A,ENSG00000144566,4,non-small cell lung carcinoma,EFO_0003060,0.937
+RAB5A,ENSG00000144566,5,acute myeloblastic leukemia with maturation,EFO_0003028,0.934
+RAB5B,ENSG00000111540,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.994
+RAB5B,ENSG00000111540,2,upper aerodigestive tract neoplasm,EFO_0004284,0.988
+RAB5B,ENSG00000111540,3,acute myeloblastic leukemia with maturation,EFO_0003028,0.984
+RAB5B,ENSG00000111540,4,anus cancer,MONDO_0001879,0.984
+RAB5B,ENSG00000111540,5,non-small cell lung carcinoma,EFO_0003060,0.979
+RAB5C,ENSG00000108774,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.997
+RAB5C,ENSG00000108774,2,anus cancer,MONDO_0001879,0.994
+RAB5C,ENSG00000108774,3,upper aerodigestive tract neoplasm,EFO_0004284,0.993
+RAB5C,ENSG00000108774,4,acute myeloblastic leukemia with maturation,EFO_0003028,0.991
+RAB5C,ENSG00000108774,5,non-small cell lung carcinoma,EFO_0003060,0.99
+RAB6A,ENSG00000175582,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.987
+RAB6A,ENSG00000175582,2,peritoneal neoplasm,EFO_1001100,0.963
+RAB6A,ENSG00000175582,3,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.962
+RAB6A,ENSG00000175582,4,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.958
+RAB6A,ENSG00000175582,5,anus cancer,MONDO_0001879,0.956
+RAB6B,ENSG00000154917,1,peritoneal neoplasm,EFO_1001100,0.996
+RAB6B,ENSG00000154917,2,high grade ovarian serous adenocarcinoma,EFO_1001958,0.995
+RAB6B,ENSG00000154917,3,anus cancer,MONDO_0001879,0.994
+RAB6B,ENSG00000154917,4,upper aerodigestive tract neoplasm,EFO_0004284,0.993
+RAB6B,ENSG00000154917,5,HER2 negative breast carcinoma,EFO_0009780,0.992
+RAB6C,ENSG00000222014,1,upper aerodigestive tract neoplasm,EFO_0004284,0.945
+RAB6C,ENSG00000222014,2,peritoneal neoplasm,EFO_1001100,0.941
+RAB6C,ENSG00000222014,3,chronic renal failure syndrome,MONDO_0024327,0.932
+RAB6C,ENSG00000222014,4,high grade ovarian serous adenocarcinoma,EFO_1001958,0.924
+RAB6C,ENSG00000222014,5,acute myeloblastic leukemia with maturation,EFO_0003028,0.889
+RAB6D,ENSG00000233087,1,chronic renal failure syndrome,MONDO_0024327,0.921
+RAB6D,ENSG00000233087,2,peritoneal neoplasm,EFO_1001100,0.908
+RAB6D,ENSG00000233087,3,high grade ovarian serous adenocarcinoma,EFO_1001958,0.888
+RAB6D,ENSG00000233087,4,upper aerodigestive tract neoplasm,EFO_0004284,0.885
+RAB6D,ENSG00000233087,5,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.877
+RAB7A,ENSG00000075785,1,upper aerodigestive tract neoplasm,EFO_0004284,0.934
+RAB7A,ENSG00000075785,2,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.897
+RAB7A,ENSG00000075785,3,chronic renal failure syndrome,MONDO_0024327,0.888
+RAB7A,ENSG00000075785,4,adult glioblastoma,MONDO_0020690,0.863
+RAB7A,ENSG00000075785,5,drug toxicity,EFO_0020003,0.853
+RAB7B,ENSG00000276600,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.963
+RAB7B,ENSG00000276600,2,neoplasm of mature B-cells,EFO_0000096,0.922
+RAB7B,ENSG00000276600,3,HIV-Associated Lipodystrophy Syndrome,EFO_1001348,0.871
+RAB7B,ENSG00000276600,4,Proteus syndrome,MONDO_0008318,0.87
+RAB7B,ENSG00000276600,5,upper aerodigestive tract neoplasm,EFO_0004284,0.867
+RAB8A,ENSG00000167461,1,peritoneal neoplasm,EFO_1001100,0.918
+RAB8A,ENSG00000167461,2,upper aerodigestive tract neoplasm,EFO_0004284,0.902
+RAB8A,ENSG00000167461,3,high grade ovarian serous adenocarcinoma,EFO_1001958,0.891
+RAB8A,ENSG00000167461,4,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.877
+RAB8A,ENSG00000167461,5,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.835
+RAB8B,ENSG00000166128,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.991
+RAB8B,ENSG00000166128,2,peritoneal neoplasm,EFO_1001100,0.987
+RAB8B,ENSG00000166128,3,Proteus syndrome,MONDO_0008318,0.984
+RAB8B,ENSG00000166128,4,upper aerodigestive tract neoplasm,EFO_0004284,0.984
+RAB8B,ENSG00000166128,5,acute myeloblastic leukemia with maturation,EFO_0003028,0.983
+RAB9A,ENSG00000123595,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.984
+RAB9A,ENSG00000123595,2,lip and oral cavity squamous cell carcinoma,MONDO_0044710,0.961
+RAB9A,ENSG00000123595,3,upper aerodigestive tract neoplasm,EFO_0004284,0.959
+RAB9A,ENSG00000123595,4,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.957
+RAB9A,ENSG00000123595,5,anus cancer,MONDO_0001879,0.943
+RAB9B,ENSG00000123570,1,high grade ovarian serous adenocarcinoma,EFO_1001958,0.994
+RAB9B,ENSG00000123570,2,upper aerodigestive tract neoplasm,EFO_0004284,0.98
+RAB9B,ENSG00000123570,3,oral cavity mucoepidermoid carcinoma,MONDO_0044964,0.978
+RAB9B,ENSG00000123570,4,anus cancer,MONDO_0001879,0.977
+RAB9B,ENSG00000123570,5,Proteus syndrome,MONDO_0008318,0.976

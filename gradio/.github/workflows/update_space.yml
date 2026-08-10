@@ -7,6 +7,8 @@ on:
     paths:
       - 'app.py'
       - 'dl_model_def.py'
+      - 'vocab_io.py'
+      - 'runtime_data.py'
       - 'prepare_runtime_artifacts.py'
       - 'requirements.txt'
       - 'README.md'
@@ -56,16 +58,16 @@ jobs:
       run: |
         python - <<'PY'
         import app
-        summary, note, frame, csv_path = app.recommend_targets(
+        summary, note, table_html, csv_path, full_csv_path = app.recommend_targets(
             'DOID_0050890',
             top_k=10,
-            filter_mode='Hide packaged known hits',
+            filter_mode='Novel predictions only',
             sort_label='OTRec score',
             min_score=0.0,
         )
-        assert not frame.empty
-        assert 'OTRec score' in frame.columns
-        assert csv_path
+        table_html = str(table_html)
+        assert table_html.count('<tr>') > 1, 'ranked table is empty'
+        assert 'platform.opentargets.org/target' in table_html, 'gene links missing'
+        assert csv_path and full_csv_path
         print(summary.splitlines()[0])
-        print(frame.head(2).to_string())
         PY

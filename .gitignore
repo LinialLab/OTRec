@@ -191,3 +191,4 @@ Outputs/_fig_backup/
 
 # Local figure backups (originals kept out of the repo)
 _fig_backup/
+gradio/data/proc_backup_2506/

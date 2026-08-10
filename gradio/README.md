@@ -41,6 +41,8 @@ Expected Space layout:
 .
 ├── app.py
 ├── dl_model_def.py
+├── vocab_io.py
+├── runtime_data.py
 ├── prepare_runtime_artifacts.py
 ├── requirements.txt
 └── data/
@@ -49,8 +51,15 @@ Expected Space layout:
         ├── disease_df.parquet
         ├── target_df.parquet
         ├── comparison_lookup.parquet
-        └── disease_metadata.csv
+        ├── disease_metadata.csv
+        └── vocabs.json.gz
 ```
+
+`vocabs.json.gz` holds the training-time vocabularies and is required for
+correct predictions (re-adapting from `df_learn_sub.parquet` permutes the
+vocabulary order and silently degrades predictions to chance). Produce it with
+`vocab_io.save_vocabularies(extract_vocabularies(model), path)` in the same
+training session as `model.weights.h5`; always update the two together.
 
 The model weights are downloaded at runtime. By default the app uses `OTREC_MODEL_REPO_ID=GrimSqueaker/OTRec` and `OTREC_MODEL_FILENAME=model.weights.h5`, but both can be overridden with environment variables for reviewer-safe or local deployments.
 
