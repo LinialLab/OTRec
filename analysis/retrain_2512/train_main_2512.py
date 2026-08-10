@@ -101,6 +101,6 @@ print("Notebook's logged 25.06 reference (same protocol, different release): "
       "Test AUC 0.9454 | PR-AUC 0.8504 (docstring comment, cell ~984)", flush=True)
 
 model.save_weights(str(OUT / f"model{SUFFIX}.weights.h5"))
-df_learn_sub = df_learn[["diseaseId", "targetId", "label", "score", "disease_text", "target_text"]].copy()
-df_learn_sub.to_parquet(OUT / f"df_learn_sub_2512{SUFFIX}.parquet")
-print(f"saved model{SUFFIX}.weights.h5 + df_learn_sub_2512{SUFFIX}.parquet (matched pair)", flush=True)
+# The matched vocabulary frame is df_learn_2512.parquet itself (written by
+# build_2512_frames.py); no separate copy needed.
+print(f"saved model{SUFFIX}.weights.h5 (vocab frame: df_learn_2512.parquet)", flush=True)

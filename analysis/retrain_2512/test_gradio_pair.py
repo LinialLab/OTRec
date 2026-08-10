@@ -47,7 +47,7 @@ def _fetch_old_weights_for_negative_control():
 
 
 def test_new_pair_loads_and_scores():
-    df_learn_sub = pd.read_parquet(NEW / "df_learn_sub_2512.parquet")
+    df_learn_sub = pd.read_parquet(NEW / "df_learn_2512.parquet")
     keras.backend.clear_session()
     model = build_two_tower_model(df_learn_sub)
     model.load_weights(str(NEW / "model.weights.h5"))  # must not raise
@@ -67,7 +67,7 @@ def test_mismatched_pair_fails_to_load():
     old_weights = _fetch_old_weights_for_negative_control()
     if old_weights is None:
         return
-    df_learn_sub_new = pd.read_parquet(NEW / "df_learn_sub_2512.parquet")
+    df_learn_sub_new = pd.read_parquet(NEW / "df_learn_2512.parquet")
     keras.backend.clear_session()
     model = build_two_tower_model(df_learn_sub_new)
     try:

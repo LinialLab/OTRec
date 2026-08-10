@@ -76,7 +76,7 @@ def test_dedup_cover_reproduces_full_frame_predictions():
 
 def test_subset_reproduces_full_frame_predictions():
     full = pd.read_parquet(R / "df_learn_2512.parquet")
-    subset = pd.read_parquet(R / "df_learn_sub_2512.parquet")
+    subset = pd.read_parquet(R / "df_learn_2512.parquet")
     print(f"full {full.shape} vs packaged subset {subset.shape}")
 
     sample = full.sample(n=4096, random_state=0)

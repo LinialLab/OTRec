@@ -20,7 +20,7 @@ R = REPO / "retrain_2512"
 PKG = R / "gradio_artifacts"
 PKG.mkdir(exist_ok=True)
 
-df_learn_full = pd.read_parquet(R / "df_learn_sub_2512.parquet")
+df_learn_full = pd.read_parquet(R / "df_learn_2512.parquet")
 disease_df = pd.read_parquet(R / "disease_df_full_2512.parquet")
 target_df = pd.read_parquet(R / "target_df_full_2512.parquet")
 comparison_lookup = pd.read_parquet(R / "Outputs" / "comparison_lookup_2512.parquet")
