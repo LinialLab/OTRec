@@ -1039,9 +1039,19 @@ def search_diseases(query):
     matches["name_starts"] = (
         matches["name"].astype(str).str.lower().str.startswith(lowered_query)
     )
+    # Match-quality tiers (computed only on the matched subset, so cheap):
+    # a name hit must outrank a synonym hit, which must outrank a row matched
+    # only through its long description -- otherwise auto-select can rank an
+    # unrelated disease first because its description mentions the query.
+    matches["name_hit"] = matches["name"].astype(str).str.contains(
+        query, case=False, na=False
+    )
+    matches["syn_hit"] = (
+        matches["synonyms"].astype(str) + " " + matches["ExactSynonyms"].astype(str)
+    ).str.contains(query, case=False, na=False)
     matches = matches.sort_values(
-        by=["exact_id", "exact_name", "name_starts", "name", "diseaseId"],
-        ascending=[False, False, False, True, True],
+        by=["exact_id", "exact_name", "name_starts", "name_hit", "syn_hit", "name", "diseaseId"],
+        ascending=[False, False, False, False, False, True, True],
     ).head(30)
 
     choices = [
