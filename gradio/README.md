@@ -61,7 +61,21 @@ vocabulary order and silently degrades predictions to chance). Produce it with
 `vocab_io.save_vocabularies(extract_vocabularies(model), path)` in the same
 training session as `model.weights.h5`; always update the two together.
 
-The model weights are downloaded at runtime. By default the app uses `OTREC_MODEL_REPO_ID=GrimSqueaker/OTRec` and `OTREC_MODEL_FILENAME=model.weights.h5`, but both can be overridden with environment variables for reviewer-safe or local deployments.
+The model weights are downloaded at runtime.
+
+## Free-tier behaviour and limits
+
+Runs on Spaces `cpu-basic` (2 vCPU, 16 GB). Practical implications:
+
+- **After ~48 h without visitors the Space sleeps.** The next visit pays a
+  container boot (~1-2 min, outside the app's control) plus the app cold start
+  (~5-15 s: 0.54 GB weights download + packaged embeddings; the app prewarms
+  in the background so the first query is usually fast once the page loads).
+- **One worker, queued requests**: simultaneous users are served in turn
+  (warm queries take a few seconds each).
+- Weights ship without optimizer state (1.63 GB -> 0.54 GB, bit-exact
+  predictions). The full training checkpoint remains in the model repo's git
+  history if training ever needs to resume. By default the app uses `OTREC_MODEL_REPO_ID=GrimSqueaker/OTRec` and `OTREC_MODEL_FILENAME=model.weights.h5`, but both can be overridden with environment variables for reviewer-safe or local deployments.
 
 ## Packaging comparison data
 
