@@ -30,20 +30,16 @@ NEW = REPO / "retrain_2512"
 OLD_WEIGHTS = REPO / "OTRec" / "gradio" / "_old_model_weights_probe.h5"  # fetched on demand below
 
 
-def _fetch_old_weights_for_negative_control():
-    """Best-effort: pull the currently-deployed weights via hf_hub_download so
-    the negative control has something real to fail against. If unavailable
-    (offline / no cached token), the negative control is skipped with a clear
-    message rather than silently passing."""
-    if OLD_WEIGHTS.exists():
-        return OLD_WEIGHTS
-    try:
-        from huggingface_hub import hf_hub_download
-        p = hf_hub_download(repo_id="GrimSqueaker/OTRec", filename="model.weights.h5")
-        return Path(p)
-    except Exception as e:
-        print(f"  (negative control skipped: could not fetch old weights -- {e})")
+def _mismatched_vocab_frame():
+    """A frame whose vocabulary CANNOT match the 25.12 weights: the released
+    25.06 training frame (different disease ontology size). Stable oracle --
+    unlike downloading "old" weights from HF, which drift as deployments
+    advance (that stale premise once made this control fail spuriously)."""
+    p = Path("/mnt/d/Research/OpenTargetsTransfer/code/copy_proc/df_learn.parquet")
+    if not p.exists():
+        print("  (negative control skipped: 25.06 frame not on disk)")
         return None
+    return pd.read_parquet(p)
 
 
 def test_new_pair_loads_and_scores():
@@ -64,19 +60,18 @@ def test_new_pair_loads_and_scores():
 
 
 def test_mismatched_pair_fails_to_load():
-    old_weights = _fetch_old_weights_for_negative_control()
-    if old_weights is None:
+    frame_2506 = _mismatched_vocab_frame()
+    if frame_2506 is None:
         return
-    df_learn_sub_new = pd.read_parquet(NEW / "df_learn_2512.parquet")
     keras.backend.clear_session()
-    model = build_two_tower_model(df_learn_sub_new)
+    model = build_two_tower_model(frame_2506)
     try:
-        model.load_weights(str(old_weights))
+        model.load_weights(str(NEW / "model.weights.h5"))
         # If load_weights didn't raise, the vocab sizes happened to coincide --
         # verify a real shape mismatch some other way so this isn't a false pass.
         raise AssertionError(
-            "old weights loaded onto new vocab without error -- negative "
-            "control is not discriminating; inspect vocab sizes manually"
+            "25.12 weights loaded onto a 25.06 vocabulary without error -- "
+            "negative control is not discriminating; inspect vocab sizes"
         )
     except (ValueError, AssertionError) as e:
         if "negative control is not discriminating" in str(e):
