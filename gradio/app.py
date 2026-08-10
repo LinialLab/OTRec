@@ -1088,10 +1088,8 @@ def launch():
             # OTRec — disease ↔ target prioritization
 
             Rank druggable-genome genes for a given disease (forward), or rank diseases for a given gene (reverse).
-            Open Targets and OTTree comparison columns are shown only where packaged comparison data is available.
-            The first query downloads model weights and precomputes embeddings, so the initial response can take around a minute.
+            Start typing a disease or gene — results appear automatically.
             Model and annotations: Open Targets Platform Release 25.12.
-            Research screening tool, not clinical evidence.
             """
         )
 
@@ -1238,6 +1236,18 @@ def launch():
                 t_min_score.change(
                     fn=run_target_query, inputs=t_inputs, outputs=t_outputs
                 )
+
+        gr.Markdown(
+            """
+            ---
+            Research screening tool, not clinical evidence — most predicted candidates will not progress in development.
+
+            If you use OTRec, please cite:
+            Ofer D., Linial M. *OTRec: A Deep Learning Recommender for Druggable Disease–Target Prioritization.*
+            bioRxiv 2025.12.21.695803, [doi:10.64898/2025.12.21.695803](https://doi.org/10.64898/2025.12.21.695803)
+            · [Code on GitHub](https://github.com/LinialLab/OTRec)
+            """
+        )
 
         demo.load(
             fn=lambda: run_example("spinal muscular atrophy"),

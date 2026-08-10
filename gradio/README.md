@@ -22,16 +22,15 @@ The app has two tabs:
 
 **Disease → Targets** (forward query):
 
-1. Search a disease by name, synonym, or Open Targets / EFO ID.
-2. Select it explicitly from the dropdown.
-3. Inspect the ranked targets, including a tractability summary column. By default, packaged known hits are hidden so the list focuses on candidate novel pairs. The summary header links out to Open Targets and, when the ontology is supported, to OLS.
-4. Read the coverage note below the summary. It explains packaged-label semantics and whether Open Targets / OTTree comparison columns are available for that disease.
-5. Download either the full filtered ranking or the full druggable-genome ranking as CSV.
+1. Start typing a disease name, synonym, or Open Targets / EFO ID — the top match is selected and ranked automatically (pick another match from the dropdown to re-rank).
+2. Inspect the ranked targets; gene names link to their Open Targets pages. By default, known clinical targets are hidden so the list focuses on novel candidates.
+3. Read the coverage note below the summary for label definitions and comparison-column availability.
+4. Download either the full filtered ranking or the full druggable-genome ranking as CSV.
 
 **Target → Diseases** (reverse query):
 
-1. Search a gene by symbol or Ensembl ID.
-2. Inspect the ranked diseases for that target and download the full disease ranking.
+1. Start typing a gene symbol or Ensembl ID — the top match is ranked automatically.
+2. Inspect the ranked diseases (names link to Open Targets) and download the full disease ranking.
 
 ## Runtime layout
 
@@ -93,10 +92,10 @@ That script packages:
 
 If those files are missing, the app still runs, but comparison columns and known-vs-novel metadata will be unavailable. If a packaged comparison file is present but empty, the app falls back to repository outputs when they are available locally.
 
-Packaged label caveat:
+Known/novel label caveat:
 
-- `packaged known hit` means the disease-target pair has a positive packaged comparison label.
-- `packaged novel` means the row is labeled `0` in the packaged comparison data.
+- `known clinical` means the disease-target pair has clinical-trial evidence in the packaged Open Targets release.
+- `novel` means the pair is labeled `0` in the packaged comparison data.
 - `unlabeled` means the pair is still rankable by OTRec, but it is outside the packaged comparison subset.
 
 ## Local smoke test
@@ -122,3 +121,11 @@ PY
 - Open Targets and OTTree columns are shown only where the packaged comparison data covers a pair
 - The CSV download contains the full filtered ranking, not just the visible rows
 
+## Citation
+
+If you use OTRec, please cite:
+
+> Ofer D., Linial M. *OTRec: A Deep Learning Recommender for Druggable Disease–Target Prioritization.*
+> bioRxiv 2025.12.21.695803. doi: [10.64898/2025.12.21.695803](https://doi.org/10.64898/2025.12.21.695803)
+
+Code: <https://github.com/LinialLab/OTRec>

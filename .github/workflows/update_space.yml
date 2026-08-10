@@ -5,14 +5,14 @@ on:
     branches:
       - main
     paths:
-      - 'app.py'
-      - 'dl_model_def.py'
-      - 'vocab_io.py'
-      - 'runtime_data.py'
-      - 'prepare_runtime_artifacts.py'
-      - 'requirements.txt'
-      - 'README.md'
-      - 'data/proc/**'
+      - 'gradio/app.py'
+      - 'gradio/dl_model_def.py'
+      - 'gradio/vocab_io.py'
+      - 'gradio/runtime_data.py'
+      - 'gradio/prepare_runtime_artifacts.py'
+      - 'gradio/requirements.txt'
+      - 'gradio/README.md'
+      - 'gradio/data/proc/**'
   workflow_dispatch:
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: .
+        working-directory: gradio
 
     steps:
     - name: Checkout
