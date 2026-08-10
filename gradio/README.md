@@ -14,7 +14,7 @@ short_description: 'OTRec: prediction of druggable target–disease associations
 Interactive demo for OTRec, a deep learning recommender that ranks druggable-genome targets for a disease by predicted likelihood of clinical relevance. Open Targets and OTTree scores are shown for context where available.
 
 This is a research screening tool, not clinical evidence. Most predicted candidates will not progress in development.
-The first query downloads model weights and precomputes embeddings, so the initial response can take around a minute.
+The app prewarms in the background on startup; after a Space wake-up the first query typically takes a few seconds.
 
 ## Use
 
@@ -52,7 +52,8 @@ Expected Space layout:
         ├── target_df.parquet
         ├── comparison_lookup.parquet
         ├── disease_metadata.csv
-        └── vocabs.json.gz
+        ├── vocabs.json.gz
+        └── embeddings.npz
 ```
 
 `vocabs.json.gz` holds the training-time vocabularies and is required for
