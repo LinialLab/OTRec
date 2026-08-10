@@ -1,0 +1,221 @@
+family,triples,observed,expected,lift,z
+L ribosomal proteins,7290,6255,363.5,17.21,348.7
+M10 matrix metallopeptidases,7360,2653,144.9,18.3,234.4
+Proteasome,5802,4049,559.8,7.23,182.3
+S ribosomal proteins,1188,1188,59.2,20.06,165.5
+Mitochondrial respiratory chain complex assembly factors,46096,6188,1701.9,3.64,138.1
+Mitochondrial complex IV: cytochrome c oxidase subunits,6536,1782,241.3,7.38,126.0
+Potassium two pore domain channel subfamily K,1628,677,35.3,19.2,119.7
+Mitochondrially encoded protein coding genes,7224,1778,266.7,6.67,117.5
+Complement system activation components,1930,544,26.8,20.29,110.5
+SH2 domain containing,174272,17380,9181.0,1.89,109.3
+Small nucleolar RNA protein coding host genes,76789,9200,3801.6,2.42,102.4
+Interferons,526,246,6.7,36.94,94.8
+DNA polymerases,39600,3636,1456.6,2.5,73.5
+Phosphodiesterases,11391,1480,435.2,3.4,65.7
+Ring finger proteins,104493,11449,7363.0,1.55,64.9
+Gamma-aminobutyric acid type A receptor subunits,12944,1381,385.3,3.58,64.6
+Histocompatibility complex,258,168,7.4,22.59,60.3
+Fibroblast growth factor family,729,336,35.6,9.43,58.0
+Bromodomain containing,3764,1304,456.0,2.86,55.2
+Cyclin dependent kinases,8878,1433,551.0,2.6,51.4
+"Myosin heavy chains, class II",132,111,4.9,22.55,49.9
+Solute carrier family 6,6430,621,139.6,4.45,48.0
+Pleckstrin homology domain containing,143298,10575,7356.7,1.44,47.9
+BCL2 family,1435,433,86.3,5.01,44.4
+Carbonic anhydrases,2856,369,62.4,5.91,43.6
+C2 domain containing protein kinases,1797,490,141.4,3.47,39.0
+C1-set domain containing,1414,198,24.4,8.13,36.1
+Cholinergic receptors nicotinic subunits,2581,343,79.6,4.31,35.4
+Transient receptor potential cation channels,4226,595,221.3,2.69,34.9
+ADAM metallopeptidases with thrombospondin type 1 motif,17,11,0.1,111.59,34.8
+Lysine demethylases,144,99,8.0,12.32,33.9
+Caspases,60,18,0.3,61.96,33.0
+RNA polymerase subunits,186,183,33.3,5.49,30.9
+T cell receptor beta locus at 7q34,12,12,0.2,69.97,28.8
+NuRD complex subunits,4602,568,239.0,2.38,28.8
+Chemokine ligands,928,274,75.1,3.65,28.5
+CD molecules,2357939,118841,111825.1,1.06,27.9
+Interleukins,1911,235,62.5,3.76,27.8
+Serine proteases,12375,897,439.6,2.04,27.3
+Armadillo like helical domain containing,40704,4178,3083.6,1.35,26.5
+PHD finger proteins,623,61,4.8,12.68,25.9
+Poly(ADP-ribose) polymerases,5518,698,348.9,2.0,25.2
+Interleukin 1 family,834,130,29.4,4.42,23.9
+Sterile alpha motif domain containing,62254,6808,5484.4,1.24,23.7
+Kinesins,1474,347,133.0,2.61,23.5
+Apolipoproteins,158,88,19.5,4.51,23.2
+Calcium voltage-gated channel alpha1 subunits,2443,215,62.1,3.46,23.1
+MicroRNA protein coding host genes,2839118,156999,150314.7,1.04,22.8
+"5-hydroxytryptamine receptors, G protein-coupled",2540,225,73.8,3.05,21.7
+Phospholipases,696,99,17.5,5.65,20.1
+Elastases,3874,228,73.5,3.1,19.8
+PWWP domain containing,1785,267,104.6,2.55,19.6
+SIN3 histone deacetylase complex subunits,2832,322,147.1,2.19,19.5
+Solute carrier family 5,854,90,23.0,3.92,19.3
+EMSY complex,3540,368,183.8,2.0,18.4
+Lipases,250,21,1.2,17.22,18.0
+Histone lysine methyltransferases,596,159,53.7,2.96,17.9
+Potassium inwardly rectifying channel subfamily J,776,103,27.5,3.75,17.7
+Protein phosphatase catalytic subunits,375,98,25.4,3.85,17.7
+SET domain containing,830,197,74.8,2.63,17.7
+Kallikreins,150,38,4.3,8.89,17.1
+Soluble glutathione S-transferases,48,42,6.2,6.81,16.2
+Tubulin alpha family,1944,312,158.7,1.97,15.9
+Mucins,436,131,45.7,2.87,15.7
+Phosphoinositide phosphatases,1364,125,44.0,2.84,15.5
+ATAC complex,3025,236,111.3,2.12,15.2
+Caspase recruitment domain containing,2132,448,285.3,1.57,15.0
+Mitogen-activated protein kinase kinase kinases,7839,584,374.6,1.56,14.9
+Cathepsins,182,35,4.5,7.82,14.9
+Flavoproteins,115022,5728,4932.7,1.16,14.4
+Toll like receptors,2625,185,80.2,2.31,14.3
+Heat shock 70kDa proteins,92,56,18.6,3.02,13.5
+Tumor necrosis factor superfamily,3546,238,125.3,1.9,13.4
+MAGE family,189,85,28.2,3.01,13.3
+AAA ATPases,1350,504,334.1,1.51,12.7
+Tubulin beta family,3789,207,107.5,1.92,12.3
+Immunoglobulin heavy locus at 14q32.33,644,23,2.8,8.33,12.3
+Granule associated serine proteases of immune defence,295,24,3.1,7.65,12.1
+BTB domain containing,94066,6259,5574.5,1.12,12.0
+Ubiquitin like modifier activating enzymes,288,90,36.1,2.49,11.4
+IPT domain containing,3734,262,155.1,1.69,10.9
+Minor histocompatibility antigens,13686,988,753.4,1.31,10.9
+Nectins and nectin-like molecules,117,49,16.5,2.97,10.7
+"G protein-coupled receptors, Class F frizzled",560,106,50.6,2.1,10.7
+Zinc fingers CXXC-type,1246,143,70.1,2.04,10.7
+Protein phosphatase 1 regulatory subunits,171982,8576,7862.0,1.09,10.3
+Protein tyrosine phosphatases non-receptor type,56,34,11.0,3.09,10.2
+Solute carrier family 22,2638,170,94.0,1.81,10.1
+M1 metallopeptidases,258,83,36.9,2.25,9.9
+Nucleotide excision repair,2560,191,105.9,1.8,9.9
+Cyclins,72,43,17.2,2.51,9.7
+C-C motif chemokine receptors,538,80,36.1,2.22,9.6
+TIR domain containing,1454,119,60.9,1.95,9.2
+FKBP prolyl isomerase family,6834,296,197.5,1.5,9.1
+DNA/RNA methyltransferases,15946,1156,934.0,1.24,9.0
+Receptor ligands,63612,3134,2763.7,1.13,9.0
+Kringle domain containing,2246,187,112.7,1.66,8.7
+STRIPAK complex,324,58,22.4,2.59,8.5
+MAPK activated protein kinases,164,69,33.6,2.05,8.2
+Cyclophilin peptidylprolyl isomerases,2430,143,86.4,1.66,8.2
+C2-set domain containing,13100,827,675.4,1.22,8.0
+WD repeat domain containing,21344,1913,1662.2,1.15,8.0
+Ribosomal protein S6 kinase family,114,58,29.2,1.99,7.7
+Pseudokinases,280,60,26.8,2.24,7.5
+TIM23 complex,60,32,14.2,2.26,7.4
+Coagulation factors,1974,150,94.2,1.59,7.3
+Integrin alpha subunits,1794,186,126.8,1.47,7.3
+Zinc fingers RANBP2-type,693,103,57.0,1.81,7.2
+Tumor necrosis factor receptor superfamily,5414,454,347.1,1.31,7.1
+Dbl family Rho GEFs,12675,596,472.8,1.26,6.9
+Lysine acetyltransferases,136,32,14.1,2.27,6.9
+Complement system regulators and receptors,1970,124,74.4,1.67,6.8
+Solute carrier family 39,39,9,1.4,6.53,6.7
+Aldehyde dehydrogenases,1920,181,121.9,1.48,6.7
+Solute carrier family 9,117,36,19.1,1.88,6.6
+Myb/SANT domain containing,893,162,107.4,1.51,6.6
+Ankyrin repeat domain containing,29185,1985,1787.1,1.11,6.6
+RAS type GTPase family,297,58,31.6,1.84,6.3
+Basic helix-loop-helix proteins,616,63,38.9,1.62,6.1
+Membrane spanning 4-domains,2975,126,86.9,1.45,5.6
+Galectins,152,8,1.6,4.88,5.0
+C2 domain containing phospholipases,34,6,1.1,5.51,4.8
+Killer cell lectin like receptors,130,39,23.9,1.63,4.8
+ATP binding cassette subfamily B,290,41,23.6,1.74,4.6
+Decarboxylases,1272,83,57.0,1.46,4.5
+Sulfatases,80,10,2.8,3.53,4.4
+NLR family,153,23,12.8,1.8,4.3
+Glycoside hydrolase family,10,2,0.2,10.91,4.3
+ATP binding cassette subfamily C,546,34,19.2,1.78,4.2
+Aldo-keto reductases,112,24,12.5,1.93,4.0
+Translational GTPases,854,117,88.9,1.32,3.9
+Wnt enhanceosome complex,128,23,13.3,1.73,3.9
+Potassium voltage-gated channels,1832,204,166.0,1.23,3.8
+ADAM metallopeptidase domain containing,19,5,1.1,4.52,3.8
+Protein tyrosine phosphatases receptor type,162,24,12.0,2.0,3.8
+Pyrin domain containing,90,6,1.6,3.7,3.5
+BPI fold containing,204,9,3.0,2.96,3.5
+Claudins,44,22,14.3,1.54,3.4
+ATP binding cassette subfamily A,44,5,1.3,3.86,3.4
+Mediator complex,434,104,80.8,1.29,3.4
+Interleukin receptors,26918,1239,1148.6,1.08,3.3
+MIF4G domain containing proteins,50,5,1.3,3.71,3.2
+7BS protein arginine methyltranferases,20,13,7.3,1.78,3.2
+Arginine methyltransferases,20,13,7.3,1.78,3.2
+Protein disulfide isomerases,100,3,0.7,4.51,2.9
+Transaminases,110,10,4.6,2.16,2.9
+Canonical high mobility group,30,12,7.1,1.69,2.9
+Fibronectin type III domain containing,89961,4883,4734.6,1.03,2.8
+Zinc fingers MYND-type,136,21,13.2,1.59,2.7
+Scavenger receptors,414,42,29.3,1.43,2.7
+I-set domain containing,310746,13629,13416.9,1.02,2.5
+Iron (II) and 2-oxoglutarate dependent oxygenases,133,21,14.3,1.46,2.2
+7BS small molecule methyltransferases,288,13,8.1,1.61,2.0
+Short chain dehydrogenase/reductase superfamily,13261,579,544.6,1.06,2.0
+Armadillo repeat containing,312,40,32.3,1.24,2.0
+Semaphorins,171,24,18.1,1.33,2.0
+Serpin peptidase inhibitors,2929,144,126.6,1.14,2.0
+JAMM/MPN+ metallopeptidase family,100,32,24.7,1.29,2.0
+Blood group antigens,4934,274,252.1,1.09,1.9
+B7 family,2805,139,123.5,1.13,1.9
+Zinc fingers ZZ-type,185,20,14.9,1.34,1.9
+Immunoglobulin like domain containing,113608,5245,5153.6,1.02,1.7
+Oxygenases,88,2,0.6,3.16,1.7
+Gla domain containing,1300,43,35.0,1.23,1.6
+Anoctamins,18,2,0.8,2.51,1.4
+V-set domain containing,283458,12608,12501.6,1.01,1.3
+Endoribonucleases,54,11,7.8,1.41,1.3
+Sushi domain containing,14524,596,573.7,1.04,1.2
+Low density lipoprotein receptors,60,12,9.5,1.27,1.2
+Tetraspanin family,93,7,5.4,1.29,0.7
+Bone morphogenetic proteins,50,4,2.9,1.37,0.7
+SNAREs,1232,36,33.4,1.08,0.6
+Scavenger receptor cysteine rich domain containing,378,30,27.6,1.09,0.6
+Cyclic nucleotide gated channels,180,9,7.7,1.17,0.5
+C2 domain containing,6240,238,232.8,1.02,0.4
+Cilia and flagella associated,378,86,83.2,1.03,0.4
+EF-hand domain containing,41748,1900,1885.2,1.01,0.4
+Tetratricopeptide repeat domain containing,918,66,63.5,1.04,0.4
+Spectrin repeat containing,43,1,0.7,1.43,0.4
+Selenoproteins,690,71,70.1,1.01,0.2
+Glutamine amidotransferase class 1 domain containing,88,8,7.7,1.05,0.2
+RNA binding motif containing,975,27,26.3,1.03,0.1
+DNA-(apurinic or apyrimidinic site) lyases,162,8,8.1,0.99,-0.0
+ATPase phospholipid transporting,660,49,49.6,0.99,-0.1
+Aminopeptidases,112,1,1.1,0.94,-0.1
+PDZ domain containing,846,17,17.7,0.96,-0.2
+Mixed lineage kinase family,25,0,0.1,0.0,-0.3
+DENN domain containing,104,0,0.1,0.0,-0.3
+C-type lectin domain containing,4492,405,409.7,0.99,-0.3
+HAD Asp-based non-protein phosphatases,9,0,0.1,0.0,-0.3
+Abhydrolase domain containing,23,0,0.2,0.0,-0.4
+M28 metallopeptidases,175,7,8.2,0.86,-0.4
+Zinc fingers FYVE-type,87,1,1.5,0.66,-0.4
+Zinc fingers C2H2-type,2624,354,360.2,0.98,-0.4
+Type II transmembrane serine proteases,51,0,0.1,0.0,-0.4
+Fc receptors,216,18,20.2,0.89,-0.6
+Proteins encoded by multiple genes,2563,251,260.6,0.96,-0.7
+Ig-like cell adhesion molecule family,3764,291,299.9,0.97,-0.7
+Centriolar satellite proteins,3432,271,281.5,0.96,-0.8
+FERM domain containing,17851,628,647.4,0.97,-0.9
+Kelch like,1064,40,45.1,0.89,-1.0
+DEP domain containing,63,0,1.1,0.0,-1.1
+ATP-grasp fold containing,1226,70,78.0,0.9,-1.3
+Membrane bound O-acyltransferase family,164,0,1.8,0.0,-1.4
+Transforming growth factor beta superfamily,252,12,17.7,0.68,-1.6
+LY6/PLAUR domain containing,136,19,24.3,0.78,-1.7
+CEA cell adhesion molecule family,110,7,11.4,0.61,-1.8
+Pseudoautosomal region 1,2092,81,98.1,0.83,-2.2
+Small molecule methyltransferases,5478,172,204.3,0.84,-3.0
+EPH receptors,1370,33,49.3,0.67,-3.3
+Membrane associated guanylate kinases,352,0,12.3,0.0,-3.7
+Spliceosomal C complex,400,40,65.5,0.61,-4.1
+Fibrinogen C domain containing,1804,126,167.0,0.75,-4.2
+Sialic acid binding Ig like lectins,638,22,45.4,0.48,-4.6
+Spliceosomal P complex,368,32,60.3,0.53,-4.8
+Cadherin related,3392,124,169.9,0.73,-5.0
+Tudor domain containing,776,23,62.1,0.37,-5.9
+"G protein-coupled receptors, Class A orphans",1538,88,143.3,0.61,-6.6
+PAS domain containing,8682,374,481.9,0.78,-6.7
+Neuropeptides,1816,96,168.2,0.57,-7.2

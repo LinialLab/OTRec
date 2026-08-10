@@ -1,0 +1,117 @@
+disease,diseaseId,rab_genes_topk,all_genes_topk_pct,enrichment,excess_contribution
+oral cavity mucoepidermoid carcinoma,MONDO_0044964,62,0.2594,3.73,0.8707
+high grade ovarian serous adenocarcinoma,EFO_1001958,64,0.4297,2.33,0.8153
+acute myeloblastic leukemia with maturation,EFO_0003028,62,0.3728,2.6,0.7991
+anus cancer,MONDO_0001879,55,0.0619,13.88,0.7328
+lethal midline granuloma,EFO_1001013,60,0.3835,2.44,0.7309
+non-small cell lung carcinoma,EFO_0003060,50,0.1181,6.61,0.5937
+neoplasm of mature T-cells or NK-cells,EFO_0002426,55,0.3821,2.25,0.5906
+neoplasm of mature B-cells,EFO_0000096,48,0.1967,3.81,0.5208
+HER2 negative breast carcinoma,EFO_0009780,42,0.031,21.14,0.4261
+adult acute lymphoblastic leukemia,MONDO_0003541,38,0.0285,20.86,0.3479
+therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457,38,0.0612,9.7,0.345
+upper aerodigestive tract neoplasm,EFO_0004284,64,0.8324,1.2,0.3071
+adult acute myeloid leukemia,EFO_1001934,35,0.0067,81.19,0.2951
+Proteus syndrome,MONDO_0008318,35,0.0048,113.86,0.2951
+peritoneal neoplasm,EFO_1001100,64,0.8528,1.17,0.2727
+male breast carcinoma,EFO_0006861,33,0.0258,20.01,0.2612
+"small intestine neuroendocrine tumor, well differentiated, low or intermediate grade",MONDO_0002995,56,0.7188,1.22,0.2472
+Ovarian Germ Cell Tumor,EFO_1000419,26,0.0071,57.32,0.1612
+childhood acute myeloid leukemia with maturation,EFO_1001945,26,0.0478,8.5,0.1589
+extrahepatic bile duct carcinoma,MONDO_0003090,25,0.0037,104.21,0.1488
+core binding factor acute myeloid leukemia,EFO_1002001,25,0.0577,6.77,0.1455
+adult glioblastoma,MONDO_0020690,57,0.8052,1.11,0.1433
+grade II meningioma,MONDO_0045056,27,0.2296,1.84,0.1214
+human papillomavirus-related squamous cell carcinoma,MONDO_0020657,23,0.0694,5.18,0.1207
+thymus cancer,MONDO_0002586,23,0.0784,4.59,0.1194
+lip and oral cavity squamous cell carcinoma,MONDO_0044710,57,0.8254,1.08,0.1104
+acute myeloid leukemia with multilineage dysplasia,MONDO_0019456,23,0.1271,2.83,0.1093
+pancreatic carcinoma,EFO_0002618,18,0.0417,6.74,0.0742
+acute myeloblastic leukemia without maturation,EFO_0003027,17,0.0112,23.74,0.0673
+Hereditary breast and ovarian cancer syndrome,Orphanet_145,16,0.0028,88.92,0.0595
+ovarian clear cell cystadenocarcinoma,MONDO_0004222,16,0.0374,6.68,0.0581
+nasal cavity and paranasal sinus squamous cell carcinoma,MONDO_0044787,14,0.0027,81.19,0.0451
+Fallopian Tube Carcinoma,EFO_1000251,46,0.6859,1.05,0.0429
+ovarian serous surface papillary adenocarcinoma,MONDO_0003874,13,0.0105,19.37,0.0386
+acute erythroblastic leukemia,EFO_1001257,12,0.0142,13.23,0.0325
+peritoneum cancer,MONDO_0002087,13,0.0827,2.46,0.0319
+neoplasm,EFO_0000616,28,0.3961,1.1,0.0306
+Primary Peritoneal Serous Adenocarcinoma,EFO_1000494,11,0.0569,3.02,0.0241
+triple-negative breast cancer,EFO_0005537,9,0.001,141.23,0.0179
+benign urinary system neoplasm,MONDO_0004180,9,0.0351,4.0,0.0166
+appendix carcinoma,MONDO_0003196,7,0.0042,25.94,0.0104
+squamous cell carcinoma of pancreas,MONDO_0018521,6,0.0109,8.61,0.0073
+prostate cancer,MONDO_0008315,6,0.0145,6.45,0.0072
+fallopian tube cancer,MONDO_0002158,10,0.1232,1.27,0.0071
+breast adenocarcinoma,EFO_0000304,5,0.0018,44.46,0.005
+"Blast Phase Chronic Myelogenous Leukemia, BCR-ABL1 Positive",EFO_1000131,5,0.0053,14.82,0.0049
+adult hepatocellular carcinoma,MONDO_0016216,5,0.0086,9.07,0.0049
+adult acute monocytic leukemia,EFO_1001933,5,0.005,15.69,0.0049
+childhood ependymoma,MONDO_0003478,5,0.0264,2.96,0.0043
+infiltrating urothelial carcinoma,MONDO_0040678,4,0.0035,18.09,0.003
+small intestine lymphoma,MONDO_0001852,4,0.0156,4.01,0.0027
+childhood acute myeloid leukemia,EFO_0000330,4,0.0237,2.64,0.0024
+fallopian tube transitional cell carcinoma,MONDO_0002833,7,0.0939,1.16,0.0016
+Uveal Melanoma,EFO_1000616,3,0.0139,3.36,0.0013
+endometrial adenosquamous carcinoma,EFO_1001952,3,0.0164,2.86,0.0012
+adenosquamous lung carcinoma,EFO_0000233,2,0.0015,21.34,0.0005
+intracranial meningioma,MONDO_0850302,2,0.0005,66.69,0.0005
+blastic plasmacytoid dendritic cell neoplasm,EFO_0010580,2,0.0074,4.2,0.0004
+Endometrial Serous Adenocarcinoma,EFO_1000238,1,0.0012,13.34,-0.0
+adult acute megakaryoblastic leukemia,EFO_1001932,1,0.0006,26.68,-0.0
+melanoma,EFO_0000756,1,0.0049,3.21,-0.0
+hereditary coproporphyria,MONDO_0007369,1,0.0025,6.35,-0.0
+uterine neoplasm,EFO_0003859,1,0.0012,12.7,-0.0
+bronchoalveolar adenocarcinoma,EFO_0000308,1,0.0048,3.25,-0.0
+gallbladder neoplasm,EFO_0004606,1,0.0004,44.46,-0.0
+bile duct cancer,MONDO_0003059,1,0.0004,44.46,-0.0
+gastric adenocarcinoma,EFO_0000503,1,0.0004,38.11,-0.0
+breast neoplasm,EFO_0003869,1,0.006,2.62,-0.0
+muscular disease,EFO_0002970,1,0.0021,7.41,-0.0
+uterine corpus cancer,EFO_0007532,1,0.0021,7.41,-0.0
+acute intermittent porphyria,MONDO_0008294,1,0.0072,2.17,-0.0001
+malignant colon neoplasm,MONDO_0021063,1,0.0095,1.64,-0.0001
+breast cancer,MONDO_0007254,2,0.0267,1.17,-0.0002
+fallopian tube mucinous adenocarcinoma,MONDO_0002744,1,0.0145,1.08,-0.0002
+ovarian mucinous cystadenocarcinoma,EFO_1001963,1,0.0136,1.14,-0.0002
+diffuse large B-cell lymphoma,EFO_0000403,1,0.022,0.71,-0.0005
+rheumatoid arthritis,EFO_0000685,1,0.0226,0.69,-0.0005
+anaplastic ependymoma,MONDO_0016700,1,0.0218,0.72,-0.0005
+fallopian tube endometrioid adenocarcinoma,MONDO_0003666,2,0.036,0.87,-0.0008
+myelofibrosis,MONDO_0044903,2,0.0484,0.65,-0.0018
+high grade B-cell lymphoma,MONDO_0044889,1,0.0481,0.32,-0.0023
+porphyria due to ALA dehydratase deficiency,MONDO_0013000,1,0.0652,0.24,-0.0043
+congestive heart failure,EFO_0000373,1,0.0808,0.19,-0.0065
+connective and soft tissue neoplasm,MONDO_0044334,1,0.0893,0.17,-0.008
+multiple myeloma,EFO_0001378,1,0.1103,0.14,-0.0122
+cancer,MONDO_0004992,6,0.1465,0.64,-0.014
+precancerous condition,MONDO_0021074,2,0.1656,0.19,-0.0269
+PMM2-congenital disorder of glycosylation,MONDO_0008907,1,0.1679,0.09,-0.0282
+HIV-Associated Lipodystrophy Syndrome,EFO_1001348,51,0.815,0.98,-0.0317
+Fallopian Tube Serous Adenocarcinoma,EFO_1000253,6,0.2041,0.46,-0.0342
+urinary bladder cancer,MONDO_0001187,4,0.2004,0.31,-0.0372
+Pleuropulmonary blastoma,EFO_0009052,4,0.2095,0.3,-0.0409
+contracture,EFO_0003899,2,0.2052,0.15,-0.0416
+anemia,MONDO_0002280,1,0.2276,0.07,-0.0518
+postherpetic neuralgia,MONDO_0041052,3,0.2326,0.2,-0.0526
+verrucous carcinoma of oral cavity,MONDO_0021538,1,0.2469,0.06,-0.0609
+intermittent vascular claudication,EFO_0003876,12,0.3226,0.58,-0.0713
+iatrogenic botulism,MONDO_0016778,4,0.3698,0.17,-0.1337
+histiocytic neoplasm,EFO_0021520,3,0.3839,0.12,-0.1459
+pituitary-dependent Cushing's disease,EFO_1001110,47,0.8524,0.86,-0.1904
+sprain,EFO_0009582,5,0.4601,0.17,-0.2068
+macular degeneration,EFO_0009606,1,0.4833,0.03,-0.2336
+uveitis,EFO_1001231,4,0.4997,0.13,-0.2467
+Hyperammonemia due to N-acetylglutamate synthetase deficiency,Orphanet_927,4,0.5023,0.12,-0.2493
+constipation disorder,MONDO_0002203,5,0.5077,0.15,-0.2528
+drug interaction,EFO_0009878,45,0.8696,0.81,-0.2652
+congenital fibrinogen deficiency,MONDO_0018060,4,0.5571,0.11,-0.3073
+childhood brain stem glioma,MONDO_0003869,11,0.5974,0.29,-0.3296
+lipodystrophy,EFO_1000727,8,0.5896,0.21,-0.3338
+perceptual disorders,MONDO_0024417,4,0.6007,0.1,-0.3579
+chronic renal failure syndrome,MONDO_0024327,41,0.8782,0.73,-0.3644
+refractory hematologic cancer,MONDO_0004111,41,0.8983,0.71,-0.4002
+incomplete abortion,EFO_1001799,31,0.8002,0.61,-0.4096
+drug toxicity,EFO_0020003,40,0.9131,0.68,-0.4468
+Penile Fibromatosis,EFO_1000466,7,0.7167,0.15,-0.5032
+Rh isoimmunization,EFO_1001159,12,0.7569,0.25,-0.5402

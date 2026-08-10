@@ -1,0 +1,337 @@
+diseaseId,disease,n_genes,n_known
+EFO_1001348,HIV-Associated Lipodystrophy Syndrome,61,0
+EFO_0004284,upper aerodigestive tract neoplasm,60,0
+EFO_1001100,peritoneal neoplasm,59,0
+EFO_0020003,drug toxicity,57,0
+MONDO_0044710,lip and oral cavity squamous cell carcinoma,56,0
+EFO_0003028,acute myeloblastic leukemia with maturation,56,0
+EFO_1001958,high grade ovarian serous adenocarcinoma,56,0
+MONDO_0004111,refractory hematologic cancer,56,0
+MONDO_0024327,chronic renal failure syndrome,56,0
+EFO_1001013,lethal midline granuloma,54,0
+MONDO_0044964,oral cavity mucoepidermoid carcinoma,54,0
+MONDO_0002995,"small intestine neuroendocrine tumor, well differentiated, low or intermediate grade",53,0
+MONDO_0020690,adult glioblastoma,53,0
+EFO_0002426,neoplasm of mature T-cells or NK-cells,50,0
+EFO_1000251,Fallopian Tube Carcinoma,50,0
+EFO_1001110,pituitary-dependent Cushing's disease,49,0
+EFO_0009878,drug interaction,48,0
+MONDO_0001879,anus cancer,47,0
+EFO_0003060,non-small cell lung carcinoma,44,0
+EFO_0000096,neoplasm of mature B-cells,42,0
+EFO_0009780,HER2 negative breast carcinoma,40,0
+MONDO_0019456,acute myeloid leukemia with multilineage dysplasia,38,0
+EFO_1001799,incomplete abortion,38,0
+MONDO_0019457,therapy related acute myeloid leukemia and myelodysplastic syndrome,38,0
+EFO_0000616,neoplasm,38,0
+MONDO_0003541,adult acute lymphoblastic leukemia,37,0
+MONDO_0008318,Proteus syndrome,37,0
+EFO_1001934,adult acute myeloid leukemia,37,0
+EFO_1001945,childhood acute myeloid leukemia with maturation,35,0
+EFO_1000419,Ovarian Germ Cell Tumor,34,0
+EFO_0006861,male breast carcinoma,34,0
+MONDO_0003090,extrahepatic bile duct carcinoma,34,0
+EFO_0002618,pancreatic carcinoma,34,0
+MONDO_0045056,grade II meningioma,33,0
+MONDO_0004222,ovarian clear cell cystadenocarcinoma,33,0
+EFO_1002001,core binding factor acute myeloid leukemia,33,0
+MONDO_0002158,fallopian tube cancer,33,0
+MONDO_0020657,human papillomavirus-related squamous cell carcinoma,32,0
+MONDO_0002087,peritoneum cancer,31,0
+MONDO_0018521,squamous cell carcinoma of pancreas,30,0
+MONDO_0002586,thymus cancer,30,0
+EFO_0003027,acute myeloblastic leukemia without maturation,30,0
+EFO_1000494,Primary Peritoneal Serous Adenocarcinoma,28,0
+Orphanet_145,Hereditary breast and ovarian cancer syndrome,28,0
+MONDO_0044787,nasal cavity and paranasal sinus squamous cell carcinoma,28,0
+MONDO_0003874,ovarian serous surface papillary adenocarcinoma,27,0
+EFO_1001257,acute erythroblastic leukemia,27,0
+EFO_0005537,triple-negative breast cancer,26,0
+MONDO_0001852,small intestine lymphoma,26,0
+EFO_1000131,"Blast Phase Chronic Myelogenous Leukemia, BCR-ABL1 Positive",25,0
+MONDO_0003196,appendix carcinoma,25,0
+MONDO_0003478,childhood ependymoma,25,0
+EFO_0000330,childhood acute myeloid leukemia,25,0
+EFO_1001933,adult acute monocytic leukemia,25,0
+EFO_1000616,Uveal Melanoma,25,0
+MONDO_0040678,infiltrating urothelial carcinoma,24,0
+MONDO_0003869,childhood brain stem glioma,24,0
+EFO_1001952,endometrial adenosquamous carcinoma,24,0
+MONDO_0004180,benign urinary system neoplasm,24,0
+EFO_0000304,breast adenocarcinoma,23,0
+MONDO_0007254,breast cancer,23,0
+MONDO_0008315,prostate cancer,23,0
+MONDO_0004992,cancer,22,0
+MONDO_0016216,adult hepatocellular carcinoma,22,0
+EFO_0007532,uterine corpus cancer,21,0
+MONDO_0002833,fallopian tube transitional cell carcinoma,21,0
+MONDO_0003666,fallopian tube endometrioid adenocarcinoma,20,0
+MONDO_0001187,urinary bladder cancer,20,0
+MONDO_0002225,ovarian sarcoma,20,0
+EFO_0000233,adenosquamous lung carcinoma,19,0
+EFO_0003859,uterine neoplasm,19,0
+EFO_1001963,ovarian mucinous cystadenocarcinoma,19,0
+EFO_0003891,biliary tract neoplasm,18,0
+EFO_0000196,metastatic prostate cancer,17,0
+MONDO_0003660,adult lymphoma,17,0
+EFO_0003869,breast neoplasm,17,0
+EFO_0000198,myelodysplastic syndrome,17,0
+MONDO_0021074,precancerous condition,17,0
+MONDO_0020077,myelodysplastic/myeloproliferative disease,17,0
+MONDO_0850302,intracranial meningioma,16,0
+EFO_1001932,adult acute megakaryoblastic leukemia,16,0
+EFO_0004289,lymphoid leukemia,16,0
+EFO_1001935,adult B acute lymphoblastic leukemia,16,0
+EFO_0010580,blastic plasmacytoid dendritic cell neoplasm,16,0
+EFO_0000221,acute monocytic leukemia,15,0
+MONDO_0008170,ovarian cancer,15,0
+MONDO_0017346,Epstein-Barr virus-positive diffuse large B-cell lymphoma of the elderly,15,0
+EFO_0010832,primary central chondrosarcoma,15,0
+MONDO_0003503,fallopian tube squamous cell carcinoma,15,0
+EFO_0009443,BRCAX breast cancer,15,0
+EFO_0001663,prostate carcinoma,15,0
+EFO_1001830,precursor T-cell lymphoblastic leukemia-lymphoma,15,0
+EFO_1000294,HER2 Positive Breast Carcinoma,14,0
+MONDO_0003383,fallopian tube clear cell adenocarcinoma,14,0
+EFO_1000044,pancreatic adenocarcinoma,14,0
+MONDO_0003659,pediatric lymphoma,14,0
+MONDO_0005411,gallbladder cancer,14,0
+EFO_1000412,Ovarian Carcinosarcoma,14,0
+EFO_1000649,estrogen-receptor positive breast cancer,14,0
+EFO_0000403,diffuse large B-cell lymphoma,14,0
+EFO_0000756,melanoma,13,0
+EFO_0000574,lymphoma,13,0
+EFO_1001946,childhood B acute lymphoblastic leukemia,13,0
+EFO_1001947,childhood T acute lymphoblastic leukemia,13,0
+MONDO_0021115,luminal B breast carcinoma,13,0
+EFO_1000253,Fallopian Tube Serous Adenocarcinoma,13,0
+MONDO_0044903,myelofibrosis,13,0
+EFO_0004606,gallbladder neoplasm,13,0
+MONDO_0003856,adult malignant hemangiopericytoma,13,0
+EFO_0000308,bronchoalveolar adenocarcinoma,12,0
+EFO_1000238,Endometrial Serous Adenocarcinoma,12,0
+MONDO_0044887,central nervous system non-hodgkin lymphoma,12,0
+MONDO_0036501,refractory malignant neoplasm,12,0
+EFO_1001973,ureter urothelial carcinoma,12,0
+EFO_1001959,hilar cholangiocarcinoma,12,0
+MONDO_0021063,malignant colon neoplasm,12,0
+EFO_0001642,lymphoid neoplasm,11,0
+MONDO_0004658,breast carcinoma in situ,11,0
+EFO_0000673,prostate adenocarcinoma,11,0
+MONDO_0003572,nasopharyngeal type undifferentiated carcinoma,11,0
+EFO_0006732,pancreatic adenosquamous carcinoma,11,0
+MONDO_0003268,mixed glioma,11,0
+EFO_1000357,Malignant Ovarian Brenner Tumor,11,0
+EFO_1001953,"endometrial endometrioid adenocarcinoma, variant with squamous differentiation",10,0
+MONDO_0003059,bile duct cancer,10,0
+MONDO_0021538,verrucous carcinoma of oral cavity,10,0
+MONDO_0021535,pancreatic neuroendocrine tumor G1,10,0
+MONDO_0021321,malignant tumor of extrahepatic bile duct,10,0
+MONDO_0003692,adult malignant mesenchymoma,10,0
+EFO_0003026,minimally differentiated acute myeloblastic leukemia,10,0
+EFO_0004252,nasopharyngeal neoplasm,10,0
+EFO_0000503,gastric adenocarcinoma,10,0
+MONDO_0019460,acute leukemia of ambiguous lineage,10,0
+MONDO_0002744,fallopian tube mucinous adenocarcinoma,9,0
+EFO_0003863,urogenital neoplasm,9,0
+EFO_0003050,large cell lung carcinoma,9,0
+MONDO_0020743,mixed phenotype acute leukemia,9,0
+EFO_0001378,multiple myeloma,9,0
+MONDO_0003033,prostate angiosarcoma,9,0
+MONDO_0004064,iris melanoma,9,0
+EFO_0003876,intermittent vascular claudication,9,0
+EFO_0000211,unspecified peripheral T-cell lymphoma,8,0
+EFO_1000407,Olfactory Neuroblastoma,8,0
+EFO_0005540,bile duct carcinoma,8,0
+EFO_0000222,acute myeloid leukemia,8,0
+EFO_0000223,acute myelomonocytic leukemia,8,0
+EFO_1000657,rectum cancer,8,0
+MONDO_0003089,extrahepatic bile duct mucoepidermoid carcinoma,8,0
+MONDO_0003212,nasal cavity carcinoma,7,0
+EFO_0003866,paranasal sinus neoplasm,7,0
+MONDO_0003060,biliary tract cancer,6,0
+EFO_0001075,ovarian carcinoma,6,0
+MONDO_0002974,cervical cancer,6,0
+EFO_1001936,adult T acute lymphoblastic leukemia,6,0
+MONDO_0004374,adult extraskeletal osteosarcoma,6,0
+MONDO_0001023,prolymphocytic leukemia,6,0
+MONDO_0044889,high grade B-cell lymphoma,6,0
+MONDO_0003890,infiltrating bladder urothelial carcinoma,6,0
+MONDO_0020541,maligant granulosa cell tumor of ovary,6,0
+EFO_0000565,leukemia,6,0
+MONDO_0018364,malignant epithelial tumor of ovary,6,0
+MONDO_0001056,gastric cancer,6,0
+EFO_0007535,verrucous carcinoma,6,0
+EFO_1001159,Rh isoimmunization,6,0
+EFO_0003025,acute megakaryoblastic leukaemia,6,0
+MONDO_0003982,bilateral breast carcinoma,6,0
+EFO_0000702,small cell lung carcinoma,6,0
+MONDO_0015686,primary peritoneal carcinoma,6,0
+MONDO_0002716,childhood spinal cord tumor,5,0
+MONDO_0002537,inverted papilloma,5,0
+MONDO_0004669,salivary gland cancer,5,0
+MONDO_0001402,vaginal cancer,5,0
+MONDO_0003936,invasive tubular breast carcinoma,5,0
+MONDO_0004192,urethra cancer,5,0
+MONDO_0008903,lung cancer,5,0
+MONDO_0003751,childhood germ cell tumor,5,0
+MONDO_0004110,refractory hairy cell leukemia,5,0
+MONDO_0011962,endometrial cancer,5,0
+MONDO_0003153,adult brainstem glioma,5,0
+MONDO_0000544,mucosal melanoma,5,0
+MONDO_0002543,adult oligodendroglioma,5,0
+Orphanet_325690,Genetic disorder of sex development,5,0
+MONDO_0001016,epididymis cancer,4,0
+EFO_0000220,acute lymphoblastic leukemia,4,0
+MONDO_0000645,fallopian tube benign neoplasm,4,0
+MONDO_0003950,nipple carcinoma,4,0
+EFO_0000305,breast carcinoma,4,0
+EFO_1001119,posterior uveitis,4,0
+MONDO_0021576,fallopian tube endometrioid tumor,4,0
+MONDO_0020656,human papillomavirus-related penile squamous cell carcinoma,4,0
+EFO_0009782,progesterone-receptor positive breast cancer,4,0
+MONDO_0002786,diencephalic cancer,4,0
+MONDO_0001340,heart cancer,4,0
+EFO_0000095,chronic lymphocytic leukemia,4,0
+MONDO_0003558,adenosquamous prostate carcinoma,4,0
+MONDO_0100342,malignant glioma,4,0
+EFO_1001512,endometrial carcinoma,4,0
+Orphanet_273,Steinert myotonic dystrophy,4,0
+MONDO_0016586,systemic mastocytosis,4,0
+MONDO_0003585,adult liposarcoma,4,0
+EFO_0008585,ST Elevation Myocardial Infarction,4,0
+EFO_1001465,gliosarcoma,4,0
+MONDO_0018542,severe congenital neutropenia,4,0
+MONDO_0003766,thalamic cancer,4,0
+EFO_1000866,choroid cancer,4,0
+EFO_0005952,non-Hodgkins lymphoma,4,0
+MONDO_0003087,mucoepidermoid breast carcinoma,3,0
+MONDO_0001325,penile cancer,3,0
+EFO_0007206,choroid plexus cancer,3,0
+MONDO_0002739,extrahepatic bile duct mucinous adenocarcinoma,3,0
+MONDO_0041052,postherpetic neuralgia,3,0
+EFO_1002015,HPV-associated cervical carcinoma,3,0
+MONDO_0002683,adult choroid plexus neoplasm,3,0
+MONDO_0008978,chordoma,3,0
+MONDO_0044334,connective and soft tissue neoplasm,3,0
+MONDO_0021639,grade II glioma,3,0
+EFO_1000140,Borderline Ovarian Surface Epithelial-Stromal Tumor,3,0
+EFO_0009781,progesterone-receptor negative breast cancer,3,0
+MONDO_0021633,cerebral astrocytoma,3,0
+MONDO_0024797,adult brain stem neoplasm,2,0
+MONDO_0003219,gastroesophageal junction adenocarcinoma,2,0
+EFO_1000059,cervical artery dissection,2,0
+MONDO_0003392,fallopian tube germ cell tumor,2,0
+EFO_0002938,hypopharyngeal carcinoma,2,0
+EFO_0004599,acute graft vs. host disease,2,0
+EFO_0005232,endometrium adenocarcinoma,2,0
+EFO_1000727,lipodystrophy,2,0
+EFO_0000707,squamous cell carcinoma,2,0
+MONDO_0018044,idiopathic hypersomnia,2,0
+EFO_0000181,head and neck squamous cell carcinoma,2,0
+EFO_1001480,metastatic colorectal cancer,2,0
+EFO_0000466,endometrioid carcinoma,2,0
+MONDO_0001763,ethmoid sinus cancer,2,0
+MONDO_0002665,extrahepatic bile duct adenocarcinoma,2,0
+MONDO_0002280,anemia,2,0
+EFO_1001082,panuveitis,2,0
+EFO_1000252,Fallopian Tube Carcinosarcoma,2,0
+MONDO_0008627,ureter cancer,2,0
+MONDO_0001322,pericardium cancer,2,0
+EFO_0006475,plasma cell leukemia,2,0
+MONDO_0002794,adult medulloblastoma,2,0
+MONDO_0002914,childhood brain stem neoplasm,2,0
+EFO_1000231,Endometrial Clear Cell Adenocarcinoma,2,0
+MONDO_0002073,malignant pineal area germ cell neoplasm,2,0
+MONDO_0004030,ureter transitional cell carcinoma,1,0
+EFO_1001012,leptomeningeal metastasis,1,0
+MONDO_0037256,serous neoplasm,1,0
+MONDO_0044907,metastatic squamous cell carcinoma,1,0
+MONDO_0004197,male urethral cancer,1,0
+MONDO_0004231,spindle cell variant squamous cell breast carcinoma,1,0
+MONDO_0040676,great vessel cancer,1,0
+EFO_0000559,keratinizing squamous cell carcinoma,1,0
+MONDO_0018171,malignant germ cell tumor of ovary,1,0
+MONDO_0018060,congenital fibrinogen deficiency,1,0
+MONDO_0016717,choroid plexus neoplasm,1,0
+MONDO_0016096,malignant non-dysgerminomatous germ cell tumor of ovary,1,0
+EFO_0000182,hepatocellular carcinoma,1,0
+EFO_0000209,T-cell acute lymphoblastic leukemia,1,0
+MONDO_0044926,oropharyngeal carcinoma,1,0
+EFO_0000373,congestive heart failure,1,0
+MONDO_0021038,Ewing sarcoma/peripheral primitive neuroectodermal tumor,1,0
+EFO_0002617,metastatic melanoma,1,0
+EFO_0002615,internal carotid artery stenosis,1,0
+EFO_0006859,head and neck malignant neoplasia,1,0
+EFO_0003868,mouth neoplasm,1,0
+MONDO_0021528,benign neoplasm of male breast,1,0
+MONDO_0021364,neoplasm of oropharynx,1,0
+MONDO_0021092,fallopian tube neoplasm,1,0
+EFO_1000576,Thymic Carcinoma,1,0
+MONDO_0024879,metastatic carcinoma,1,0
+MONDO_0021657,ovarian sex cord-stromal tumor,1,0
+MONDO_0021656,nongerminomatous germ cell tumor,1,0
+EFO_0003860,pancreatic neoplasm,1,0
+EFO_0003853,respiratory system neoplasm,1,0
+EFO_0002950,pregnancy,1,0
+MONDO_0004667,sublingual gland cancer,1,0
+MONDO_0004545,adult malignant schwannoma,1,0
+MONDO_0004336,rectal signet ring cell adenocarcinoma,1,0
+EFO_0006352,laryngeal squamous cell carcinoma,1,0
+MONDO_0003029,skin angiosarcoma,1,0
+MONDO_0003022,pediatric angiosarcoma,1,0
+MONDO_0002981,peripheral primitive neuroectodermal tumor of bone,1,0
+MONDO_0002912,brainstem cancer,1,0
+MONDO_0002834,primary prostate urothelial carcinoma,1,0
+MONDO_0002581,spindle cell rhabdomyosarcoma,1,0
+MONDO_0001128,nasal cavity cancer,1,0
+MONDO_0000956,small intestine cancer,1,0
+MONDO_0000653,integumentary system cancer,1,0
+MONDO_0002482,nipple neoplasm,1,0
+MONDO_0002434,oculomotor nerve cancer,1,0
+MONDO_0002178,placenta cancer,1,0
+MONDO_0002100,cardiovascular cancer,1,0
+EFO_1000016,anaplastic lung carcinoma,1,0
+MONDO_0001501,retroperitoneal sarcoma,1,0
+MONDO_0001410,postmenopausal atrophic vaginitis,1,0
+MONDO_0001378,urachus cancer,1,0
+MONDO_0001375,bladder trigone cancer,1,0
+MONDO_0001350,parametrium malignant neoplasm,1,0
+MONDO_0100431,migraine without aura,1,0
+EFO_0000218,acute erythroleukemia,1,0
+MONDO_0020574,central nervous system nongerminomatous germ cell tumor,1,0
+MONDO_0019465,nodal marginal zone B-cell lymphoma,1,0
+MONDO_0019079,proximal spinal muscular atrophy,1,0
+MONDO_0018201,extragonadal germ cell tumor,1,0
+EFO_0000588,mesothelioma,1,0
+EFO_0000278,pancreatitis,1,0
+MONDO_0001991,malignant cardiac germ cell tumor,1,0
+EFO_1000435,Ovarian Transitional Cell Carcinoma,1,0
+MONDO_0044925,oral cavity carcinoma,1,0
+EFO_1001231,uveitis,1,0
+EFO_1001094,penile neoplasm,1,0
+EFO_1000236,Endometrial Mucinous Adenocarcinoma,1,0
+EFO_1000234,Endometrial Hyperplasia without Atypia,1,0
+EFO_1000088,Appendix Adenocarcinoma,1,0
+EFO_1000026,diffuse intrinsic pontine glioma,1,0
+EFO_0700108,non-infectious posterior uveitis,1,0
+EFO_0008528,urothelial carcinoma,1,0
+EFO_0007372,mitral valve stenosis,1,0
+EFO_0007270,femoral cancer,1,0
+MONDO_0003510,malignant testicular germ cell tumor,1,0
+EFO_1001956,gallbladder carcinoma,1,0
+MONDO_0003495,ovarian squamous cell neoplasm,1,0
+MONDO_0003404,adult yolk sac tumor,1,0
+MONDO_0003403,testicular non-seminomatous germ cell cancer,1,0
+MONDO_0003283,epididymal neoplasm,1,0
+MONDO_0003248,adult pineal parenchymal tumor,1,0
+MONDO_0003216,ureter adenocarcinoma,1,0
+EFO_1001944,childhood acute monocytic leukemia,1,0
+EFO_1001943,childhood acute megakaryoblastic leukemia,1,0
+EFO_1001779,chronic myelomonocytic leukemia,1,0
+EFO_1001769,carcinoid heart disease,1,0
+MONDO_0003107,infratentorial cancer,1,0
+MONDO_0003104,epicardium cancer,1,0
+MONDO_0000430,mature T-cell and NK-cell non-Hodgkin lymphoma,1,0
+EFO_1001969,"squamous cell breast carcinoma, acantholytic variant",1,0
+MONDO_0003502,ureter squamous cell carcinoma,1,0

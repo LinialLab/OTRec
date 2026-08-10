@@ -1,0 +1,1921 @@
+gene,disease,diseaseId
+RAB18,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB18,urethra cancer,MONDO_0004192
+RAB18,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB18,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB18,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB18,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB18,biliary tract neoplasm,EFO_0003891
+RAB18,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB18,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB18,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB18,upper aerodigestive tract neoplasm,EFO_0004284
+RAB18,grade II glioma,MONDO_0021639
+RAB18,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB18,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB18,refractory hairy cell leukemia,MONDO_0004110
+RAB18,pituitary-dependent Cushing's disease,EFO_1001110
+RAB18,adult hepatocellular carcinoma,MONDO_0016216
+RAB18,core binding factor acute myeloid leukemia,EFO_1002001
+RAB18,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB18,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB18,childhood acute myeloid leukemia,EFO_0000330
+RAB18,adult glioblastoma,MONDO_0020690
+RAB18,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB18,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB18,refractory malignant neoplasm,MONDO_0036501
+RAB18,ureter urothelial carcinoma,EFO_1001973
+RAB18,adult oligodendroglioma,MONDO_0002543
+RAB18,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB18,lethal midline granuloma,EFO_1001013
+RAB18,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB5B,small intestine lymphoma,MONDO_0001852
+RAB5B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB5B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB5B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB5B,biliary tract neoplasm,EFO_0003891
+RAB5B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB5B,urethra cancer,MONDO_0004192
+RAB5B,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB5B,refractory hairy cell leukemia,MONDO_0004110
+RAB5B,adult hepatocellular carcinoma,MONDO_0016216
+RAB5B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB5B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB5B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB5B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB5B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB5B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB5B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB5B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB5B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB5B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB5B,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB5B,ureter urothelial carcinoma,EFO_1001973
+RAB5B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB5B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB5B,adult glioblastoma,MONDO_0020690
+RAB5B,grade II glioma,MONDO_0021639
+RAB5B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB5B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB5B,refractory malignant neoplasm,MONDO_0036501
+RAB5B,childhood acute myeloid leukemia,EFO_0000330
+RAB30,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB30,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB30,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB30,pituitary-dependent Cushing's disease,EFO_1001110
+RAB30,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB30,core binding factor acute myeloid leukemia,EFO_1002001
+RAB30,chronic renal failure syndrome,MONDO_0024327
+RAB30,upper aerodigestive tract neoplasm,EFO_0004284
+RAB30,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB30,urethra cancer,MONDO_0004192
+RAB30,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB30,refractory hairy cell leukemia,MONDO_0004110
+RAB30,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB30,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB30,refractory malignant neoplasm,MONDO_0036501
+RAB30,lethal midline granuloma,EFO_1001013
+RAB30,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB30,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB30,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB30,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB30,adult hepatocellular carcinoma,MONDO_0016216
+RAB30,adult glioblastoma,MONDO_0020690
+RAB30,biliary tract neoplasm,EFO_0003891
+RAB30,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB30,grade II glioma,MONDO_0021639
+RAB30,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB30,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB30,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB30,small intestine lymphoma,MONDO_0001852
+RAB30,childhood acute myeloid leukemia,EFO_0000330
+RAB20,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB20,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB20,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB20,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB20,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB20,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB20,core binding factor acute myeloid leukemia,EFO_1002001
+RAB20,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB20,adult hepatocellular carcinoma,MONDO_0016216
+RAB20,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB20,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB20,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB20,childhood acute myeloid leukemia,EFO_0000330
+RAB20,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB20,small intestine lymphoma,MONDO_0001852
+RAB20,refractory hairy cell leukemia,MONDO_0004110
+RAB20,adult glioblastoma,MONDO_0020690
+RAB20,grade II glioma,MONDO_0021639
+RAB20,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB20,lethal midline granuloma,EFO_1001013
+RAB20,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB20,refractory malignant neoplasm,MONDO_0036501
+RAB20,biliary tract neoplasm,EFO_0003891
+RAB20,urethra cancer,MONDO_0004192
+RAB20,adult oligodendroglioma,MONDO_0002543
+RAB20,upper aerodigestive tract neoplasm,EFO_0004284
+RAB20,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB20,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB20,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB20,pituitary-dependent Cushing's disease,EFO_1001110
+RAB15,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB15,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB15,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB15,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB15,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB15,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB15,core binding factor acute myeloid leukemia,EFO_1002001
+RAB15,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB15,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB15,adult hepatocellular carcinoma,MONDO_0016216
+RAB15,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB15,small intestine lymphoma,MONDO_0001852
+RAB15,urethra cancer,MONDO_0004192
+RAB15,upper aerodigestive tract neoplasm,EFO_0004284
+RAB15,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB15,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB15,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB15,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB15,childhood acute myeloid leukemia,EFO_0000330
+RAB15,adult glioblastoma,MONDO_0020690
+RAB15,refractory hairy cell leukemia,MONDO_0004110
+RAB15,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB15,biliary tract neoplasm,EFO_0003891
+RAB15,grade II glioma,MONDO_0021639
+RAB15,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB15,lethal midline granuloma,EFO_1001013
+RAB15,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB15,refractory malignant neoplasm,MONDO_0036501
+RAB15,fallopian tube cancer,MONDO_0002158
+RAB15,adult oligodendroglioma,MONDO_0002543
+RAB5A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB5A,refractory hairy cell leukemia,MONDO_0004110
+RAB5A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB5A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB5A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB5A,childhood acute myeloid leukemia,EFO_0000330
+RAB5A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB5A,urethra cancer,MONDO_0004192
+RAB5A,biliary tract neoplasm,EFO_0003891
+RAB5A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB5A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB5A,adult glioblastoma,MONDO_0020690
+RAB5A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB5A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB5A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB5A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB5A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB5A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB5A,refractory malignant neoplasm,MONDO_0036501
+RAB5A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB5A,adult hepatocellular carcinoma,MONDO_0016216
+RAB5A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB5A,grade II glioma,MONDO_0021639
+RAB5A,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB5A,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB5A,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB5A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB5A,fallopian tube cancer,MONDO_0002158
+RAB5A,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB5A,adult oligodendroglioma,MONDO_0002543
+RAB4A,adult hepatocellular carcinoma,MONDO_0016216
+RAB4A,childhood acute myeloid leukemia,EFO_0000330
+RAB4A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB4A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB4A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB4A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB4A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB4A,urethra cancer,MONDO_0004192
+RAB4A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB4A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB4A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB4A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB4A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB4A,adult glioblastoma,MONDO_0020690
+RAB4A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB4A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB4A,biliary tract neoplasm,EFO_0003891
+RAB4A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB4A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB4A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB4A,fallopian tube cancer,MONDO_0002158
+RAB4A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB4A,refractory malignant neoplasm,MONDO_0036501
+RAB4A,refractory hairy cell leukemia,MONDO_0004110
+RAB4A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB4A,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB4A,grade II glioma,MONDO_0021639
+RAB4A,adult oligodendroglioma,MONDO_0002543
+RAB4A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB4A,lethal midline granuloma,EFO_1001013
+RAB6D,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB6D,core binding factor acute myeloid leukemia,EFO_1002001
+RAB6D,adult hepatocellular carcinoma,MONDO_0016216
+RAB6D,refractory hairy cell leukemia,MONDO_0004110
+RAB6D,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB6D,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB6D,childhood acute myeloid leukemia,EFO_0000330
+RAB6D,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB6D,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB6D,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB6D,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB6D,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB6D,upper aerodigestive tract neoplasm,EFO_0004284
+RAB6D,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB6D,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB6D,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB6D,adult glioblastoma,MONDO_0020690
+RAB6D,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB6D,small intestine lymphoma,MONDO_0001852
+RAB6D,grade II glioma,MONDO_0021639
+RAB6D,biliary tract neoplasm,EFO_0003891
+RAB6D,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB6D,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB6D,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB6D,chronic renal failure syndrome,MONDO_0024327
+RAB6D,acute erythroblastic leukemia,EFO_1001257
+RAB6D,lethal midline granuloma,EFO_1001013
+RAB6D,pituitary-dependent Cushing's disease,EFO_1001110
+RAB6D,refractory malignant neoplasm,MONDO_0036501
+RAB6D,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB21,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB21,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB21,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB21,adult hepatocellular carcinoma,MONDO_0016216
+RAB21,core binding factor acute myeloid leukemia,EFO_1002001
+RAB21,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB21,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB21,upper aerodigestive tract neoplasm,EFO_0004284
+RAB21,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB21,biliary tract neoplasm,EFO_0003891
+RAB21,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB21,childhood acute myeloid leukemia,EFO_0000330
+RAB21,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB21,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB21,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB21,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB21,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB21,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB21,refractory malignant neoplasm,MONDO_0036501
+RAB21,pituitary-dependent Cushing's disease,EFO_1001110
+RAB21,small intestine lymphoma,MONDO_0001852
+RAB21,urethra cancer,MONDO_0004192
+RAB21,adult glioblastoma,MONDO_0020690
+RAB21,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB21,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB21,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB21,refractory hairy cell leukemia,MONDO_0004110
+RAB21,grade II glioma,MONDO_0021639
+RAB21,ureter urothelial carcinoma,EFO_1001973
+RAB21,adult oligodendroglioma,MONDO_0002543
+RAB1A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB1A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB1A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB1A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB1A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB1A,small intestine lymphoma,MONDO_0001852
+RAB1A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB1A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB1A,adult glioblastoma,MONDO_0020690
+RAB1A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB1A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB1A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB1A,childhood acute myeloid leukemia,EFO_0000330
+RAB1A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB1A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB1A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB1A,refractory hairy cell leukemia,MONDO_0004110
+RAB1A,adult hepatocellular carcinoma,MONDO_0016216
+RAB1A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB1A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB1A,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB1A,refractory malignant neoplasm,MONDO_0036501
+RAB1A,Fallopian Tube Carcinosarcoma,EFO_1000252
+RAB1A,urethra cancer,MONDO_0004192
+RAB1A,acute myeloblastic leukemia without maturation,EFO_0003027
+RAB1A,adult oligodendroglioma,MONDO_0002543
+RAB1A,fallopian tube cancer,MONDO_0002158
+RAB1A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB1A,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB1A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RASEF,fallopian tube transitional cell carcinoma,MONDO_0002833
+RASEF,adult B acute lymphoblastic leukemia,EFO_1001935
+RASEF,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RASEF,chronic renal failure syndrome,MONDO_0024327
+RASEF,adult hepatocellular carcinoma,MONDO_0016216
+RASEF,core binding factor acute myeloid leukemia,EFO_1002001
+RASEF,adult glioblastoma,MONDO_0020690
+RASEF,shoulder impingement syndrome,EFO_1001178
+RASEF,small intestine lymphoma,MONDO_0001852
+RASEF,sex chromosome disorder of sex development,MONDO_0017975
+RASEF,refractory malignant neoplasm,MONDO_0036501
+RASEF,childhood T acute lymphoblastic leukemia,EFO_1001947
+RASEF,Endometrial Hyperplasia without Atypia,EFO_1000234
+RASEF,childhood B acute lymphoblastic leukemia,EFO_1001946
+RASEF,upper aerodigestive tract neoplasm,EFO_0004284
+RASEF,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RASEF,childhood acute myeloid leukemia with maturation,EFO_1001945
+RASEF,lethal midline granuloma,EFO_1001013
+RASEF,HIV-Associated Lipodystrophy Syndrome,EFO_1001348
+RASEF,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RASEF,pituitary-dependent Cushing's disease,EFO_1001110
+RASEF,refractory hairy cell leukemia,MONDO_0004110
+RASEF,adult oligodendroglioma,MONDO_0002543
+RASEF,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RASEF,adult T acute lymphoblastic leukemia,EFO_1001936
+RASEF,grade II glioma,MONDO_0021639
+RASEF,urethra cancer,MONDO_0004192
+RASEF,adult acute lymphoblastic leukemia,MONDO_0003541
+RASEF,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RASEF,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB6A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB6A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB6A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB6A,fallopian tube cancer,MONDO_0002158
+RAB6A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB6A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB6A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB6A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB6A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB6A,adult hepatocellular carcinoma,MONDO_0016216
+RAB6A,urethra cancer,MONDO_0004192
+RAB6A,biliary tract neoplasm,EFO_0003891
+RAB6A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB6A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB6A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB6A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB6A,childhood acute myeloid leukemia,EFO_0000330
+RAB6A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB6A,refractory hairy cell leukemia,MONDO_0004110
+RAB6A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB6A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB6A,adult glioblastoma,MONDO_0020690
+RAB6A,chronic renal failure syndrome,MONDO_0024327
+RAB6A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB6A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB6A,Fallopian Tube Carcinosarcoma,EFO_1000252
+RAB6A,small intestine lymphoma,MONDO_0001852
+RAB6A,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB6A,grade II glioma,MONDO_0021639
+RAB6A,refractory malignant neoplasm,MONDO_0036501
+RAB11B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB11B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB11B,chronic renal failure syndrome,MONDO_0024327
+RAB11B,urethra cancer,MONDO_0004192
+RAB11B,refractory hairy cell leukemia,MONDO_0004110
+RAB11B,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB11B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB11B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB11B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB11B,adult hepatocellular carcinoma,MONDO_0016216
+RAB11B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB11B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB11B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB11B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB11B,small intestine lymphoma,MONDO_0001852
+RAB11B,adult glioblastoma,MONDO_0020690
+RAB11B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB11B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB11B,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB11B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB11B,childhood acute myeloid leukemia,EFO_0000330
+RAB11B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB11B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB11B,biliary tract neoplasm,EFO_0003891
+RAB11B,refractory malignant neoplasm,MONDO_0036501
+RAB11B,grade II glioma,MONDO_0021639
+RAB11B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB11B,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB11B,adult oligodendroglioma,MONDO_0002543
+RAB11B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB7A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB7A,childhood acute myeloid leukemia,EFO_0000330
+RAB7A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB7A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB7A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB7A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB7A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB7A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB7A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB7A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB7A,adult hepatocellular carcinoma,MONDO_0016216
+RAB7A,adult glioblastoma,MONDO_0020690
+RAB7A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB7A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB7A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB7A,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB7A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB7A,refractory hairy cell leukemia,MONDO_0004110
+RAB7A,small intestine lymphoma,MONDO_0001852
+RAB7A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB7A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB7A,chronic renal failure syndrome,MONDO_0024327
+RAB7A,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB7A,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB7A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB7A,biliary tract neoplasm,EFO_0003891
+RAB7A,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB7A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB7A,adult oligodendroglioma,MONDO_0002543
+RAB7A,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB9A,small intestine lymphoma,MONDO_0001852
+RAB9A,childhood acute myeloid leukemia,EFO_0000330
+RAB9A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB9A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB9A,refractory malignant neoplasm,MONDO_0036501
+RAB9A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB9A,grade II glioma,MONDO_0021639
+RAB9A,adult hepatocellular carcinoma,MONDO_0016216
+RAB9A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB9A,urethra cancer,MONDO_0004192
+RAB9A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB9A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB9A,biliary tract neoplasm,EFO_0003891
+RAB9A,lethal midline granuloma,EFO_1001013
+RAB9A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB9A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB9A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB9A,chronic renal failure syndrome,MONDO_0024327
+RAB9A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB9A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB9A,refractory hairy cell leukemia,MONDO_0004110
+RAB9A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB9A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB9A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB9A,fallopian tube cancer,MONDO_0002158
+RAB9A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB9A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB9A,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB9A,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB9A,pituitary-dependent Cushing's disease,EFO_1001110
+CRACR2A,childhood acute lymphoblastic leukemia,MONDO_0000870
+CRACR2A,HIV-Associated Lipodystrophy Syndrome,EFO_1001348
+CRACR2A,adult oligodendroglioma,MONDO_0002543
+CRACR2A,verrucous carcinoma of oral cavity,MONDO_0021538
+CRACR2A,fallopian tube cancer,MONDO_0002158
+CRACR2A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+CRACR2A,fallopian tube transitional cell carcinoma,MONDO_0002833
+CRACR2A,uveitis,EFO_1001231
+CRACR2A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+CRACR2A,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+CRACR2A,Endometrial Hyperplasia without Atypia,EFO_1000234
+CRACR2A,chronic renal failure syndrome,MONDO_0024327
+CRACR2A,childhood acute myeloid leukemia,EFO_0000330
+CRACR2A,acute myeloblastic leukemia with maturation,EFO_0003028
+CRACR2A,adult acute lymphoblastic leukemia,MONDO_0003541
+CRACR2A,adult B acute lymphoblastic leukemia,EFO_1001935
+CRACR2A,adult T acute lymphoblastic leukemia,EFO_1001936
+CRACR2A,childhood acute myeloid leukemia with maturation,EFO_1001945
+CRACR2A,childhood B acute lymphoblastic leukemia,EFO_1001946
+CRACR2A,adult glioblastoma,MONDO_0020690
+CRACR2A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+CRACR2A,childhood T acute lymphoblastic leukemia,EFO_1001947
+CRACR2A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+CRACR2A,high grade ovarian serous adenocarcinoma,EFO_1001958
+CRACR2A,core binding factor acute myeloid leukemia,EFO_1002001
+CRACR2A,refractory hairy cell leukemia,MONDO_0004110
+CRACR2A,adult hepatocellular carcinoma,MONDO_0016216
+CRACR2A,urethra cancer,MONDO_0004192
+CRACR2A,upper aerodigestive tract neoplasm,EFO_0004284
+CRACR2A,small intestine lymphoma,MONDO_0001852
+RAB40B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB40B,adult hepatocellular carcinoma,MONDO_0016216
+RAB40B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB40B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB40B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB40B,biliary tract neoplasm,EFO_0003891
+RAB40B,chronic renal failure syndrome,MONDO_0024327
+RAB40B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB40B,lethal midline granuloma,EFO_1001013
+RAB40B,small intestine lymphoma,MONDO_0001852
+RAB40B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB40B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB40B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB40B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB40B,grade II glioma,MONDO_0021639
+RAB40B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB40B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB40B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB40B,adult glioblastoma,MONDO_0020690
+RAB40B,refractory malignant neoplasm,MONDO_0036501
+RAB40B,refractory hairy cell leukemia,MONDO_0004110
+RAB40B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB40B,urethra cancer,MONDO_0004192
+RAB40B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB40B,childhood acute myeloid leukemia,EFO_0000330
+RAB40B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB40B,adult oligodendroglioma,MONDO_0002543
+RAB40B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB40B,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB40B,shoulder impingement syndrome,EFO_1001178
+RAB3B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB3B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB3B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB3B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB3B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB3B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB3B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB3B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB3B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB3B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB3B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB3B,adult hepatocellular carcinoma,MONDO_0016216
+RAB3B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB3B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB3B,childhood acute myeloid leukemia,EFO_0000330
+RAB3B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB3B,adult glioblastoma,MONDO_0020690
+RAB3B,refractory hairy cell leukemia,MONDO_0004110
+RAB3B,small intestine lymphoma,MONDO_0001852
+RAB3B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB3B,grade II glioma,MONDO_0021639
+RAB3B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB3B,urethra cancer,MONDO_0004192
+RAB3B,refractory malignant neoplasm,MONDO_0036501
+RAB3B,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB3B,biliary tract neoplasm,EFO_0003891
+RAB3B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB3B,lethal midline granuloma,EFO_1001013
+RAB3B,ureter urothelial carcinoma,EFO_1001973
+RAB3B,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB33B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB33B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB33B,small intestine lymphoma,MONDO_0001852
+RAB33B,refractory hairy cell leukemia,MONDO_0004110
+RAB33B,childhood acute myeloid leukemia,EFO_0000330
+RAB33B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB33B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB33B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB33B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB33B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB33B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB33B,adult hepatocellular carcinoma,MONDO_0016216
+RAB33B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB33B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB33B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB33B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB33B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB33B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB33B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB33B,biliary tract neoplasm,EFO_0003891
+RAB33B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB33B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB33B,adult glioblastoma,MONDO_0020690
+RAB33B,refractory malignant neoplasm,MONDO_0036501
+RAB33B,chronic renal failure syndrome,MONDO_0024327
+RAB33B,ureter urothelial carcinoma,EFO_1001973
+RAB33B,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB33B,urethra cancer,MONDO_0004192
+RAB33B,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB33B,fallopian tube cancer,MONDO_0002158
+RAB27B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB27B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB27B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB27B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB27B,refractory hairy cell leukemia,MONDO_0004110
+RAB27B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB27B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB27B,adult hepatocellular carcinoma,MONDO_0016216
+RAB27B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB27B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB27B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB27B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB27B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB27B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB27B,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB27B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB27B,adult glioblastoma,MONDO_0020690
+RAB27B,chronic renal failure syndrome,MONDO_0024327
+RAB27B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB27B,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB27B,childhood acute myeloid leukemia,EFO_0000330
+RAB27B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB27B,adult oligodendroglioma,MONDO_0002543
+RAB27B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB27B,urethra cancer,MONDO_0004192
+RAB27B,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB27B,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB27B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB27B,small intestine lymphoma,MONDO_0001852
+RAB27B,ureter urothelial carcinoma,EFO_1001973
+RAB27A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB27A,adult hepatocellular carcinoma,MONDO_0016216
+RAB27A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB27A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB27A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB27A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB27A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB27A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB27A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB27A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB27A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB27A,refractory hairy cell leukemia,MONDO_0004110
+RAB27A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB27A,chronic renal failure syndrome,MONDO_0024327
+RAB27A,small intestine lymphoma,MONDO_0001852
+RAB27A,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB27A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB27A,childhood acute myeloid leukemia,EFO_0000330
+RAB27A,adult oligodendroglioma,MONDO_0002543
+RAB27A,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB27A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB27A,adult glioblastoma,MONDO_0020690
+RAB27A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB27A,HIV-Associated Lipodystrophy Syndrome,EFO_1001348
+RAB27A,biliary tract neoplasm,EFO_0003891
+RAB27A,sex chromosome disorder of sex development,MONDO_0017975
+RAB27A,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB27A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB27A,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB27A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB34,core binding factor acute myeloid leukemia,EFO_1002001
+RAB34,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB34,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB34,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB34,adult hepatocellular carcinoma,MONDO_0016216
+RAB34,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB34,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB34,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB34,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB34,childhood acute myeloid leukemia,EFO_0000330
+RAB34,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB34,small intestine lymphoma,MONDO_0001852
+RAB34,refractory hairy cell leukemia,MONDO_0004110
+RAB34,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB34,upper aerodigestive tract neoplasm,EFO_0004284
+RAB34,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB34,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB34,pituitary-dependent Cushing's disease,EFO_1001110
+RAB34,Penile Fibromatosis,EFO_1000466
+RAB34,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB34,grade II glioma,MONDO_0021639
+RAB34,biliary tract neoplasm,EFO_0003891
+RAB34,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB34,lethal midline granuloma,EFO_1001013
+RAB34,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB34,acute erythroblastic leukemia,EFO_1001257
+RAB34,Fallopian Tube Carcinosarcoma,EFO_1000252
+RAB34,refractory malignant neoplasm,MONDO_0036501
+RAB34,adult glioblastoma,MONDO_0020690
+RAB34,ureter urothelial carcinoma,EFO_1001973
+RAB25,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB25,adult hepatocellular carcinoma,MONDO_0016216
+RAB25,core binding factor acute myeloid leukemia,EFO_1002001
+RAB25,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB25,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB25,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB25,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB25,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB25,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB25,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB25,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB25,grade II glioma,MONDO_0021639
+RAB25,upper aerodigestive tract neoplasm,EFO_0004284
+RAB25,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB25,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB25,adult glioblastoma,MONDO_0020690
+RAB25,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB25,childhood acute myeloid leukemia,EFO_0000330
+RAB25,chronic renal failure syndrome,MONDO_0024327
+RAB25,lethal midline granuloma,EFO_1001013
+RAB25,pituitary-dependent Cushing's disease,EFO_1001110
+RAB25,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB25,refractory malignant neoplasm,MONDO_0036501
+RAB25,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB25,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB25,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB25,Penile Fibromatosis,EFO_1000466
+RAB25,biliary tract neoplasm,EFO_0003891
+RAB25,refractory hairy cell leukemia,MONDO_0004110
+RAB25,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB19,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB19,adult hepatocellular carcinoma,MONDO_0016216
+RAB19,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB19,core binding factor acute myeloid leukemia,EFO_1002001
+RAB19,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB19,refractory hairy cell leukemia,MONDO_0004110
+RAB19,adult glioblastoma,MONDO_0020690
+RAB19,childhood acute myeloid leukemia,EFO_0000330
+RAB19,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB19,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB19,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB19,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB19,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB19,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB19,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB19,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB19,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB19,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB19,urethra cancer,MONDO_0004192
+RAB19,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB19,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB19,upper aerodigestive tract neoplasm,EFO_0004284
+RAB19,biliary tract neoplasm,EFO_0003891
+RAB19,grade II glioma,MONDO_0021639
+RAB19,refractory malignant neoplasm,MONDO_0036501
+RAB19,small intestine lymphoma,MONDO_0001852
+RAB19,lethal midline granuloma,EFO_1001013
+RAB19,adult oligodendroglioma,MONDO_0002543
+RAB19,pituitary-dependent Cushing's disease,EFO_1001110
+RAB19,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB3C,core binding factor acute myeloid leukemia,EFO_1002001
+RAB3C,adult glioblastoma,MONDO_0020690
+RAB3C,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB3C,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB3C,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB3C,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB3C,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB3C,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB3C,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB3C,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB3C,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB3C,adult hepatocellular carcinoma,MONDO_0016216
+RAB3C,childhood acute myeloid leukemia,EFO_0000330
+RAB3C,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB3C,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB3C,upper aerodigestive tract neoplasm,EFO_0004284
+RAB3C,refractory hairy cell leukemia,MONDO_0004110
+RAB3C,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB3C,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB3C,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB3C,refractory malignant neoplasm,MONDO_0036501
+RAB3C,small intestine lymphoma,MONDO_0001852
+RAB3C,biliary tract neoplasm,EFO_0003891
+RAB3C,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB3C,urethra cancer,MONDO_0004192
+RAB3C,grade II glioma,MONDO_0021639
+RAB3C,lethal midline granuloma,EFO_1001013
+RAB3C,pituitary-dependent Cushing's disease,EFO_1001110
+RAB3C,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB3C,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB8B,adult hepatocellular carcinoma,MONDO_0016216
+RAB8B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB8B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB8B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB8B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB8B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB8B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB8B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB8B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB8B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB8B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB8B,lethal midline granuloma,EFO_1001013
+RAB8B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB8B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB8B,childhood acute myeloid leukemia,EFO_0000330
+RAB8B,refractory hairy cell leukemia,MONDO_0004110
+RAB8B,small intestine lymphoma,MONDO_0001852
+RAB8B,grade II glioma,MONDO_0021639
+RAB8B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB8B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB8B,adult glioblastoma,MONDO_0020690
+RAB8B,biliary tract neoplasm,EFO_0003891
+RAB8B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB8B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB8B,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB8B,refractory malignant neoplasm,MONDO_0036501
+RAB8B,adult oligodendroglioma,MONDO_0002543
+RAB8B,chronic renal failure syndrome,MONDO_0024327
+RAB8B,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB8B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB4B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB4B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB4B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB4B,urethra cancer,MONDO_0004192
+RAB4B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB4B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB4B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB4B,grade II glioma,MONDO_0021639
+RAB4B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB4B,adult glioblastoma,MONDO_0020690
+RAB4B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB4B,adult hepatocellular carcinoma,MONDO_0016216
+RAB4B,refractory hairy cell leukemia,MONDO_0004110
+RAB4B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB4B,biliary tract neoplasm,EFO_0003891
+RAB4B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB4B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB4B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB4B,childhood acute myeloid leukemia,EFO_0000330
+RAB4B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB4B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB4B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB4B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB4B,refractory malignant neoplasm,MONDO_0036501
+RAB4B,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB4B,fallopian tube cancer,MONDO_0002158
+RAB4B,lethal midline granuloma,EFO_1001013
+RAB4B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB4B,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB4B,ureter urothelial carcinoma,EFO_1001973
+RAB37,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB37,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB37,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB37,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB37,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB37,adult glioblastoma,MONDO_0020690
+RAB37,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB37,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB37,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB37,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB37,upper aerodigestive tract neoplasm,EFO_0004284
+RAB37,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB37,adult hepatocellular carcinoma,MONDO_0016216
+RAB37,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB37,childhood acute myeloid leukemia,EFO_0000330
+RAB37,refractory hairy cell leukemia,MONDO_0004110
+RAB37,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB37,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB37,core binding factor acute myeloid leukemia,EFO_1002001
+RAB37,biliary tract neoplasm,EFO_0003891
+RAB37,refractory malignant neoplasm,MONDO_0036501
+RAB37,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB37,urethra cancer,MONDO_0004192
+RAB37,grade II glioma,MONDO_0021639
+RAB37,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB37,lethal midline granuloma,EFO_1001013
+RAB37,small intestine lymphoma,MONDO_0001852
+RAB37,pituitary-dependent Cushing's disease,EFO_1001110
+RAB37,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB37,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB40C,refractory hairy cell leukemia,MONDO_0004110
+RAB40C,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB40C,core binding factor acute myeloid leukemia,EFO_1002001
+RAB40C,adult oligodendroglioma,MONDO_0002543
+RAB40C,refractory malignant neoplasm,MONDO_0036501
+RAB40C,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB40C,adult glioblastoma,MONDO_0020690
+RAB40C,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB40C,small intestine lymphoma,MONDO_0001852
+RAB40C,upper aerodigestive tract neoplasm,EFO_0004284
+RAB40C,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB40C,childhood acute myeloid leukemia,EFO_0000330
+RAB40C,biliary tract neoplasm,EFO_0003891
+RAB40C,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB40C,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB40C,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB40C,urethra cancer,MONDO_0004192
+RAB40C,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB40C,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB40C,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB40C,pituitary-dependent Cushing's disease,EFO_1001110
+RAB40C,adult hepatocellular carcinoma,MONDO_0016216
+RAB40C,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB40C,grade II glioma,MONDO_0021639
+RAB40C,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB40C,lethal midline granuloma,EFO_1001013
+RAB40C,ureter urothelial carcinoma,EFO_1001973
+RAB40C,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB40C,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB40C,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB6C,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB6C,core binding factor acute myeloid leukemia,EFO_1002001
+RAB6C,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB6C,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB6C,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB6C,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB6C,adult hepatocellular carcinoma,MONDO_0016216
+RAB6C,childhood acute myeloid leukemia,EFO_0000330
+RAB6C,refractory hairy cell leukemia,MONDO_0004110
+RAB6C,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB6C,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB6C,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB6C,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB6C,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB6C,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB6C,adult glioblastoma,MONDO_0020690
+RAB6C,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB6C,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB6C,small intestine lymphoma,MONDO_0001852
+RAB6C,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB6C,upper aerodigestive tract neoplasm,EFO_0004284
+RAB6C,lethal midline granuloma,EFO_1001013
+RAB6C,pituitary-dependent Cushing's disease,EFO_1001110
+RAB6C,refractory malignant neoplasm,MONDO_0036501
+RAB6C,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB6C,chronic renal failure syndrome,MONDO_0024327
+RAB6C,grade II glioma,MONDO_0021639
+RAB6C,Fallopian Tube Carcinosarcoma,EFO_1000252
+RAB6C,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB6C,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB3A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB3A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB3A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB3A,adult hepatocellular carcinoma,MONDO_0016216
+RAB3A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB3A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB3A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB3A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB3A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB3A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB3A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB3A,refractory hairy cell leukemia,MONDO_0004110
+RAB3A,grade II glioma,MONDO_0021639
+RAB3A,nasal cavity carcinoma,MONDO_0003212
+RAB3A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB3A,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB3A,childhood acute myeloid leukemia,EFO_0000330
+RAB3A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB3A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB3A,lethal midline granuloma,EFO_1001013
+RAB3A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB3A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB3A,adult glioblastoma,MONDO_0020690
+RAB3A,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB3A,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB3A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB3A,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB3A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB3A,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB3A,adult oligodendroglioma,MONDO_0002543
+RAB35,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB35,adult hepatocellular carcinoma,MONDO_0016216
+RAB35,small intestine lymphoma,MONDO_0001852
+RAB35,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB35,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB35,pituitary-dependent Cushing's disease,EFO_1001110
+RAB35,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB35,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB35,grade II glioma,MONDO_0021639
+RAB35,upper aerodigestive tract neoplasm,EFO_0004284
+RAB35,refractory hairy cell leukemia,MONDO_0004110
+RAB35,biliary tract neoplasm,EFO_0003891
+RAB35,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB35,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB35,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB35,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB35,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB35,adult glioblastoma,MONDO_0020690
+RAB35,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB35,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB35,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB35,core binding factor acute myeloid leukemia,EFO_1002001
+RAB35,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB35,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB35,childhood acute myeloid leukemia,EFO_0000330
+RAB35,adult oligodendroglioma,MONDO_0002543
+RAB35,chronic renal failure syndrome,MONDO_0024327
+RAB35,acute myeloblastic leukemia without maturation,EFO_0003027
+RAB35,shoulder impingement syndrome,EFO_1001178
+RAB35,HIV-Associated Lipodystrophy Syndrome,EFO_1001348
+RAB29,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB29,pituitary-dependent Cushing's disease,EFO_1001110
+RAB29,chronic renal failure syndrome,MONDO_0024327
+RAB29,grade II glioma,MONDO_0021639
+RAB29,core binding factor acute myeloid leukemia,EFO_1002001
+RAB29,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB29,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB29,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB29,shoulder impingement syndrome,EFO_1001178
+RAB29,refractory hairy cell leukemia,MONDO_0004110
+RAB29,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB29,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB29,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB29,adult hepatocellular carcinoma,MONDO_0016216
+RAB29,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB29,adult glioblastoma,MONDO_0020690
+RAB29,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB29,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB29,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB29,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB29,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB29,small intestine lymphoma,MONDO_0001852
+RAB29,fallopian tube cancer,MONDO_0002158
+RAB29,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB29,childhood acute myeloid leukemia,EFO_0000330
+RAB29,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB29,blindness (disorder),MONDO_0001941
+RAB29,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB29,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB29,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB38,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB38,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB38,refractory hairy cell leukemia,MONDO_0004110
+RAB38,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB38,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB38,core binding factor acute myeloid leukemia,EFO_1002001
+RAB38,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB38,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB38,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB38,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB38,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB38,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB38,childhood acute myeloid leukemia,EFO_0000330
+RAB38,upper aerodigestive tract neoplasm,EFO_0004284
+RAB38,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB38,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB38,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB38,adult hepatocellular carcinoma,MONDO_0016216
+RAB38,adult glioblastoma,MONDO_0020690
+RAB38,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB38,grade II glioma,MONDO_0021639
+RAB38,refractory malignant neoplasm,MONDO_0036501
+RAB38,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB38,pituitary-dependent Cushing's disease,EFO_1001110
+RAB38,lethal midline granuloma,EFO_1001013
+RAB38,biliary tract neoplasm,EFO_0003891
+RAB38,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB38,small intestine lymphoma,MONDO_0001852
+RAB38,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB38,shoulder impingement syndrome,EFO_1001178
+RAB33A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB33A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB33A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB33A,childhood acute myeloid leukemia,EFO_0000330
+RAB33A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB33A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB33A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB33A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB33A,adult hepatocellular carcinoma,MONDO_0016216
+RAB33A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB33A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB33A,refractory hairy cell leukemia,MONDO_0004110
+RAB33A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB33A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB33A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB33A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB33A,grade II glioma,MONDO_0021639
+RAB33A,refractory malignant neoplasm,MONDO_0036501
+RAB33A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB33A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB33A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB33A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB33A,urethra cancer,MONDO_0004192
+RAB33A,lethal midline granuloma,EFO_1001013
+RAB33A,biliary tract neoplasm,EFO_0003891
+RAB33A,small intestine lymphoma,MONDO_0001852
+RAB33A,adult glioblastoma,MONDO_0020690
+RAB33A,fallopian tube cancer,MONDO_0002158
+RAB33A,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB33A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB1B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB1B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB1B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB1B,childhood acute myeloid leukemia,EFO_0000330
+RAB1B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB1B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB1B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB1B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB1B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB1B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB1B,adult hepatocellular carcinoma,MONDO_0016216
+RAB1B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB1B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB1B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB1B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB1B,adult glioblastoma,MONDO_0020690
+RAB1B,refractory hairy cell leukemia,MONDO_0004110
+RAB1B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB1B,urethra cancer,MONDO_0004192
+RAB1B,small intestine lymphoma,MONDO_0001852
+RAB1B,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB1B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB1B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB1B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB1B,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB1B,chronic renal failure syndrome,MONDO_0024327
+RAB1B,fallopian tube cancer,MONDO_0002158
+RAB1B,ureter urothelial carcinoma,EFO_1001973
+RAB1B,Fallopian Tube Carcinosarcoma,EFO_1000252
+RAB1B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB3D,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB3D,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB3D,upper aerodigestive tract neoplasm,EFO_0004284
+RAB3D,refractory hairy cell leukemia,MONDO_0004110
+RAB3D,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB3D,adult glioblastoma,MONDO_0020690
+RAB3D,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB3D,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB3D,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB3D,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB3D,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB3D,adult hepatocellular carcinoma,MONDO_0016216
+RAB3D,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB3D,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB3D,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB3D,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB3D,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB3D,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB3D,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB3D,childhood acute myeloid leukemia,EFO_0000330
+RAB3D,core binding factor acute myeloid leukemia,EFO_1002001
+RAB3D,urethra cancer,MONDO_0004192
+RAB3D,biliary tract neoplasm,EFO_0003891
+RAB3D,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB3D,refractory malignant neoplasm,MONDO_0036501
+RAB3D,grade II glioma,MONDO_0021639
+RAB3D,lethal midline granuloma,EFO_1001013
+RAB3D,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB3D,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB3D,pituitary-dependent Cushing's disease,EFO_1001110
+RAB9B,childhood acute myeloid leukemia,EFO_0000330
+RAB9B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB9B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB9B,grade II glioma,MONDO_0021639
+RAB9B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB9B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB9B,adult hepatocellular carcinoma,MONDO_0016216
+RAB9B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB9B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB9B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB9B,refractory hairy cell leukemia,MONDO_0004110
+RAB9B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB9B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB9B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB9B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB9B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB9B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB9B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB9B,refractory malignant neoplasm,MONDO_0036501
+RAB9B,biliary tract neoplasm,EFO_0003891
+RAB9B,urethra cancer,MONDO_0004192
+RAB9B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB9B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB9B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB9B,adult glioblastoma,MONDO_0020690
+RAB9B,lethal midline granuloma,EFO_1001013
+RAB9B,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB9B,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB9B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB9B,chronic renal failure syndrome,MONDO_0024327
+RAB6B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB6B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB6B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB6B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB6B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB6B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB6B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB6B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB6B,childhood acute myeloid leukemia,EFO_0000330
+RAB6B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB6B,adult hepatocellular carcinoma,MONDO_0016216
+RAB6B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB6B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB6B,refractory hairy cell leukemia,MONDO_0004110
+RAB6B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB6B,small intestine lymphoma,MONDO_0001852
+RAB6B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB6B,adult glioblastoma,MONDO_0020690
+RAB6B,urethra cancer,MONDO_0004192
+RAB6B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB6B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB6B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB6B,refractory malignant neoplasm,MONDO_0036501
+RAB6B,adult oligodendroglioma,MONDO_0002543
+RAB6B,biliary tract neoplasm,EFO_0003891
+RAB6B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB6B,grade II glioma,MONDO_0021639
+RAB6B,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB6B,fallopian tube cancer,MONDO_0002158
+RAB6B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB28,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB28,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB28,adult hepatocellular carcinoma,MONDO_0016216
+RAB28,core binding factor acute myeloid leukemia,EFO_1002001
+RAB28,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB28,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB28,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB28,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB28,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB28,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB28,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB28,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB28,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB28,adult glioblastoma,MONDO_0020690
+RAB28,small intestine lymphoma,MONDO_0001852
+RAB28,grade II glioma,MONDO_0021639
+RAB28,upper aerodigestive tract neoplasm,EFO_0004284
+RAB28,refractory malignant neoplasm,MONDO_0036501
+RAB28,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB28,urethra cancer,MONDO_0004192
+RAB28,childhood acute myeloid leukemia,EFO_0000330
+RAB28,refractory hairy cell leukemia,MONDO_0004110
+RAB28,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB28,lethal midline granuloma,EFO_1001013
+RAB28,biliary tract neoplasm,EFO_0003891
+RAB28,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB28,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB28,pituitary-dependent Cushing's disease,EFO_1001110
+RAB28,ureter urothelial carcinoma,EFO_1001973
+RAB28,Fallopian Tube Carcinosarcoma,EFO_1000252
+RAB42,biliary tract neoplasm,EFO_0003891
+RAB42,refractory malignant neoplasm,MONDO_0036501
+RAB42,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB42,upper aerodigestive tract neoplasm,EFO_0004284
+RAB42,small intestine lymphoma,MONDO_0001852
+RAB42,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB42,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB42,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB42,lethal midline granuloma,EFO_1001013
+RAB42,adult hepatocellular carcinoma,MONDO_0016216
+RAB42,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB42,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB42,urethra cancer,MONDO_0004192
+RAB42,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB42,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB42,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB42,childhood acute myeloid leukemia,EFO_0000330
+RAB42,grade II glioma,MONDO_0021639
+RAB42,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB42,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB42,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB42,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB42,refractory hairy cell leukemia,MONDO_0004110
+RAB42,chronic renal failure syndrome,MONDO_0024327
+RAB42,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB42,core binding factor acute myeloid leukemia,EFO_1002001
+RAB42,adult glioblastoma,MONDO_0020690
+RAB42,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB42,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB42,fallopian tube cancer,MONDO_0002158
+RAB10,core binding factor acute myeloid leukemia,EFO_1002001
+RAB10,adult hepatocellular carcinoma,MONDO_0016216
+RAB10,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB10,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB10,upper aerodigestive tract neoplasm,EFO_0004284
+RAB10,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB10,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB10,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB10,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB10,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB10,refractory hairy cell leukemia,MONDO_0004110
+RAB10,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB10,refractory malignant neoplasm,MONDO_0036501
+RAB10,biliary tract neoplasm,EFO_0003891
+RAB10,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB10,adult glioblastoma,MONDO_0020690
+RAB10,childhood acute myeloid leukemia,EFO_0000330
+RAB10,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB10,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB10,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB10,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB10,chronic renal failure syndrome,MONDO_0024327
+RAB10,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB10,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB10,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB10,urethra cancer,MONDO_0004192
+RAB10,small intestine lymphoma,MONDO_0001852
+RAB10,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB10,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB10,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB8A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB8A,adult hepatocellular carcinoma,MONDO_0016216
+RAB8A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB8A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB8A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB8A,urethra cancer,MONDO_0004192
+RAB8A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB8A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB8A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB8A,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB8A,grade II glioma,MONDO_0021639
+RAB8A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB8A,biliary tract neoplasm,EFO_0003891
+RAB8A,nasal cavity carcinoma,MONDO_0003212
+RAB8A,childhood acute myeloid leukemia,EFO_0000330
+RAB8A,small intestine lymphoma,MONDO_0001852
+RAB8A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB8A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB8A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB8A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB8A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB8A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB8A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB8A,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB8A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB8A,ureter urothelial carcinoma,EFO_1001973
+RAB8A,adult glioblastoma,MONDO_0020690
+RAB8A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB8A,Fallopian Tube Carcinosarcoma,EFO_1000252
+RAB8A,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB26,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB26,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB26,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB26,adult glioblastoma,MONDO_0020690
+RAB26,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB26,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB26,small intestine lymphoma,MONDO_0001852
+RAB26,childhood acute myeloid leukemia,EFO_0000330
+RAB26,refractory hairy cell leukemia,MONDO_0004110
+RAB26,upper aerodigestive tract neoplasm,EFO_0004284
+RAB26,core binding factor acute myeloid leukemia,EFO_1002001
+RAB26,adult hepatocellular carcinoma,MONDO_0016216
+RAB26,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB26,urethra cancer,MONDO_0004192
+RAB26,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB26,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB26,chronic renal failure syndrome,MONDO_0024327
+RAB26,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB26,lethal midline granuloma,EFO_1001013
+RAB26,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB26,refractory malignant neoplasm,MONDO_0036501
+RAB26,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB26,grade II glioma,MONDO_0021639
+RAB26,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB26,biliary tract neoplasm,EFO_0003891
+RAB26,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB26,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB26,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB26,pituitary-dependent Cushing's disease,EFO_1001110
+RAB26,fallopian tube cancer,MONDO_0002158
+RAB39A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB39A,childhood acute myeloid leukemia,EFO_0000330
+RAB39A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB39A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB39A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB39A,adult hepatocellular carcinoma,MONDO_0016216
+RAB39A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB39A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB39A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB39A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB39A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB39A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB39A,chronic renal failure syndrome,MONDO_0024327
+RAB39A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB39A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB39A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB39A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB39A,refractory hairy cell leukemia,MONDO_0004110
+RAB39A,small intestine lymphoma,MONDO_0001852
+RAB39A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB39A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB39A,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB39A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB39A,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB39A,refractory malignant neoplasm,MONDO_0036501
+RAB39A,grade II glioma,MONDO_0021639
+RAB39A,adult glioblastoma,MONDO_0020690
+RAB39A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB39A,lethal midline granuloma,EFO_1001013
+RAB39A,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB11A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB11A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB11A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB11A,grade II glioma,MONDO_0021639
+RAB11A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB11A,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB11A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB11A,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB11A,adult glioblastoma,MONDO_0020690
+RAB11A,childhood acute myeloid leukemia,EFO_0000330
+RAB11A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB11A,ureter urothelial carcinoma,EFO_1001973
+RAB11A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB11A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB11A,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB11A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB11A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB11A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB11A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB11A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB11A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB11A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB11A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB11A,adult hepatocellular carcinoma,MONDO_0016216
+RAB11A,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB11A,biliary tract neoplasm,EFO_0003891
+RAB11A,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB11A,chronic renal failure syndrome,MONDO_0024327
+RAB11A,refractory malignant neoplasm,MONDO_0036501
+RAB11A,refractory hairy cell leukemia,MONDO_0004110
+RAB23,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB23,grade II glioma,MONDO_0021639
+RAB23,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB23,Penile Fibromatosis,EFO_1000466
+RAB23,refractory hairy cell leukemia,MONDO_0004110
+RAB23,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB23,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB23,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB23,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB23,chronic renal failure syndrome,MONDO_0024327
+RAB23,adult hepatocellular carcinoma,MONDO_0016216
+RAB23,lethal midline granuloma,EFO_1001013
+RAB23,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB23,upper aerodigestive tract neoplasm,EFO_0004284
+RAB23,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB23,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB23,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB23,urethra cancer,MONDO_0004192
+RAB23,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB23,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB23,refractory malignant neoplasm,MONDO_0036501
+RAB23,core binding factor acute myeloid leukemia,EFO_1002001
+RAB23,adult glioblastoma,MONDO_0020690
+RAB23,adult oligodendroglioma,MONDO_0002543
+RAB23,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB23,childhood acute myeloid leukemia,EFO_0000330
+RAB23,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB23,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB23,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB23,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB14,adult hepatocellular carcinoma,MONDO_0016216
+RAB14,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB14,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB14,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB14,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB14,core binding factor acute myeloid leukemia,EFO_1002001
+RAB14,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB14,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB14,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB14,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB14,childhood acute myeloid leukemia,EFO_0000330
+RAB14,refractory hairy cell leukemia,MONDO_0004110
+RAB14,upper aerodigestive tract neoplasm,EFO_0004284
+RAB14,adult oligodendroglioma,MONDO_0002543
+RAB14,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB14,pituitary-dependent Cushing's disease,EFO_1001110
+RAB14,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB14,biliary tract neoplasm,EFO_0003891
+RAB14,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB14,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB14,urethra cancer,MONDO_0004192
+RAB14,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB14,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB14,adult glioblastoma,MONDO_0020690
+RAB14,grade II glioma,MONDO_0021639
+RAB14,fallopian tube cancer,MONDO_0002158
+RAB14,refractory malignant neoplasm,MONDO_0036501
+RAB14,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB14,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB14,small intestine lymphoma,MONDO_0001852
+RAB2B,adult hepatocellular carcinoma,MONDO_0016216
+RAB2B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB2B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB2B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB2B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB2B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB2B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB2B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB2B,adult glioblastoma,MONDO_0020690
+RAB2B,small intestine lymphoma,MONDO_0001852
+RAB2B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB2B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB2B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB2B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB2B,grade II glioma,MONDO_0021639
+RAB2B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB2B,refractory malignant neoplasm,MONDO_0036501
+RAB2B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB2B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB2B,urethra cancer,MONDO_0004192
+RAB2B,refractory hairy cell leukemia,MONDO_0004110
+RAB2B,childhood acute myeloid leukemia,EFO_0000330
+RAB2B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB2B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB2B,lethal midline granuloma,EFO_1001013
+RAB2B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB2B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB2B,adult oligodendroglioma,MONDO_0002543
+RAB2B,fallopian tube cancer,MONDO_0002158
+RAB2B,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB41,core binding factor acute myeloid leukemia,EFO_1002001
+RAB41,grade II glioma,MONDO_0021639
+RAB41,childhood acute myeloid leukemia,EFO_0000330
+RAB41,refractory malignant neoplasm,MONDO_0036501
+RAB41,upper aerodigestive tract neoplasm,EFO_0004284
+RAB41,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB41,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB41,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB41,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB41,refractory hairy cell leukemia,MONDO_0004110
+RAB41,adult glioblastoma,MONDO_0020690
+RAB41,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB41,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB41,adult hepatocellular carcinoma,MONDO_0016216
+RAB41,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB41,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB41,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB41,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB41,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB41,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB41,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB41,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB41,lethal midline granuloma,EFO_1001013
+RAB41,biliary tract neoplasm,EFO_0003891
+RAB41,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB41,adult oligodendroglioma,MONDO_0002543
+RAB41,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB41,chronic renal failure syndrome,MONDO_0024327
+RAB41,pituitary-dependent Cushing's disease,EFO_1001110
+RAB41,urethra cancer,MONDO_0004192
+RAB31,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB31,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB31,core binding factor acute myeloid leukemia,EFO_1002001
+RAB31,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB31,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB31,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB31,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB31,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB31,adult hepatocellular carcinoma,MONDO_0016216
+RAB31,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB31,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB31,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB31,childhood acute myeloid leukemia,EFO_0000330
+RAB31,urethra cancer,MONDO_0004192
+RAB31,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB31,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB31,upper aerodigestive tract neoplasm,EFO_0004284
+RAB31,pituitary-dependent Cushing's disease,EFO_1001110
+RAB31,refractory hairy cell leukemia,MONDO_0004110
+RAB31,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB31,adult glioblastoma,MONDO_0020690
+RAB31,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB31,biliary tract neoplasm,EFO_0003891
+RAB31,grade II glioma,MONDO_0021639
+RAB31,lethal midline granuloma,EFO_1001013
+RAB31,refractory malignant neoplasm,MONDO_0036501
+RAB31,ureter urothelial carcinoma,EFO_1001973
+RAB31,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB31,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB31,small intestine lymphoma,MONDO_0001852
+RAB43,childhood acute myeloid leukemia,EFO_0000330
+RAB43,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB43,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB43,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB43,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB43,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB43,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB43,adult hepatocellular carcinoma,MONDO_0016216
+RAB43,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB43,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB43,core binding factor acute myeloid leukemia,EFO_1002001
+RAB43,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB43,upper aerodigestive tract neoplasm,EFO_0004284
+RAB43,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB43,refractory hairy cell leukemia,MONDO_0004110
+RAB43,urethra cancer,MONDO_0004192
+RAB43,small intestine lymphoma,MONDO_0001852
+RAB43,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB43,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB43,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB43,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB43,adult glioblastoma,MONDO_0020690
+RAB43,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB43,Malignant Ovarian Brenner Tumor,EFO_1000357
+RAB43,lethal midline granuloma,EFO_1001013
+RAB43,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB43,refractory malignant neoplasm,MONDO_0036501
+RAB43,fallopian tube cancer,MONDO_0002158
+RAB43,biliary tract neoplasm,EFO_0003891
+RAB43,chronic renal failure syndrome,MONDO_0024327
+RAB36,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB36,adult hepatocellular carcinoma,MONDO_0016216
+RAB36,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB36,biliary tract neoplasm,EFO_0003891
+RAB36,refractory hairy cell leukemia,MONDO_0004110
+RAB36,upper aerodigestive tract neoplasm,EFO_0004284
+RAB36,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB36,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB36,small intestine lymphoma,MONDO_0001852
+RAB36,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB36,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB36,childhood acute myeloid leukemia,EFO_0000330
+RAB36,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB36,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB36,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB36,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB36,adult glioblastoma,MONDO_0020690
+RAB36,core binding factor acute myeloid leukemia,EFO_1002001
+RAB36,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB36,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB36,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB36,refractory malignant neoplasm,MONDO_0036501
+RAB36,grade II glioma,MONDO_0021639
+RAB36,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB36,pituitary-dependent Cushing's disease,EFO_1001110
+RAB36,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB36,lethal midline granuloma,EFO_1001013
+RAB36,urethra cancer,MONDO_0004192
+RAB36,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB36,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB2A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB2A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB2A,childhood acute myeloid leukemia,EFO_0000330
+RAB2A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB2A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB2A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB2A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB2A,small intestine lymphoma,MONDO_0001852
+RAB2A,adult hepatocellular carcinoma,MONDO_0016216
+RAB2A,adult glioblastoma,MONDO_0020690
+RAB2A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB2A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB2A,grade II glioma,MONDO_0021639
+RAB2A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB2A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB2A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB2A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB2A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB2A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB2A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB2A,refractory hairy cell leukemia,MONDO_0004110
+RAB2A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB2A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB2A,chronic renal failure syndrome,MONDO_0024327
+RAB2A,adult oligodendroglioma,MONDO_0002543
+RAB2A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB2A,biliary tract neoplasm,EFO_0003891
+RAB2A,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB2A,refractory malignant neoplasm,MONDO_0036501
+RAB2A,lethal midline granuloma,EFO_1001013
+RAB5C,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB5C,childhood acute myeloid leukemia,EFO_0000330
+RAB5C,refractory hairy cell leukemia,MONDO_0004110
+RAB5C,adult glioblastoma,MONDO_0020690
+RAB5C,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB5C,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB5C,upper aerodigestive tract neoplasm,EFO_0004284
+RAB5C,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB5C,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB5C,adult hepatocellular carcinoma,MONDO_0016216
+RAB5C,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB5C,biliary tract neoplasm,EFO_0003891
+RAB5C,core binding factor acute myeloid leukemia,EFO_1002001
+RAB5C,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB5C,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB5C,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB5C,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB5C,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB5C,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB5C,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB5C,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB5C,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB5C,ureter urothelial carcinoma,EFO_1001973
+RAB5C,urethra cancer,MONDO_0004192
+RAB5C,refractory malignant neoplasm,MONDO_0036501
+RAB5C,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB5C,grade II glioma,MONDO_0021639
+RAB5C,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB5C,pituitary-dependent Cushing's disease,EFO_1001110
+RAB5C,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB32,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB32,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB32,chronic renal failure syndrome,MONDO_0024327
+RAB32,upper aerodigestive tract neoplasm,EFO_0004284
+RAB32,grade II glioma,MONDO_0021639
+RAB32,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB32,childhood acute myeloid leukemia,EFO_0000330
+RAB32,core binding factor acute myeloid leukemia,EFO_1002001
+RAB32,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB32,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB32,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB32,pituitary-dependent Cushing's disease,EFO_1001110
+RAB32,small intestine lymphoma,MONDO_0001852
+RAB32,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB32,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB32,mixed glioma,MONDO_0003268
+RAB32,refractory hairy cell leukemia,MONDO_0004110
+RAB32,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB32,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB32,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB32,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB32,adult glioblastoma,MONDO_0020690
+RAB32,adult hepatocellular carcinoma,MONDO_0016216
+RAB32,biliary tract neoplasm,EFO_0003891
+RAB32,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB32,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB32,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB32,Penile Fibromatosis,EFO_1000466
+RAB32,adult oligodendroglioma,MONDO_0002543
+RAB32,acute erythroblastic leukemia,EFO_1001257
+RAB22A,refractory hairy cell leukemia,MONDO_0004110
+RAB22A,adult glioblastoma,MONDO_0020690
+RAB22A,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB22A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB22A,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB22A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB22A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB22A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB22A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB22A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB22A,urethra cancer,MONDO_0004192
+RAB22A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB22A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB22A,chronic renal failure syndrome,MONDO_0024327
+RAB22A,adult hepatocellular carcinoma,MONDO_0016216
+RAB22A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB22A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB22A,refractory malignant neoplasm,MONDO_0036501
+RAB22A,adult oligodendroglioma,MONDO_0002543
+RAB22A,Endometrial Hyperplasia without Atypia,EFO_1000234
+RAB22A,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB22A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB22A,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB22A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB22A,small intestine lymphoma,MONDO_0001852
+RAB22A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB22A,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB22A,HIV-Associated Lipodystrophy Syndrome,EFO_1001348
+RAB22A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB22A,grade II glioma,MONDO_0021639
+RAB13,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB13,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB13,core binding factor acute myeloid leukemia,EFO_1002001
+RAB13,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB13,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB13,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB13,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB13,upper aerodigestive tract neoplasm,EFO_0004284
+RAB13,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB13,urethra cancer,MONDO_0004192
+RAB13,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB13,adult hepatocellular carcinoma,MONDO_0016216
+RAB13,refractory hairy cell leukemia,MONDO_0004110
+RAB13,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB13,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB13,fallopian tube cancer,MONDO_0002158
+RAB13,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB13,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB13,adult glioblastoma,MONDO_0020690
+RAB13,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB13,biliary tract neoplasm,EFO_0003891
+RAB13,childhood acute myeloid leukemia,EFO_0000330
+RAB13,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB13,refractory malignant neoplasm,MONDO_0036501
+RAB13,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB13,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB13,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB13,ureter urothelial carcinoma,EFO_1001973
+RAB13,Fallopian Tube Carcinosarcoma,EFO_1000252
+RAB13,small intestine lymphoma,MONDO_0001852
+RAB39B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB39B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB39B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB39B,childhood acute myeloid leukemia,EFO_0000330
+RAB39B,adult hepatocellular carcinoma,MONDO_0016216
+RAB39B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB39B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB39B,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB39B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB39B,refractory hairy cell leukemia,MONDO_0004110
+RAB39B,refractory malignant neoplasm,MONDO_0036501
+RAB39B,biliary tract neoplasm,EFO_0003891
+RAB39B,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB39B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB39B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB39B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB39B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB39B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB39B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB39B,grade II glioma,MONDO_0021639
+RAB39B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB39B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB39B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB39B,fallopian tube cancer,MONDO_0002158
+RAB39B,urethra cancer,MONDO_0004192
+RAB39B,lethal midline granuloma,EFO_1001013
+RAB39B,small intestine lymphoma,MONDO_0001852
+RAB39B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB39B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB39B,adult glioblastoma,MONDO_0020690
+RAB24,core binding factor acute myeloid leukemia,EFO_1002001
+RAB24,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB24,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB24,adult hepatocellular carcinoma,MONDO_0016216
+RAB24,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB24,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB24,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB24,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB24,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB24,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB24,upper aerodigestive tract neoplasm,EFO_0004284
+RAB24,pituitary-dependent Cushing's disease,EFO_1001110
+RAB24,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB24,fallopian tube squamous cell carcinoma,MONDO_0003503
+RAB24,biliary tract neoplasm,EFO_0003891
+RAB24,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB24,lethal midline granuloma,EFO_1001013
+RAB24,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB24,grade II glioma,MONDO_0021639
+RAB24,ureter urothelial carcinoma,EFO_1001973
+RAB24,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB24,childhood acute myeloid leukemia,EFO_0000330
+RAB24,urethra cancer,MONDO_0004192
+RAB24,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB24,refractory malignant neoplasm,MONDO_0036501
+RAB24,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB24,adult glioblastoma,MONDO_0020690
+RAB24,refractory hairy cell leukemia,MONDO_0004110
+RAB24,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB24,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB44,upper aerodigestive tract neoplasm,EFO_0004284
+RAB44,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB44,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB44,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB44,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB44,core binding factor acute myeloid leukemia,EFO_1002001
+RAB44,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB44,adult hepatocellular carcinoma,MONDO_0016216
+RAB44,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB44,chronic renal failure syndrome,MONDO_0024327
+RAB44,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB44,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB44,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB44,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB44,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB44,refractory hairy cell leukemia,MONDO_0004110
+RAB44,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB44,grade II glioma,MONDO_0021639
+RAB44,pituitary-dependent Cushing's disease,EFO_1001110
+RAB44,adult oligodendroglioma,MONDO_0002543
+RAB44,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB44,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB44,adult glioblastoma,MONDO_0020690
+RAB44,HIV-Associated Lipodystrophy Syndrome,EFO_1001348
+RAB44,uveitis,EFO_1001231
+RAB44,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB44,childhood acute myeloid leukemia,EFO_0000330
+RAB44,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB44,Endometrial Hyperplasia without Atypia,EFO_1000234
+RAB44,high grade ovarian serous adenocarcinoma,EFO_1001958
+RAB17,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB17,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB17,upper aerodigestive tract neoplasm,EFO_0004284
+RAB17,core binding factor acute myeloid leukemia,EFO_1002001
+RAB17,urethra cancer,MONDO_0004192
+RAB17,small intestine lymphoma,MONDO_0001852
+RAB17,biliary tract neoplasm,EFO_0003891
+RAB17,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB17,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB17,adult hepatocellular carcinoma,MONDO_0016216
+RAB17,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB17,grade II glioma,MONDO_0021639
+RAB17,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB17,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB17,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB17,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB17,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB17,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB17,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB17,refractory malignant neoplasm,MONDO_0036501
+RAB17,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB17,lip and oral cavity squamous cell carcinoma,MONDO_0044710
+RAB17,adult glioblastoma,MONDO_0020690
+RAB17,childhood acute myeloid leukemia,EFO_0000330
+RAB17,adult oligodendroglioma,MONDO_0002543
+RAB17,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB17,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB17,mixed glioma,MONDO_0003268
+RAB17,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB17,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB40A,urethra cancer,MONDO_0004192
+RAB40A,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB40A,grade II glioma,MONDO_0021639
+RAB40A,childhood acute myeloid leukemia,EFO_0000330
+RAB40A,refractory hairy cell leukemia,MONDO_0004110
+RAB40A,small intestine lymphoma,MONDO_0001852
+RAB40A,chronic renal failure syndrome,MONDO_0024327
+RAB40A,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB40A,core binding factor acute myeloid leukemia,EFO_1002001
+RAB40A,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB40A,upper aerodigestive tract neoplasm,EFO_0004284
+RAB40A,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB40A,adult glioblastoma,MONDO_0020690
+RAB40A,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB40A,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB40A,childhood acute lymphoblastic leukemia,MONDO_0000870
+RAB40A,biliary tract neoplasm,EFO_0003891
+RAB40A,pituitary-dependent Cushing's disease,EFO_1001110
+RAB40A,adult hepatocellular carcinoma,MONDO_0016216
+RAB40A,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB40A,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB40A,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB40A,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB40A,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB40A,refractory malignant neoplasm,MONDO_0036501
+RAB40A,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB40A,lethal midline granuloma,EFO_1001013
+RAB40A,Penile Fibromatosis,EFO_1000466
+RAB40A,Disorder of amino acid and other organic acid metabolism,Orphanet_79062
+RAB40A,intermittent vascular claudication,EFO_0003876
+RAB7B,adult acute lymphoblastic leukemia,MONDO_0003541
+RAB7B,adult hepatocellular carcinoma,MONDO_0016216
+RAB7B,fallopian tube transitional cell carcinoma,MONDO_0002833
+RAB7B,adult B acute lymphoblastic leukemia,EFO_1001935
+RAB7B,childhood acute myeloid leukemia with maturation,EFO_1001945
+RAB7B,childhood B acute lymphoblastic leukemia,EFO_1001946
+RAB7B,upper aerodigestive tract neoplasm,EFO_0004284
+RAB7B,childhood T acute lymphoblastic leukemia,EFO_1001947
+RAB7B,refractory hairy cell leukemia,MONDO_0004110
+RAB7B,core binding factor acute myeloid leukemia,EFO_1002001
+RAB7B,fallopian tube clear cell adenocarcinoma,MONDO_0003383
+RAB7B,pituitary-dependent Cushing's disease,EFO_1001110
+RAB7B,urethra cancer,MONDO_0004192
+RAB7B,sex chromosome disorder of sex development,MONDO_0017975
+RAB7B,fallopian tube mucinous adenocarcinoma,MONDO_0002744
+RAB7B,chronic renal failure syndrome,MONDO_0024327
+RAB7B,grade II glioma,MONDO_0021639
+RAB7B,Primary Peritoneal Serous Adenocarcinoma,EFO_1000494
+RAB7B,HIV-Associated Lipodystrophy Syndrome,EFO_1001348
+RAB7B,human papillomavirus-related squamous cell carcinoma,MONDO_0020657
+RAB7B,acute myeloblastic leukemia with maturation,EFO_0003028
+RAB7B,ovarian clear cell cystadenocarcinoma,MONDO_0004222
+RAB7B,therapy related acute myeloid leukemia and myelodysplastic syndrome,MONDO_0019457
+RAB7B,fallopian tube endometrioid adenocarcinoma,MONDO_0003666
+RAB7B,adult T acute lymphoblastic leukemia,EFO_1001936
+RAB7B,verrucous carcinoma of oral cavity,MONDO_0021538
+RAB7B,shoulder impingement syndrome,EFO_1001178
+RAB7B,oral cavity mucoepidermoid carcinoma,MONDO_0044964
+RAB7B,Endometrial Hyperplasia without Atypia,EFO_1000234
+RAB7B,small intestine lymphoma,MONDO_0001852
