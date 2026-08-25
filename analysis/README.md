@@ -8,11 +8,11 @@ Full write-up with per-claim evidence: [HANDOFF_REPORT.md](HANDOFF_REPORT.md).
 
 | Analysis | Script | Result |
 |---|---|---|
-| Per-feature-group ablation (temporal, 5 rungs) | `scripts/ablation_temporal.py`, `scripts/run_ablation.sh` | `results/ablation_table_final.csv` |
+| Per-feature-group ablation (temporal, 5 rungs) | `scripts/ablation_temporal.py`, `scripts/run_ablation.sh` | `../Outputs/S3-feature_ablation.csv` |
 | Seed replication of the text-only vs full contrast | `scripts/run_seed_replication.sh` | `results/ablation_seed_replication.csv` |
-| Temporal per-pair predictions (seed 42, OTRec + OTTree) | `scripts/temporal_preds_seed42.py` | per-pair parquet (not committed) |
+| Temporal per-pair predictions (seed 42, OTRec + OTTree) | `scripts/temporal_preds_seed42.py` | `../Outputs/S7-temporal_predictions.parquet` |
 | Leakage bound: clinical-precedence tractability tokens stripped | `scripts/temporal_strip_tractability.py` | reported in the write-up |
-| Stratification by therapeutic area / known targets / annotation volume | `scripts/stratify_q7.py`, `scripts/q7_summary_export.py` | `results/q7_summary.csv` |
+| Stratification by therapeutic area / known targets / annotation volume | `scripts/stratify_q7.py`, `scripts/q7_summary_export.py` | `../Outputs/S8-shortlist_stratification.csv` |
 | Node2Vec under the temporal protocol | `scripts/run_node2vec_temporal.py` | `results/node2vec_temporal_result.json` |
 | Temporal base rate and indication-count strata | `scripts/t6_t4a.py`, `scripts/t3_t4b_final.py` | reported in the write-up |
 | Manuscript-number verification against released artefacts | `scripts/verify_paper.py`, `verify2.py`, `verify3.py`, `verify4.py`, `verify_t2.py` | reported in the write-up |
@@ -31,9 +31,9 @@ committed; set `OTREC_SCRATCH` to point at them:
 
 ```bash
 # from the workspace root
-python OTRec/rebuttal/scripts/temporal_preds_seed42.py          # writes the per-pair parquet
-OTREC_SCRATCH=rebuttal_scratch python OTRec/rebuttal/scripts/t3_t4b_final.py
-bash OTRec/rebuttal/scripts/run_ablation.sh                     # 5 rungs, ~10 min each on one GPU
+python OTRec/analysis/scripts/temporal_preds_seed42.py          # writes OTRec/Outputs/S7-temporal_predictions.parquet
+OTREC_SCRATCH=rebuttal_scratch python OTRec/analysis/scripts/t3_t4b_final.py
+bash OTRec/analysis/scripts/run_ablation.sh                     # 5 rungs, ~10 min each on one GPU
 ```
 
 ## Ablation design

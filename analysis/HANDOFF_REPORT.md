@@ -1,5 +1,12 @@
 # OTRec rebuttal analysis — handoff report
 
+> **Note (2026-08-25):** this is a historical record; paths have since changed.
+> The per-pair temporal predictions and stratification summaries referenced below now live in
+> `Outputs/` as `S7-temporal_predictions.parquet`, `S8-shortlist_stratification.csv`,
+> `S3-feature_ablation.csv`, and `S5-ottree_hyperparameter_sweep.csv`. The manuscript's
+> Tables 4/5 and S8 were re-based on the committed `S7-temporal_predictions.parquet`
+> (see `SUBMISSION_REPRO_AUDIT.md` in the workspace root).
+
 Session date: 2026-07-26. All work is read-only against the repo; every script and output
 lives in `rebuttal_scratch/`. No repo file was created, modified, or deleted. The only
 computation beyond re-analysis was one authorised seed-42 temporal retrain (plus a leakage

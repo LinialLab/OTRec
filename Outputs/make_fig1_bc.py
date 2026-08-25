@@ -151,9 +151,9 @@ def main():
         1, 2, figsize=(15, 5.8), constrained_layout=True,
         gridspec_kw={"width_ratios": [len(lb), len(lc)]},
     )
-    plot_panel(ax1, lb, rb, rbs, pb, pbs, "B. Target-Disjoint Cross-Validation (5x5-fold)")
+    plot_panel(ax1, lb, rb, rbs, pb, pbs, "A. Target-Disjoint Cross-Validation (5x5-fold)")
     plot_panel(ax2, lc, rc, rcs, pc, pcs,
-               "C. Temporal Validation (2025)", hide_y=True)
+               "B. Temporal Validation (2025)", hide_y=True)
 
     # Explicit handles: a BarContainer legend entry would take its colour from the
     # first bar, which is now OTRec's orange, and mislabel the whole series.

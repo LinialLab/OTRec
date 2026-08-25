@@ -1,138 +1,116 @@
+# OTRec
 
-# OTRec: A deep learning recommender for prospective druggable disease–target associations
+OTRec (Open Targets Recommender) ranks druggable genes for a disease using a two-tower recommender trained on Open Targets data. It predicts disease–target prioritization rather than compound–protein binding or drug–target interaction. This repository contains the code, released predictions, and the interactive demo for the OTRec manuscript.
 
-**OTRec** (Open Targets Recommender) ranks druggable genes for a disease using a two-tower neural architecture trained on Open Targets Platform data. The repository contains the notebooks, model code, outputs, and the interactive Gradio app used for manuscript figures and reviewer-facing artifacts.
+## Try OTRec
 
-If you want to retrain or reevaluate the model, you will need the Open Targets parquet exports and the historical 22.02 release described below.
+* **Web demo:** explore disease → target and target → disease rankings in the [OTRec Hugging Face app](https://huggingface.co/spaces/GrimSqueaker/OTRec).
+* **Released predictions:** `Outputs/S1-DL_novel_predictions.csv` (novel candidates) and `Outputs/S2-DL_novel+known_candidates.csv` (novel + known).
+* **Simple local query**, no model install needed:
+
+```bash
+pip install pandas
+python examples/query_predictions.py --disease obesity
+python examples/query_predictions.py --target GIPR
+```
+
+See [examples/README.md](examples/README.md).
+
+## Released paper data
+
+All manuscript data files live in `Outputs/`:
+
+| File | Contents |
+|---|---|
+| `S1-DL_novel_predictions.csv` | 214,968 novel disease–target predictions (score ≥ 0.65; 4,347 diseases) |
+| `S2-DL_novel+known_candidates.csv` | S1 plus 67,532 known clinical associations (282,500 rows) |
+| `S3-feature_ablation.csv` | Per-feature-group ablation (temporal setting) |
+| `S5-ottree_hyperparameter_sweep.csv` | CatBoost baseline hyperparameter sweep |
+| `S7-temporal_predictions.parquet` | Per-pair temporal predictions behind Tables 4, 5, and S8 |
+| `S8-shortlist_stratification.csv` | Shortlist metrics by therapeutic area / known targets / annotation volume |
+| `S9-gene_family_overlap.csv` | Per-family gene-family overlap statistics (25.12 model) |
+| `Table 1/2/3 ... .csv` | Main benchmark tables |
+| `InterFeat_reranked_candidates/` | InterFeat annotations for selected candidates |
+| `CV_*`, `temporal_*` directories | Per-fold and per-run metrics behind Tables 1–3 |
+
+**Versions:** the manuscript benchmarks and the S1/S2 prediction files are frozen to the paper analysis (Open Targets 22.02 and 25.06). The interactive web app has since been refreshed to Open Targets 25.12 (`analysis/retrain_2512/`), so live app scores can differ from S1/S2.
+
+## Citation
+
+> Ofer D., Linial M. *OTRec: A Deep Learning Recommender for Druggable Disease–Target Prioritization.* bioRxiv 2025.12.21.695803. doi: [10.64898/2025.12.21.695803](https://doi.org/10.64898/2025.12.21.695803)
 
 ---
 
-## 📂 Repository Structure
+## Reproducing the analysis
+
+### Repository structure
 
 ```text
 OTRec/
-├── 2-Temporal-Eval.ipynb       # Main evaluation notebook: Temporal split (2022 vs 2025)
-├── 1-Train-DL-Retriever.ipynb  # Training loop for the Deep Learning Recommender
 ├── 0-OT-PreProcess_Recc.ipynb  # Data preprocessing and feature engineering
-├── dl_model_def.py             # Keras definition of the Two-Tower model architecture
-├── utils.py                    # Helper functions for data loading and metrics
+├── 1-Train-DL-Retriever.ipynb  # Trains the two-tower model; writes S1/S2
+├── 2-Temporal-Eval.ipynb       # Temporal split validation (2022 vs 2025)
+├── dl_model_def.py             # Keras two-tower model definition
+├── utils.py                    # Data loading and metric helpers
+├── examples/                   # Query the released predictions with pandas
 ├── gradio/                     # Standalone interactive web demo
-│   ├── app.py                  # Gradio application entry point
-│   └── ...                     # App-specific assets
-├── analysis/                   # Supplementary analyses (S1–S8)
-│   ├── scripts/                # Reproduction scripts
-│   └── results/                # Per-analysis outputs (CSV/parquet)
-├── baselines/                  # Baseline reproduction (run_baselines.py)
-└── Outputs/                    # Model weights, metrics, and released predictions
-    ├── S1-DL_novel_predictions.csv        # 214,968 novel candidates (4,347 diseases)
-    ├── S2-DL_novel+known_candidates.csv   # S1 + 67,532 known associations (282,500 rows)
-    └── InterFeat_reranked_candidates/     # InterFeat annotations for selected candidates
+├── analysis/                   # Supplementary and rebuttal analyses
+│   ├── scripts/                # Reproduction scripts (S3, S5, S7, S8, ...)
+│   └── retrain_2512/           # Open Targets 25.12 deployment refresh
+├── baselines/                  # Baseline reproduction (run_baselines.py, run_temporal_repeated.py)
+└── Outputs/                    # Released predictions, tables, figures, metrics
 ```
 
----
+### Data prerequisites
 
+The repository does not contain the raw Open Targets Platform (OTP) data. To retrain or re-evaluate, download the parquet exports from [Open Targets Data Downloads](https://platform.opentargets.org/downloads):
 
-### Important: Data & Prerequisites
+* Core: `associationByOverallDirect` (rename folder to `association_overall_direct`), `associationByDatatypeDirect` (→ `association_by_datatype_direct`), `target`, `disease`, `knownDrugsAggregated` (→ `known_drug`)
+* Features: `targetPrioritisation` (→ `target_prioritisation`), `targetEssentiality` (→ `target_essentiality`), `diseasePhenotypes` (→ `disease_phenotype`), optional `mousePhenotypes` (→ `mouse_phenotype`)
+* Temporal validation additionally needs the Release **22.02** core datasets.
 
-**Note:** This repository **does not** contain the raw Open Targets Platform (OTP) data due to file size limitations. You must download the data separately to run the training or evaluation scripts.
-
-### 1. Download Open Targets Data
-
-The code expects raw Parquet files from Open Targets in a specific directory structure relative to this repo (typically `../data/opentargets/`).
-
-You will need to download the following datasets via `wget` or rsync from the [Open Targets Data Downloads](https://platform.opentargets.org/downloads). Specifically, the code requires:
-
-* **Core Datasets:**
-* `associationByOverallDirect` (Note: Rename folder to `association_overall_direct` after download)
-* `associationByDatatypeDirect` (Note: Rename folder to `association_by_datatype_direct`)
-* `target`
-* `disease`
-* `knownDrugsAggregated` (Note: Rename folder to `known_drug`)
-
-
-* **Additional Feature Datasets:**
-* `targetPrioritisation` (Note: Rename folder to `target_prioritisation`)
-* `targetEssentiality` (Note: Rename folder to `target_essentiality`)
-* `diseasePhenotypes` (Note: Rename folder to `disease_phenotype`)
-* optional: `mousePhenotypes` (Note: Rename folder to `mouse_phenotype`)
-
-
-* **Historical Data (For Temporal Validation):**
-* For the temporal split (2022 vs 2025), you also need the Open Targets Release **22.02** versions of the core datasets above, placed in `../data/historical_ot/22_02/`.
-
-
-### 2. Directory Structure Expectation
-
-The scripts assume the following directory layout by default. If you use a different path, please update `Config.DATA_DIR` in the notebooks/scripts.
+Expected layout (siblings of this repository; set `Config.DATA_DIR` in the notebooks to change it):
 
 ```text
 project_root/
-├── OTRec/                 # This repository
-│   ├── 0-OT-PreProcess_Recc.ipynb
-│   └── ...
-└── data/                  # Data folder (sibling to OTRec)
-    ├── opentargets/       # Current Data (2025.xx)
-    │   ├── association_overall_direct/
-    │   ├── association_by_datatype_direct/
-    │   ├── target/
-    │   ├── disease/
-    │   ├── known_drug/
-    │   ├── target_prioritisation/
-    │   ├── target_essentiality/
-    │   ├── disease_phenotype/
-    │   └── mouse_phenotype/
-    └── historical_ot/     # Historical Data (22.02)
-        └── 22_02/
-            ├── association_overall_direct/
-            └── ... (other core datasets)
-
+├── OTRec/                 # this repository
+└── data/
+    ├── opentargets/       # current release (paper: 25.06)
+    │   ├── association_overall_direct/ ... mouse_phenotype/
+    └── historical_ot/
+        └── 22_02/         # historical release for the temporal split
 ```
 
-### 3. Environment
+### Environment
 
-Install the required dependencies (Python 3.10+ recommended). We use tensorflow and keras:
+Python 3.10+:
 
 ```bash
 pip install tensorflow pandas scikit-learn catboost gradio pyarrow fastparquet
-
 ```
 
----
+### Run order
 
-##  Usage
+1. `0-OT-PreProcess_Recc.ipynb` — filters raw data, applies the druggable-genome constraint, builds the training frame, trains the CatBoost baseline.
+2. `1-Train-DL-Retriever.ipynb` — trains the two-tower model; writes weights and the S1/S2 prediction files.
+3. `2-Temporal-Eval.ipynb` — temporal validation: 2022 model vs 2025 clinical outcomes.
 
-### Running the Analysis
+Baselines: `baselines/run_baselines.py` (CV) and `baselines/run_temporal_repeated.py` (temporal, five runs). Supplementary analyses: see [analysis/README.md](analysis/README.md).
 
-The notebooks are numbered sequentially:
-
-1. **`0-OT-PreProcess_Recc.ipynb`**: Filters raw data, applies "druggable genome" constraints, and generates the training dataset. Trains the CatBoost baseline.
-2. **`1-Train-DL-Retriever.ipynb`**: Trains the Two-Tower model. Saves model weights to `Outputs/`.
-3. **`2-Temporal-Eval.ipynb`**: Performs the rigorous temporal split validation, comparing 2022 predictions against 2025 clinical outcomes.
-
-### Interactive Demo (Gradio)
-
-We provide a standalone web interface to explore predictions.
+### Interactive demo (local)
 
 ```bash
 cd gradio
 python app.py
-
 ```
 
-The Gradio app downloads model weights at runtime and precomputes embeddings on first use. See [gradio/README.md](gradio/README.md) for packaged comparison caveats, environment variables, and reviewer-facing behavior.
+The app downloads model weights at runtime; see [gradio/README.md](gradio/README.md) for details and caveats.
 
----
+## Key results
 
-## 📊 Key Results
+* **Temporal validation** (predict 2025 clinical-trial entries from 2022 data; mean of five runs): OTRec ROC-AUC **0.872** / PR-AUC **0.288** vs Open Targets score 0.559 / 0.082.
+* **Target-disjoint 5×5 CV** (targets unseen in training): OTRec ROC-AUC **0.950** / PR-AUC **0.844**.
 
-* **Temporal validation:** Predicting 2025 clinical-trial entries from 2022 data (mean over five runs).
-* **OTRec:** ROC-AUC **0.872**, PR-AUC **0.288**
-* **Open Targets Score:** ROC-AUC **0.559**, PR-AUC **0.082**
+## License
 
-
-* **Target-Disjoint Generalization:** 5×5-fold CV (25 folds) on targets unseen during training.
-* **OTRec:** ROC-AUC **0.950**, PR-AUC **0.844**
-
-
-
----
+MIT. Open Targets Platform data are CC0 1.0; other evidence sources retain their own licenses.

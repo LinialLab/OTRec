@@ -28,7 +28,7 @@ from run_temporal_repeated import (
     set_global_seed,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "results"      # OTRec/analysis/results
+OUT = Path(__file__).resolve().parents[2] / "Outputs"      # OTRec/Outputs
 SEED, EPOCHS = 42, 6
 
 history_raw = pd.read_parquet(ROOT.parent / "code" / "history_df.parquet")
@@ -99,5 +99,5 @@ print(f"OTTree seed42 ROC {roc_auc_score(y, ottree_pred):.6f} "
 out = test_df[["diseaseId", "targetId", "label", "score_past"]].copy()
 out["otrec"] = otrec_pred
 out["ottree"] = ottree_pred
-out.to_parquet(OUT / "temporal_preds_seed42.parquet", index=False)
+out.to_parquet(OUT / "S7-temporal_predictions.parquet", index=False)
 print("saved", OUT / "temporal_preds_seed42.parquet", out.shape, flush=True)

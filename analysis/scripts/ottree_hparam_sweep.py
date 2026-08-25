@@ -5,7 +5,7 @@ configuration and were therefore "not given their best chance". Mirrors
 train_ottree_once() from baselines/run_temporal_repeated.py (same features, same
 train/test construction, same seed); only the CatBoost params vary.
 
-Writes analysis/results/ottree_hparam_sweep.csv.
+Writes Outputs/S5-ottree_hyperparameter_sweep.csv.
 """
 import sys
 from pathlib import Path
@@ -25,7 +25,7 @@ from run_temporal_repeated import (
     merge_df_dis_target,
 )
 
-OUT = ROOT / "analysis" / "results"
+OUT = ROOT / "Outputs"
 SEED = 42
 
 FEATURES = ["disease_text", "target_text", "diseaseId"]
@@ -79,9 +79,9 @@ def main() -> None:
 
     df = pd.DataFrame(rows)
     OUT.mkdir(parents=True, exist_ok=True)
-    df.to_csv(OUT / "ottree_hparam_sweep.csv", index=False)
+    df.to_csv(OUT / "S5-ottree_hyperparameter_sweep.csv", index=False)
     print("\nbest ROC", df.ROC_AUC.max(), "| best PR", df.PR_AUC.max())
-    print("saved", OUT / "ottree_hparam_sweep.csv", flush=True)
+    print("saved", OUT / "S5-ottree_hyperparameter_sweep.csv", flush=True)
 
 
 if __name__ == "__main__":

@@ -5,10 +5,11 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 
-OUT = Path(__file__).resolve().parent
-sub = pd.read_parquet(OUT / "q7_stratified.parquet")
-hist = pd.read_parquet(OUT.parent / "code" / "history_df.parquet")
-dd = pd.read_parquet(OUT.parent / "code" / "copy_proc" / "disease_df.parquet",
+ROOT = Path(__file__).resolve().parents[3]                 # workspace root (parent of OTRec)
+OUT = ROOT / "OTRec" / "Outputs"
+sub = pd.read_parquet(ROOT / "OTRec" / "analysis" / "results" / "q7_stratified.parquet")
+hist = pd.read_parquet(ROOT / "code" / "history_df.parquet")
+dd = pd.read_parquet(ROOT / "code" / "copy_proc" / "disease_df.parquet",
                      columns=["diseaseId", "therapeuticAreas"])
 MODELS = [("OTRec", "otrec"), ("OTTree", "ottree"), ("TargetMean", "TargetMean")]
 
@@ -81,6 +82,6 @@ for (lo, hi), lab in zip([(-1, qs[0]), (qs[0], qs[1]), (qs[1], qs[2]), (qs[2], 1
     emit(sub[(sub.ann_vol > lo) & (sub.ann_vol <= hi)], "target_annotation_volume", lab)
 
 df = pd.DataFrame(rows)
-df.to_csv(OUT / "q7_summary.csv", index=False)
+df.to_csv(OUT / "S8-shortlist_stratification.csv", index=False)
 print(df.to_string(index=False, float_format=lambda x: f"{x:.3f}"))
-print("\nwrote", OUT / "q7_summary.csv", df.shape)
+print("\nwrote", OUT / "S8-shortlist_stratification.csv", df.shape)
